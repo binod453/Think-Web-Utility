@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<link th:rel="stylesheet"
+	th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} " />
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap-datepicker/css/bootstrap-datepicker.css}"/>
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap-datepicker/css/bootstrap-datepicker.standalone.css}"/>
+    <link th:rel="stylesheet" th:href="@{webjars/font-awesome/5.11.2/css/all.css} "/>
+<title></title>
+</head>
+<body>
+	<div class="container" style="">
+		<div class="row" style="margin-top: 20px">
+			<form th:action="test" method="post">
+				<fieldset>
+					<div class="form-group row">
+						<label for="dynamicRenewalCode" class="col-sm-8 col-form-label">Please Enter Dynamic Renewal Code</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" id="dynamicRenewalCode" >
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="description" class="col-sm-4 col-form-label">Description</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="description" >
+						</div>
+					</div>
+					<fieldset class="form-group">
+					    <div class="row">
+					      <legend class="col-form-label col-sm-4 pt-0">Offer Type</legend>
+					      <div class="col-sm-8">
+					        <div class="form-check">
+					          <input class="form-check-input" type="radio" name="offerTypeRadios" id="fixed" value="option1">
+					          <label class="form-check-label" for="fixed">
+					            Fixed
+					          </label>
+					        </div>
+					        <div class="form-check">
+					          <input class="form-check-input" type="radio" name="offerTypeRadios" id="installment" value="option2">
+					          <label class="form-check-label" for="installment">
+					           	Installment
+					          </label>
+					        </div>
+					      </div>
+					    </div>
+				  </fieldset>
+				  
+				  <div class="form-group" id="activePeriod" style='display:none'>
+				  <label for="activePeriod" class="col-sm-4 col-form-label">Active Period</label>
+					  <div class="input-group date">
+	                    <input type="text" class="form-control" autocomplete="off" />
+	                    <div class="input-group-append">
+	                        <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+	                    </div>
+	                </div>
+	                </div>
+				  
+					<table class="table" id="tableForFixed" style='display:none'>
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>Username</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Mark</td>
+								<td>Otto</td>
+								<td>@mdo</td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<table class="table" id="tableForInstallment" style='display:none'>
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>Username</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Mark</td>
+								<td>Otto</td>
+								<td>@mdo</td>
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+								<td>Jacob</td>
+								<td>Thornton</td>
+								<td>@fat</td>
+							</tr>
+							<tr>
+								<th scope="row">3</th>
+								<td>Larry</td>
+								<td>the Bird</td>
+								<td>@twitter</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="row">
+						<div class="col-xs-6 col-sm-6 col-md-6">
+							<input type="submit" class="btn btn-primary" value="Ok" />
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-6">
+							<input type="reset" class="btn btn-primary" value="Cancel" />
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/webjars/bootstrap-datepicker/js/bootstrap-datepicker.js}"></script>
+
+<script>
+$("#fixed").click(function () {
+    $('#activePeriod').css('display', ($(this).val() === 'option1') ? 'block':'none');
+    $('#tableForFixed').css('display', ($(this).val() === 'option1') ? 'block':'none');
+});
+
+$("#installment").click(function () {
+    $('#activePeriod').css('display', ($(this).val() === 'option2') ? 'block':'none');
+    $('#tableForInstallment').css('display', ($(this).val() === 'option2') ? 'block':'none');
+});
+
+  /*   $('.input-group.date').datepicker({
+        autoclose: true,
+        todayHighlight: true
+    });  */
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+[
+  {
+    "slNo": "1",
+    "dynamicCode": "abc",
+    "offerType": "Fixed",
+    "description": "demo description",
+    "activeFrom": "2023-10-20",
+    "activeTo": "2027-01-21"
+  },
+  {
+    "slNo": "2",
+    "dynamicCode": "ada",
+    "offerType": "Fixed",
+    "description": "demo description",
+    "activeFrom": "2013-10-11",
+    "activeTo": "2023-08-24"
+  },
+  {
+    "slNo": "3",
+    "dynamicCode": "asfgsd",
+    "offerType": "Installment",
+    "description": "demo descriptions",
+    "activeFrom": "2011-04-25",
+    "activeTo": "2012-02-22"
+  },
+  {
+    "slNo": "4",
+    "dynamicCode": "Test",
+    "offerType": "Installment",
+    "description": "test descriptions",
+    "activeFrom": "2011-09-12",
+    "activeTo": "2012-02-10"
+  }
+]
