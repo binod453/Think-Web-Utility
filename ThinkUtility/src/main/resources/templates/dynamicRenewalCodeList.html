@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
    <head>
-      <meta charset="UTF-8"/>
       <title>Think Dynamic Pricing Web Utility</title>
       <link th:rel="stylesheet" th:href="@{/css/datatables.css}"/>
       <link th:rel="stylesheet" th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
@@ -15,14 +14,9 @@
       </nav>
       <div class="container">
          <div class="row" style="margin-top:20px">
-         <!-- th:onclick="addRenewalCode()"-->
-             <form th:action="@{/addNewRenewalCode}" method="post">
-	       <!--     <fieldset> -->
 	            <div class="form-group">
-	            	<button type="button" class="btn btn-secondary btn-lg" >Add Renewal Code</button>
+	            	<a href="/addNewRenewalCode" th:href="@{/addNewRenewalCode}" class="btn btn-secondary btn-lg">Add Renewal Code</a>
 	            </div>
-               <!-- </fieldset>-->
-            </form> 
          </div>
       </div>
       <div class="container">
@@ -71,14 +65,6 @@
                  {"data": "activeTo", "width": "20%"}
              ]
          });
-         
-         function addRenewalCode(){
-         	$.ajax({url: "addNewRenewalCode",
-          		type: "POST",
-          		success: function(result){
-          	    console.log("add page");
-         	  }});
-         };
       </script>
    </body>
 </html>
