@@ -13,6 +13,8 @@ public class DynamicRenewalCodeModel implements Serializable{
 	private String dynamicCode;
 	private String offerType;
 	private String description;
-	private Date activeFrom;
-	private Date activeTo;
+	private int activeFrom;
+	private int activeTo;
+	private RenewalCodeDataDetails renewalCodeDataDetails;
+	private LoginModel loginModel;
 }
