@@ -2,65 +2,65 @@
 <%@ include file="/common/meta.jsp"%>
 <title> Dynamic Renewal Codes </title>
 
-<script src="<c:url value='/resources/js/datatables/dataTables.bootstrap4.min.js'/>"></script>
-<script src="<c:url value='/resources/js/datatables/jquery.dataTables.min.js'/>"></script>
 <script src="<c:url value='/resources/js/renewalCodes.js'/>"></script>
-
-<!-- Alert -->
-<div class="alert alert-success alert-dismissible fade show customErrorMsg" role="alert" id="greenAlert" style="display:none">
-   <span id="alertMessage"></span>
-  <button type="button" class="close"  aria-label="Close" onclick="$('#greenAlert').hide();">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-
 <div class="col-md-12">
 	<h3 class="mainHeading">
 	</h3>
 <%@ include file="/common/header.jsp"%>
 </div>
-	<div class="tab-content">
-		<div id="tab1" class="tab-pane fade show active "> 
-			<div class="whiteBg tabContent">
-				<div class=" clearfix"></div>
-				<div class="col-sm-12 ">
-					<hr>
+	<div class="container-fluid mt-5">
+		<div  class="pt-3"> 
+			<div class="whiteBg ">
+				<div class="mt-4 row">
+				<div class="col-sm-12 text-right">
+					
+				
+				<button type="button" class="btn btn-dark btn-sm" id="addNew"><i class="fa fa-plus"></i> Add New</button>
+				
 				</div>
-				<div class="col-sm-12 p-0 mt-3">
+				<div class="col-sm-12  mt-3">
 					<table class="table table-bordered  table-striped   mt-4" id="dynamicRenewalCodesTable">
 						<thead>
 							<tr>
 								<th>Sl No</th>
 								<th>Dynamic Code</th>
-								<th>Type</th>
 								<th>Description</th>
-								<th>Active From</th>
-								<th>Active To</th>
+								<th>Status</th>
 								<th>Action</th>
 							</tr>
 						</thead>
 						<tbody>
-							<c:forEach items="${sessionScope.dynamicPriceSelectResponseList}" var="dynamicCodeList">
+							<c:forEach items="${codeModelList}" var="dynamicCodeList" varStatus="counter">
 								<tr>
-									<td><c:out value="${dynamicCodeList.dynamic_price_id}" /></td>
-									<td><c:out value="${dynamicCodeList.dynamic_price_name}" /></td>
-									<td></td>
-									<td><c:out value="${dynamicCodeList.description}" /></td>
-									<td></td>
-									<td></td>
-									<td><a href=# class='btn btn-outline-secondary table-btn' id="editCode" title='Edit'><i class='fa fa-edit'></i></a></td>
+									<td id="dynamic_price_id"><c:out value="${counter.count}" /></td>
+									<td id="dynamic_price_name"><c:out value="${dynamicCodeList.dynamic_price_name}" /></td>
+									<td id="description"><c:out value="${dynamicCodeList.description}" /></td>
+									<td id="status">
+										<c:choose>
+										    <c:when test="${dynamicCodeList.isactive == '1'}">
+										        Active
+										    </c:when>
+										    <c:otherwise>
+										        In-Active
+										    </c:otherwise>
+										</c:choose>	
+									</td>
+									<input type="hidden" id="dynamic_price_id" value="${dynamicCodeList.dynamic_price_id}"/>
+									<td><a href=# class='btn' id="editCode" title='Edit'><i class='fa fa-edit'></i></a></td>
+									
 								</tr>
 							</c:forEach>
 						</tbody>
 				</table>
 				</div>
+				</div>
 			</div>
 		</div>
 		
-		<button type="button" class="btn btn-primary btn-lg btn-block" id="addNew">Click to Add New</button>
+		
 	</div>
 	
-	<!-- Modal -->
+	<!-- Add-Modal -->
 <div class="modal fade" id="addNewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog " style="max-width: 80%;">
         <div class="modal-content">
@@ -72,105 +72,118 @@
             	 <form:form method="POST" modelAttribute="dynamicRenewalCodeModel" action="addNewRenewalCode" id="addNewRenewalCodeForm">
 					<fieldset>
 						<div class="form-group row">
-							<label for="dynamicRenewalCode" class="col-sm-8 col-form-label">Please Enter Dynamic Renewal Code</label>
-							<div class="col-sm-4">
-								<form:input path = "dynamicCode" type="text" class="form-control" id="dynamicRenewalCode" />
+							<label for="dynamicRenewalCode" class="col-sm-4 col-form-label required-field">Dynamic Renewal Code </label>
+							<div class="col-sm-8">
+								<form:input path = "dynamicCode" type="text" class="form-control" id="dynamicRenewalCode" onfocusout="checkRenewalCode(this)"/>
+							</div>
+							<div class="col-sm-12 textError" id="errorDiv1"></div>
+						</div>
+						<div class="form-group row">
+							<label for="description" class="col-sm-4 col-form-label">Description</label>
+							<div class="col-sm-8">
+								<form:input path = "description" type="text" class="form-control" id="description"/>
+							</div>
+						</div>
+						<div class="form-group row">
+						 <label class="col-sm-4 col-form-label" for="exampleCheck1">Status</label>
+							<div class="col-sm-8">
+								<input type="checkbox" data-toggle="toggle" id="toggle-event" data-on="Active" data-off="In-Active">
+								<form:input path="isActive" type="hidden" id="isActive"/>
+							</div>
+						</div>
+						
+					<table class="table table-bordered  table-striped mt-4" id="tableForInstallment">
+						<thead>
+							<tr>
+								<th>From Cycle</th>
+								<th>To Cycle</th>
+								<th>Type</th>
+								<th>Value</th>
+								<th>Currency</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody id="tbodyContainer">
+							
+						</tbody>
+					</table>
+					<div class="col-sm-12 textError" id="errorDiv2"></div>
+				<!-- 	<div class="text-right">
+						<button type="button" class="btn btn-dark btn-sm " id="addNewInstallment" onclick="insNewRow()">Click to Add New</button>
+					</div> -->
+					
+					</fieldset>
+				</form:form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default reset-btn" data-dismiss="modal"  id="cancelAddNewCode">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="addNewRenewalCodeForm()" id="saveNewCode" disabled>Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Modal -->
+
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog " style="max-width: 80%;">
+        <div class="modal-content">
+            <div class="modal-header">
+             <h4 class="modal-title" id="myModalLabel">Create Dynamic Renewal Code</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
+            </div>
+            <div class="modal-body">
+            	 <form:form method="POST" modelAttribute="dynamicRenewalCodeModel" action="saveUpdatedRenewalCode" id="updateRenewalCodeForm">
+					<fieldset>
+					
+						<div class="form-group row">
+							<label for="dynamicRenewalCode" class="col-sm-4 col-form-label required-field">Dynamic Renewal Code</label>
+							<div class="col-sm-8">
+								<form:input path = "dynamicCode" type="text" class="form-control" id="editDynamicRenewalCode"/>
 							</div>
 						</div>
 						<div class="form-group row">
 							<label for="description" class="col-sm-4 col-form-label">Description</label>
 							<div class="col-sm-8">
-								<form:input path = "description" type="text" class="form-control" id="description" />
+								<form:input path = "description" type="text" class="form-control" id="editDescription" />
 							</div>
 						</div>
-						<fieldset class="form-group">
-						    <div class="row">
-						      <legend class="col-form-label col-sm-4 pt-0">Offer Type</legend>
-						      <div class="col-sm-8">
-						        <div class="form-check">
-						          <form:radiobutton path = "offerType" class="form-check-input" name="offerTypeRadios" id="fixed" value="option1"/>
-						          <label class="form-check-label" for="fixed">
-						            Fixed
-						          </label>
-						        </div>
-						        <div class="form-check">
-						          <form:radiobutton path = "offerType" class="form-check-input" name="offerTypeRadios" id="installment" value="option2"/>
-						          <label class="form-check-label" for="installment">
-						           	Installment
-						          </label>
-						        </div>
-						      </div>
-						    </div>
-					  </fieldset>
-					  <div class="form-group row">
-					  <label for="activePeriod" class="col-2 col-form-label">Active Period</label>
-					  <div class="col-4">
-					    <form:input path = "activeFrom" class="form-control" type="date" id="activeFrom"/>
-					  </div>
-					  <div class="col-4">
-					    <form:input path = "activeTo" class="form-control" type="date" id="activeTo"/>
-					  </div>
-					</div>
-					<table class="table table-bordered  table-striped mt-4" id="tableForFixed" style='display:none'>
+						<div class="form-group row">
+						 <label class="col-sm-4 col-form-label" for="is_active_edit">Status</label>
+							<div class="col-sm-8">
+								<input type="checkbox" data-toggle="toggle" id="toggle-event-edit" data-on="Active" data-off="In-Active">
+								<form:input path="isActive" type="hidden" id="isActiveEdit"/>
+							</div>
+						</div>
+					
+					<table class="table table-bordered  table-striped mt-4" id="tableForInstallment" style='display:block'>
 						<thead>
 							<tr>
-								<th style="width: 20%;">From Cycle</th>
-								<th style="width: 20%;">To Cycle</th>
-								<th style="width: 20%;">Value</th>
-								<th style="width: 40%;">Type</th>
-								<th style="width: 20%;">Currency</th>
+								<th>From Cycle</th>
+								<th>To Cycle</th>
+								<th  style="width: 20%;">Type</th>
+								<th>Value</th>
+								<th>Currency</th>
 								<!-- <th style="width: 20%;">Action</th> -->
 							</tr>
 						</thead>
-						<tbody>
-							<tr>
-								<td><form:input path = "renewalCodeDataDetails.fromCycle" type="text" name="fromCycle" class="form-control"/></td>
-								<td><form:input path = "renewalCodeDataDetails.toCycle" type="text" name="toCycle" class="form-control"/></td>
-								<td><form:input path = "renewalCodeDataDetails.value" type="text" name="value" class="form-control"/></td>
-								<td><form:select path="renewalCodeDataDetails.type" class="form-control" name="type">
-								    <form:option value = "Percentage"  label = "Percentage" id="percentageType"></form:option>
-								    <form:option value = "Amount" label = "Amount" id="AmountType"></form:option>
-								 </form:select></td>
-								<td><form:input path = "renewalCodeDataDetails.currency" type="text" name="currency" class="form-control" id="currency"/></td>
-								<!-- <td><a href=# class='btn btn-outline-secondary table-btn' id="editCode" title='Edit Renewal Code'><i class='fa fa-edit'></i></a></td> -->
-							</tr>
+						<tbody id="editTableBody">
 						</tbody>
 					</table>
-					
-					<table class="table table-bordered  table-striped mt-4" id="tableForInstallment" style='display:none'>
-						<thead>
-							<tr>
-								<th style="width: 20%;">From Cycle</th>
-								<th style="width: 20%;">To Cycle</th>
-								<th style="width: 20%;">Value</th>
-								<th style="width: 30%;">Type</th>
-								<th style="width: 20%;">Currency</th>
-								<th style="width: 20%;">Action</th>
-							</tr>
-						</thead>
-						<tbody>
-								<tr>
-								<td><form:input path = "renewalCodeDataDetails.fromCycle" type="text" name="fromCycle" class="form-control"/></td>
-								<td><form:input path = "renewalCodeDataDetails.toCycle" type="text" name="toCycle" class="form-control"/></td>
-								<td><form:input path = "renewalCodeDataDetails.value" type="text" name="value" class="form-control"/></td>
-								<td><form:select path="renewalCodeDataDetails.type" class="form-control" name="type">
-								    <form:option value = "Percentage"  label = "Percentage" id="percentageType"></form:option>
-								    <form:option value = "Amount" label = "Amount" id="AmountType"></form:option>
-								 </form:select></td>
-								<td><form:input path = "renewalCodeDataDetails.currency" type="text" name="currency" class="form-control" id="currency"/></td>
-								<td><!-- <a href=# class='btn btn-outline-secondary table-btn' id="editCode" title='Edit'><i class='fa fa-edit'></i></a> --> <a href=# class='btn btn-outline-secondary table-btn' id="deleteCode" title='Delete' ><i class='fa fa-trash'></i></a>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<button type="button" class="btn btn-primary btn-lg btn-block" id="addNewInstallment" style="display: none" onclick="insRow()">Click to Add New</button>
+					<div class="col-sm-12 textError" id="errorDiv3"></div>
+					<!-- <button type="button" class="btn btn-primary btn-lg btn-block" id="editInstallment" style="display: block" onclick="insEditRow()">Click to Add New</button> -->
 					</fieldset>
 				</form:form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary" form="addNewRenewalCodeForm" id="saveNewCode">Save changes</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal"  id="cancelCode">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="updateRenewalCodeForm()" id="updateCode">Save changes</button>
             </div>
         </div>
     </div>
 </div>
+
+<c:if test="${not empty priceNameList}">
+	<input type="hidden" id="priceNameList" value="${priceNameList}"/>
+</c:if>
+

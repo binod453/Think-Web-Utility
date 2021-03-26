@@ -20,4 +20,10 @@ public interface DynamicRenewalCodeService {
 
 	public LoginModel setLoginDetails(JsonObject jsonObj);
 
+	public int getMaxCodeId(LoginModel loginModel) throws ServiceException, RemoteException;
+
+	public DynamicRenewalCodeModel getDynamicCodesById(LoginModel userDetails, int id) throws ServiceException, RemoteException;
+
+	public int updateDynamicRenewalCode(DynamicRenewalCodeModel dynamicRenewalCodeModel) throws ServiceException, RemoteException;
+
 }

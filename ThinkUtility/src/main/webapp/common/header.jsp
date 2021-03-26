@@ -1,6 +1,6 @@
 <header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top blueBg">
-	<a class="navbar-brand" href="articles"> <img src="" class="" alt="" /> Dynamic Renewal Codes </a>
+  <nav class="navbar navbar-expand-md  navbar-dark bg-dark fixed-top ">
+	<a class="navbar-brand" href="dynamicRenewalCodes"> <img src="" class="" alt="" /> Dynamic Renewal Codes </a>
 	
 	<div id="navbarsExampleDefault" class="ml-auto">
 	  <ul class="nav justify-content-end topLinks">

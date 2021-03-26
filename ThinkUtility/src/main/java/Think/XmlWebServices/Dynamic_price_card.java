@@ -327,7 +327,7 @@ public class Dynamic_price_card  implements java.io.Serializable {
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("percentage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "Percentage"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "percentage"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "decimal"));
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);

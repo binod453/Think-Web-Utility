@@ -1,5 +1,6 @@
 package com.mps.think.utility.serviceImpl;
 
+import java.math.BigDecimal;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Service;
 import com.google.gson.JsonObject;
 import com.mps.think.utility.model.DynamicRenewalCodeModel;
 import com.mps.think.utility.model.LoginModel;
+import com.mps.think.utility.model.RenewalCodeDataDetails;
 import com.mps.think.utility.service.DynamicRenewalCodeService;
 
 import Think.XmlWebServices.Dynamic_price;
@@ -23,9 +25,14 @@ import Think.XmlWebServices.Dynamic_price_add_request;
 import Think.XmlWebServices.Dynamic_price_add_response;
 import Think.XmlWebServices.Dynamic_price_card;
 import Think.XmlWebServices.Dynamic_price_card_add_request;
+import Think.XmlWebServices.Dynamic_price_card_add_response;
+import Think.XmlWebServices.Dynamic_price_card_edit_request;
+import Think.XmlWebServices.Dynamic_price_card_edit_response;
 import Think.XmlWebServices.Dynamic_price_card_select_request;
 import Think.XmlWebServices.Dynamic_price_card_select_response;
 import Think.XmlWebServices.Dynamic_price_card_select_responseDynamic_price_card_select;
+import Think.XmlWebServices.Dynamic_price_edit_request;
+import Think.XmlWebServices.Dynamic_price_edit_response;
 import Think.XmlWebServices.Dynamic_price_select_request;
 import Think.XmlWebServices.Dynamic_price_select_response;
 import Think.XmlWebServices.Dynamic_price_select_responseDynamic_price_id;
@@ -41,11 +48,10 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService {
 
-	private static final Comparator<DynamicRenewalCodeModel> EMPTY_COMPARATOR = (e1, e2) -> 0;
-	
 	@Override
-	public List<Dynamic_price_select_responseDynamic_price_select> getDynamicCodesList(LoginModel loginModel) throws ServiceException, RemoteException {
-		
+	public List<Dynamic_price_select_responseDynamic_price_select> getDynamicCodesList(LoginModel loginModel)
+			throws ServiceException, RemoteException {
+
 		List<Dynamic_price_select_responseDynamic_price_select> dynamicPriceSelectResponse = new ArrayList<Dynamic_price_select_responseDynamic_price_select>();
 
 		ThinkSoap soap = null;
@@ -53,118 +59,60 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 		soap = locator.getThinkSoap();
 
 		User_login_data loginData = new User_login_data();
-		Dynamic_price_select_request dynamicPriceSelectrequest= new Dynamic_price_select_request();
-		
+		Dynamic_price_select_request dynamicPriceSelectrequest = new Dynamic_price_select_request();
+
 		loginData.setLogin(loginModel.getUsername());
 		loginData.setPassword(loginModel.getPassword());
-		
+
 		dynamicPriceSelectrequest.setDsn(loginModel.getDsn());
 		dynamicPriceSelectrequest.setUser_login_data(loginData);
-		
+
 		dynamicPriceSelectResponse = Stream.of(soap.dynamicPriceSelect(dynamicPriceSelectrequest))
-											.sorted(Comparator.comparingInt(Dynamic_price_select_responseDynamic_price_select :: getDynamic_price_id))
-											.collect(Collectors.toList());
-		
-//		
-//		Dynamic_price_card_select_request dynamicPriceCardSelectrequest = new Dynamic_price_card_select_request();
-//		dynamicPriceCardSelectrequest.setDsn(loginModel.getDsn());
-//		dynamicPriceCardSelectrequest.setUser_login_data(loginData);
-//		
-//		List<Dynamic_price_card_select_responseDynamic_price_card_select> dynamicPriceCardSelectRespose = Arrays.asList(soap.dynamicPriceCardSelect(dynamicPriceCardSelectrequest));
-//		
-//		List<DynamicRenewalCodeModel> model = new ArrayList<DynamicRenewalCodeModel>();
-//		
-//		
-//		for(Dynamic_price_select_responseDynamic_price_select select : dynamicPriceSelectResponse) {
-//			DynamicRenewalCodeModel m1 = new DynamicRenewalCodeModel();
-//			for(Dynamic_price_card_select_responseDynamic_price_card_select cardSelect : dynamicPriceCardSelectRespose) {
-//				if(select.getDynamic_price_id() == cardSelect.getDynamic_price_id()) {
-//					m1.setSlNo(select.getDynamic_price_id());
-//					m1.setActiveFrom(cardSelect.get);
-//					m1.setActiveTo(activeTo);
-//					m1.setDescription(description);
-//					m1.setDynamicCode(dynamicCode);
-//					m1.setOfferType(offerType);
-//				}else {
-//					
-//				}
-//			}
-//		}
-//		
-//		
-//		
-//		
-//		
-//		
-//		
-//		model.stream().forEach(s-> s.setActiveFrom(activeFrom););
-//		
-//		List<> pageData = Arrays.asList(dynamicPriceSelectResponse);
-		
+				.sorted(Comparator.comparingInt(Dynamic_price_select_responseDynamic_price_select::getDynamic_price_id))
+				.collect(Collectors.toList());
+
 		return dynamicPriceSelectResponse;
 	}
 
 	@Override
-	public int addNewDynamicRenewalCode(DynamicRenewalCodeModel dynamicRenewalCodeModel) throws ServiceException, RemoteException {
+	public int addNewDynamicRenewalCode(DynamicRenewalCodeModel dynamicRenewalCodeModel)
+			throws ServiceException, RemoteException {
 		ThinkSoap soap = null;
 		ThinkWSLocator locator = new ThinkWSLocator();
 		soap = locator.getThinkSoap();
 		
-		User_login_data loginData = new User_login_data();
-		Dynamic_price dynamicPrice = new Dynamic_price();
-		Dynamic_price_card dynamicPriceCard = new Dynamic_price_card();
+		int seq=0;
 		
-		Dynamic_price_add_request priceAddRequest = setDynamicPriceAddRequest(dynamicRenewalCodeModel, loginData, dynamicPrice);
-		
-		Dynamic_price_add_response dynamicPriceAddResponse = new Dynamic_price_add_response();
-		dynamicPriceAddResponse = soap.dynamicPriceAdd(priceAddRequest);
-		System.out.println(dynamicPriceAddResponse.getDynamic_price().getDynamic_price_id());
-		
-		Dynamic_price_card_add_request dynamicPriceCardAddRequest = setDynamicPriceCardAddRequest(dynamicRenewalCodeModel, loginData, dynamicPriceCard);
-		
-		return 0;
-	}
+		//Check whether the data is duplicate or not
+//		int status = checkDuplicateData(dynamicRenewalCodeModel);
+//		if(status == 1) {
+//			return status;
+//		}else {
+			User_login_data loginData = new User_login_data();
+			Dynamic_price dynamicPrice = new Dynamic_price();
 
-	private Dynamic_price_card_add_request setDynamicPriceCardAddRequest(
-			DynamicRenewalCodeModel dynamicRenewalCodeModel, User_login_data loginData, Dynamic_price_card dynamicPriceCard) {
-		Dynamic_price_card_add_request priceCardAddRequest = new Dynamic_price_card_add_request();
+			List<RenewalCodeDataDetails> renewalPriceCardsList = dynamicRenewalCodeModel.getRenewalCodeDataDetailsList();
+			
+//			List<RenewalCodeDataDetails> filteredRenewalPriceCardsList = renewalPriceCardsList.stream().filter(data -> data.getFromCycle() > 0).collect(Collectors.toList());
+			renewalPriceCardsList.removeIf(data -> data.getFromCycle() == 0);
+			
+
+			Dynamic_price_add_request priceAddRequest = setDynamicPriceAddRequest(dynamicRenewalCodeModel, loginData,
+					dynamicPrice);
+			soap.dynamicPriceAdd(priceAddRequest);
+
+			for (RenewalCodeDataDetails priceCardDetail : renewalPriceCardsList) {
+				priceCardDetail.setDynamicPriceSeq(seq++);
+				Dynamic_price_card dynamicPriceCard = new Dynamic_price_card();
+				Dynamic_price_card_add_request dynamicPriceCardAddRequest = setDynamicPriceCardAddRequest(
+						dynamicRenewalCodeModel, priceCardDetail, loginData, dynamicPriceCard);
+				soap.dynamicPricecardAdd(dynamicPriceCardAddRequest);
+			}
+
+			return 0;
+		//}
 		
-		loginData.setLogin(dynamicRenewalCodeModel.getLoginModel().getUsername());
-		loginData.setPassword(dynamicRenewalCodeModel.getLoginModel().getPassword());
-		priceCardAddRequest.setDsn(dynamicRenewalCodeModel.getLoginModel().getDsn());
 		
-		dynamicPriceCard.setFrom_cycle(Objects.isNull(dynamicRenewalCodeModel.getActiveFrom()) ? 0 : dynamicRenewalCodeModel.getActiveFrom());
-		dynamicPriceCard.setTo_cycle(Objects.isNull(dynamicRenewalCodeModel.getActiveTo()) ? 0 : dynamicRenewalCodeModel.getActiveTo());
-	//	dynamicPriceCard.setDynamic_price_id(dynamic_price_id);
-	//	dynamicPriceCard.setDynamic_price_seq(dynamic_price_seq);
-	//	dynamicPriceCard.setPrice(price);
-//		dynamicPriceCard.setDynamic_price_type(dynamic_price_type);
-//		dynamicPriceCard.setDynamic_price_type(dynamic_price_type);
-//		dynamicPriceCard.setCurrency(currency);
-		
-		priceCardAddRequest.setUser_login_data(loginData);
-		priceCardAddRequest.setDynamic_price_card(dynamicPriceCard);
-		
-		return null;
-	}
-
-	private Dynamic_price_add_request setDynamicPriceAddRequest(DynamicRenewalCodeModel dynamicRenewalCodeModel,
-			User_login_data loginData, Dynamic_price dynamicPrice) {
-		Dynamic_price_add_request priceAddRequest = new Dynamic_price_add_request();
-
-		dynamicPrice.setDynamic_price_name(dynamicRenewalCodeModel.getDynamicCode());
-		dynamicPrice.setDescription(dynamicRenewalCodeModel.getDescription());
-		// dynamicPrice.setIsactive(isactive);
-		dynamicPrice.setDynamic_price_id(dynamicRenewalCodeModel.getSlNo());
-
-		loginData.setLogin(dynamicRenewalCodeModel.getLoginModel().getUsername());
-		loginData.setPassword(dynamicRenewalCodeModel.getLoginModel().getPassword());
-		priceAddRequest.setDsn(dynamicRenewalCodeModel.getLoginModel().getDsn());
-
-		priceAddRequest.setUser_login_data(loginData);
-		priceAddRequest.setDynamic_price(dynamicPrice);
-
-		return priceAddRequest;
 	}
 
 	@Override
@@ -178,77 +126,231 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 		return loginModel;
 	}
 
-//	@Override
-//	public Page<DynamicRenewalCodeModel> getDynamicCodes(PagingRequest pagingRequest) {
-//		ObjectMapper objectMapper = new ObjectMapper();
-//
-//		try {
-//			List<DynamicRenewalCodeModel> dynamicCodes = objectMapper.readValue(
-//					getClass().getClassLoader().getResourceAsStream("DummyData.json"),
-//					new TypeReference<List<DynamicRenewalCodeModel>>() {
-//					});
-//
-//			return getPage(dynamicCodes, pagingRequest);
-//
-//		} catch (IOException e) {
-//			log.error(e.getMessage(), e);
-//		}
-//
-//		return new Page<>();
-//	}
-//
-//	private Page<DynamicRenewalCodeModel> getPage(List<DynamicRenewalCodeModel> dynamicCodes,
-//			PagingRequest pagingRequest) {
-//		List<DynamicRenewalCodeModel> filtered = dynamicCodes.stream().sorted(sortDynamicCodes(pagingRequest))
-//				.filter(filterDynamicCodes(pagingRequest)).skip(pagingRequest.getStart())
-//				.limit(pagingRequest.getLength()).collect(Collectors.toList());
-//
-//		long count = dynamicCodes.stream().filter(filterDynamicCodes(pagingRequest)).count();
-//
-//		Page<DynamicRenewalCodeModel> page = new Page<>(filtered);
-//		page.setRecordsFiltered((int) count);
-//		page.setRecordsTotal((int) count);
-//		page.setDraw(pagingRequest.getDraw());
-//
-//		return page;
-//	}
-//
-//	private Predicate<DynamicRenewalCodeModel> filterDynamicCodes(PagingRequest pagingRequest) {
-//		if (pagingRequest.getSearch() == null || StringUtils.isEmpty(pagingRequest.getSearch().getValue())) {
-//			return employee -> true;
-//		}
-//
-//		String value = pagingRequest.getSearch().getValue();
-//
-//		return dynamicCode -> dynamicCode.getDynamicCode().toLowerCase().contains(value)
-//				|| dynamicCode.getOfferType().toLowerCase().contains(value)
-//				|| dynamicCode.getDescription().toLowerCase().contains(value);
-//	}
-//
-//	private Comparator<DynamicRenewalCodeModel> sortDynamicCodes(PagingRequest pagingRequest) {
-//		if (pagingRequest.getOrder() == null) {
-//			return EMPTY_COMPARATOR;
-//		}
-//
-//		try {
-//			Order order = pagingRequest.getOrder().get(0);
-//
-//			int columnIndex = order.getColumn();
-//			Column column = pagingRequest.getColumns().get(columnIndex);
-//
-//			Comparator<DynamicRenewalCodeModel> comparator = DynamicRenewalCodeComparator
-//					.getComparator(column.getData(), order.getDir());
-//			if (comparator == null) {
-//				return EMPTY_COMPARATOR;
-//			}
-//
-//			return comparator;
-//
-//		} catch (Exception e) {
-//			log.error(e.getMessage(), e);
-//		}
-//
-//		return EMPTY_COMPARATOR;
-//	}
+	@Override
+	public int getMaxCodeId(LoginModel loginModel) throws ServiceException, RemoteException {
+		List<Dynamic_price_select_responseDynamic_price_select> data = getDynamicCodesList(loginModel);
+		int result = data.get(data.size() - 1).getDynamic_price_id();
+		return result;
+	}
 
+	@Override
+	public DynamicRenewalCodeModel getDynamicCodesById(LoginModel userDetails, int id)
+			throws ServiceException, RemoteException {
+		ThinkSoap soap = null;
+		ThinkWSLocator locator = new ThinkWSLocator();
+		soap = locator.getThinkSoap();
+
+		User_login_data loginData = new User_login_data();
+		Dynamic_price_select_request dynamicPriceSelectrequest = new Dynamic_price_select_request();
+		Dynamic_price_card_select_request dynamicPriceCardSelectrequest = new Dynamic_price_card_select_request();
+
+		loginData.setLogin(userDetails.getUsername());
+		loginData.setPassword(userDetails.getPassword());
+
+		dynamicPriceSelectrequest.setDsn(userDetails.getDsn());
+		dynamicPriceSelectrequest.setUser_login_data(loginData);
+		dynamicPriceSelectrequest.setDynamic_price_id(id);
+
+		Dynamic_price_select_responseDynamic_price_select[] getCodeDetails = soap
+				.dynamicPriceSelect(dynamicPriceSelectrequest);
+
+		dynamicPriceCardSelectrequest.setDsn(userDetails.getDsn());
+		dynamicPriceCardSelectrequest.setDynamic_price_id(id);
+		dynamicPriceCardSelectrequest.setUser_login_data(loginData);
+
+		Dynamic_price_card_select_responseDynamic_price_card_select[] getPriceCardDetails = soap
+				.dynamicPriceCardSelect(dynamicPriceCardSelectrequest);
+
+		DynamicRenewalCodeModel dynamicRenewalCodeModel = new DynamicRenewalCodeModel();
+		List<RenewalCodeDataDetails> codeDataDetailsList = new ArrayList<RenewalCodeDataDetails>();
+
+		if (getCodeDetails != null && getCodeDetails.length > 0) {
+			dynamicRenewalCodeModel.setDescription(getCodeDetails[0].getDescription());
+			dynamicRenewalCodeModel.setDynamicCode(getCodeDetails[0].getDynamic_price_name());
+			dynamicRenewalCodeModel.setIsActive(getCodeDetails[0].getIsactive());
+		}
+		if (getPriceCardDetails != null && getPriceCardDetails.length > 0) {
+			for (Dynamic_price_card_select_responseDynamic_price_card_select select : getPriceCardDetails) {
+				RenewalCodeDataDetails codeDataDetails = new RenewalCodeDataDetails();
+				codeDataDetails.setFromCycle(Objects.isNull(select.getFrom_cycle()) ? 0 : select.getFrom_cycle());
+				codeDataDetails.setToCycle(Objects.isNull(select.getTo_cycle()) ? 0 : select.getTo_cycle());
+				if (!Objects.isNull(select.getPrice()) && select.getPrice().intValueExact() > 0) {
+					codeDataDetails.setValue(
+							Objects.isNull(select.getPrice().intValueExact()) ? 0 : select.getPrice().intValueExact());
+				}
+				else if (!Objects.isNull(select.getPercentage()) && select.getPercentage().intValueExact() > 0) {
+					codeDataDetails.setValue(Objects.isNull(select.getPercentage().intValueExact()) ? 0
+							: select.getPercentage().intValueExact());
+				}
+				else {
+					codeDataDetails.setValue(0);
+				}
+				codeDataDetails.setType(
+						Objects.isNull(select.getDynamic_price_type()) ? 0 : select.getDynamic_price_type());
+				codeDataDetails.setCurrency(Objects.isNull(select.getCurrency()) ? "" : select.getCurrency());
+
+				codeDataDetailsList.add(codeDataDetails);
+			}
+			dynamicRenewalCodeModel.setRenewalCodeDataDetailsList(codeDataDetailsList);
+		}
+
+		return dynamicRenewalCodeModel;
+	}
+
+	@Override
+	public int updateDynamicRenewalCode(DynamicRenewalCodeModel dynamicRenewalCodeModel)
+			throws ServiceException, RemoteException {
+		ThinkSoap soap = null;
+		ThinkWSLocator locator = new ThinkWSLocator();
+		soap = locator.getThinkSoap();
+
+		User_login_data loginData = new User_login_data();
+		Dynamic_price dynamicPrice = new Dynamic_price();
+		
+		List<RenewalCodeDataDetails> editRenewalPriceCardsList = dynamicRenewalCodeModel.getRenewalCodeDataDetailsList();
+
+		Dynamic_price_edit_request priceEditRequest = setDynamicPriceEditRequest(dynamicRenewalCodeModel, loginData,
+				dynamicPrice);
+		soap.dynamicPriceEdit(priceEditRequest);
+
+		for (RenewalCodeDataDetails priceCardDetail : editRenewalPriceCardsList) {
+			Dynamic_price_card dynamicPriceCard = new Dynamic_price_card();
+			Dynamic_price_card_edit_request dynamicPriceCardEditRequest = setDynamicPriceCardEditRequest(
+					dynamicRenewalCodeModel, priceCardDetail, loginData, dynamicPriceCard);
+			soap.dynamicPricecardEdit(dynamicPriceCardEditRequest);
+		}
+
+		return 0;
+	}
+
+	private Dynamic_price_card_edit_request setDynamicPriceCardEditRequest(
+			DynamicRenewalCodeModel dynamicRenewalCodeModel, RenewalCodeDataDetails priceCardDetail, User_login_data loginData,
+			Dynamic_price_card dynamicPriceCard) {
+		Dynamic_price_card_edit_request priceCardEditRequest = new Dynamic_price_card_edit_request();
+
+		loginData.setLogin(dynamicRenewalCodeModel.getLoginModel().getUsername());
+		loginData.setPassword(dynamicRenewalCodeModel.getLoginModel().getPassword());
+		priceCardEditRequest.setDsn(dynamicRenewalCodeModel.getLoginModel().getDsn());
+
+		dynamicPriceCard
+				.setFrom_cycle(Objects.isNull(priceCardDetail.getFromCycle()) ? 0
+						: priceCardDetail.getFromCycle());
+		dynamicPriceCard
+				.setTo_cycle(Objects.isNull(priceCardDetail.getToCycle()) ? 0
+						: priceCardDetail.getToCycle());
+		if (!Objects.isNull(priceCardDetail.getType())
+				&& priceCardDetail.getType() == 0) {
+			dynamicPriceCard.setPrice(
+					Objects.isNull(priceCardDetail.getValue()) ? BigDecimal.ZERO
+							: BigDecimal.valueOf(priceCardDetail.getValue()));
+		} else {
+			dynamicPriceCard.setPercentage(
+					Objects.isNull(priceCardDetail.getValue()) ? BigDecimal.ZERO
+							: BigDecimal.valueOf(priceCardDetail.getValue()));
+		}
+		dynamicPriceCard.setDynamic_price_type(
+				Objects.isNull(priceCardDetail.getType()) ? 0
+						: priceCardDetail.getType());
+		dynamicPriceCard
+				.setCurrency(Objects.isNull(priceCardDetail.getCurrency()) ? ""
+						: priceCardDetail.getCurrency());
+		dynamicPriceCard.setDynamic_price_id(dynamicRenewalCodeModel.getSlNo());
+		dynamicPriceCard.setDynamic_price_seq(priceCardDetail.getDynamicPriceSeq());
+
+		priceCardEditRequest.setUser_login_data(loginData);
+		priceCardEditRequest.setDynamic_price_card(dynamicPriceCard);
+		priceCardEditRequest.setSubmit(true);
+
+		return priceCardEditRequest;
+	}
+
+	private Dynamic_price_edit_request setDynamicPriceEditRequest(DynamicRenewalCodeModel dynamicRenewalCodeModel,
+			User_login_data loginData, Dynamic_price dynamicPrice) {
+		Dynamic_price_edit_request priceEditRequest = new Dynamic_price_edit_request();
+
+		dynamicPrice.setDynamic_price_name(dynamicRenewalCodeModel.getDynamicCode());
+		dynamicPrice.setDescription(dynamicRenewalCodeModel.getDescription());
+		dynamicPrice.setDynamic_price_id(dynamicRenewalCodeModel.getSlNo());
+		dynamicPrice.setIsactive(dynamicRenewalCodeModel.getIsActive());
+
+		loginData.setLogin(dynamicRenewalCodeModel.getLoginModel().getUsername());
+		loginData.setPassword(dynamicRenewalCodeModel.getLoginModel().getPassword());
+		priceEditRequest.setDsn(dynamicRenewalCodeModel.getLoginModel().getDsn());
+
+		priceEditRequest.setUser_login_data(loginData);
+		priceEditRequest.setDynamic_price(dynamicPrice);
+		priceEditRequest.setSubmit(true);
+
+		return priceEditRequest;
+	}
+
+	private Dynamic_price_card_add_request setDynamicPriceCardAddRequest(
+			DynamicRenewalCodeModel dynamicRenewalCodeModel, RenewalCodeDataDetails priceCardDetail,
+			User_login_data loginData, Dynamic_price_card dynamicPriceCard) {
+		Dynamic_price_card_add_request priceCardAddRequest = new Dynamic_price_card_add_request();
+
+		loginData.setLogin(dynamicRenewalCodeModel.getLoginModel().getUsername());
+		loginData.setPassword(dynamicRenewalCodeModel.getLoginModel().getPassword());
+		priceCardAddRequest.setDsn(dynamicRenewalCodeModel.getLoginModel().getDsn());
+
+		dynamicPriceCard
+				.setFrom_cycle(Objects.isNull(priceCardDetail.getFromCycle()) ? 0 : priceCardDetail.getFromCycle());
+		dynamicPriceCard.setTo_cycle(Objects.isNull(priceCardDetail.getToCycle()) ? 0 : priceCardDetail.getToCycle());
+		if (!Objects.isNull(priceCardDetail.getType()) && priceCardDetail.getType() == 0) {
+			dynamicPriceCard.setPrice(Objects.isNull(priceCardDetail.getValue()) ? BigDecimal.ZERO
+					: BigDecimal.valueOf(priceCardDetail.getValue()));
+		} else {
+			dynamicPriceCard.setPercentage(Objects.isNull(priceCardDetail.getValue()) ? BigDecimal.ZERO
+					: BigDecimal.valueOf(priceCardDetail.getValue()));
+		}
+		dynamicPriceCard.setDynamic_price_type(
+				Objects.isNull(priceCardDetail.getType()) ? 0 : priceCardDetail.getType());
+		dynamicPriceCard
+				.setCurrency(Objects.isNull(priceCardDetail.getCurrency()) ? "" : priceCardDetail.getCurrency());
+
+		dynamicPriceCard.setDynamic_price_id(dynamicRenewalCodeModel.getSlNo());
+		dynamicPriceCard.setDynamic_price_seq(priceCardDetail.getDynamicPriceSeq());
+
+		priceCardAddRequest.setUser_login_data(loginData);
+		priceCardAddRequest.setDynamic_price_card(dynamicPriceCard);
+		priceCardAddRequest.setSubmit(true);
+
+		return priceCardAddRequest;
+	}
+
+	private Dynamic_price_add_request setDynamicPriceAddRequest(DynamicRenewalCodeModel dynamicRenewalCodeModel,
+			User_login_data loginData, Dynamic_price dynamicPrice) {
+		Dynamic_price_add_request priceAddRequest = new Dynamic_price_add_request();
+
+		dynamicPrice.setDynamic_price_name(dynamicRenewalCodeModel.getDynamicCode());
+		dynamicPrice.setDescription(dynamicRenewalCodeModel.getDescription());
+		dynamicPrice.setDynamic_price_id(dynamicRenewalCodeModel.getSlNo());
+		dynamicPrice.setIsactive(dynamicRenewalCodeModel.getIsActive());
+
+		loginData.setLogin(dynamicRenewalCodeModel.getLoginModel().getUsername());
+		loginData.setPassword(dynamicRenewalCodeModel.getLoginModel().getPassword());
+		priceAddRequest.setDsn(dynamicRenewalCodeModel.getLoginModel().getDsn());
+
+		priceAddRequest.setUser_login_data(loginData);
+		priceAddRequest.setDynamic_price(dynamicPrice);
+		priceAddRequest.setSubmit(true);
+
+		return priceAddRequest;
+	}
+
+	private int checkDuplicateData(DynamicRenewalCodeModel dynamicRenewalCodeModel) throws RemoteException, ServiceException {
+		List<Dynamic_price_select_responseDynamic_price_select> dataList = getDynamicCodesList(dynamicRenewalCodeModel.getLoginModel());
+		Dynamic_price_select_responseDynamic_price_select unique = dataList.stream()
+																			.filter(data -> data.getDynamic_price_name().equals(dynamicRenewalCodeModel.getDynamicCode()))
+																			.findAny()
+																			.orElse(null);
+		
+		if(unique != null) {
+			return 1;
+		}
+		else {
+			return 0;
+		}
+		
+	}
 }

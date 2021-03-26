@@ -2,6 +2,7 @@ package com.mps.think.utility.model;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.List;
 
 import lombok.Data;
 
@@ -16,5 +17,7 @@ public class DynamicRenewalCodeModel implements Serializable{
 	private int activeFrom;
 	private int activeTo;
 	private RenewalCodeDataDetails renewalCodeDataDetails;
+	private List<RenewalCodeDataDetails> renewalCodeDataDetailsList;
 	private LoginModel loginModel;
+	private int isActive;
 }

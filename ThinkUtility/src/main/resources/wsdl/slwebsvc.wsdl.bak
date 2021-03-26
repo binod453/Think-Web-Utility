@@ -198,7 +198,7 @@
           <xsd:attribute name="dsn" type="xsd:string" />
         </xsd:complexType>
       </xsd:element>
-	   <xsd:element name="dynamic_price_select_response">
+	 	  <xsd:element name="dynamic_price_select_response">
         <xsd:complexType>
           <xsd:sequence>
 		  <xsd:element name="dynamic_price_select" minOccurs="0" maxOccurs="unbounded">
@@ -1180,7 +1180,7 @@
 			<xsd:element name="dynamic_price_type" type="xsd:int" minOccurs="0" />
             <xsd:element name="currency" type="xsd:string" minOccurs="0" />
             <xsd:element name="price" type="xsd:decimal" />
-            <xsd:element name="percentage" type="xsd:decimal" nillable="true" />
+            <xsd:element name="Percentage" type="xsd:decimal" nillable="true" />
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
@@ -1197,7 +1197,7 @@
 			<xsd:element name="dynamic_price_type" type="xsd:int" minOccurs="0" />
             <xsd:element name="currency" type="xsd:string" minOccurs="0" />
             <xsd:element name="price" type="xsd:decimal" />
-            <xsd:element name="percentage" type="xsd:decimal" nillable="true" />
+            <xsd:element name="Percentage" type="xsd:decimal" nillable="true" />
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>

@@ -12,6 +12,9 @@ public class RenewalCodeDataDetails implements Serializable{
 	private int fromCycle;
 	private int toCycle;
 	private int value;
-	private String type;
+	private int percentageValue;
+	private int type;
 	private String currency;
+	private int currencyType;
+	private int dynamicPriceSeq;
 }

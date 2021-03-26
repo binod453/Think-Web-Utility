@@ -18,17 +18,17 @@ public class Dynamic_price_card_select_responseDynamic_price_card_select  implem
 
     private int dynamic_price_seq;  // attribute
 
-    private java.lang.String from_cycle;  // attribute
+    private int from_cycle;  // attribute
 
-    private java.lang.String to_cycle;  // attribute
+    private int to_cycle;  // attribute
 
     private int dynamic_price_type;  // attribute
 
     private java.lang.String currency;  // attribute
 
-    private java.lang.String price;  // attribute
+    private java.math.BigDecimal price;  // attribute
 
-    private int percentage;  // attribute
+    private java.math.BigDecimal percentage;  // attribute
 
     public Dynamic_price_card_select_responseDynamic_price_card_select() {
     }
@@ -39,12 +39,12 @@ public class Dynamic_price_card_select_responseDynamic_price_card_select  implem
            java.lang.String description,
            int isactive,
            int dynamic_price_seq,
-           java.lang.String from_cycle,
-           java.lang.String to_cycle,
+           int from_cycle,
+           int to_cycle,
            int dynamic_price_type,
            java.lang.String currency,
-           java.lang.String price,
-           int percentage) {
+           java.math.BigDecimal price,
+           java.math.BigDecimal percentage) {
            this.dynamic_price_id = dynamic_price_id;
            this.dynamic_price_name = dynamic_price_name;
            this.description = description;
@@ -164,7 +164,7 @@ public class Dynamic_price_card_select_responseDynamic_price_card_select  implem
      * 
      * @return from_cycle
      */
-    public java.lang.String getFrom_cycle() {
+    public int getFrom_cycle() {
         return from_cycle;
     }
 
@@ -174,7 +174,7 @@ public class Dynamic_price_card_select_responseDynamic_price_card_select  implem
      * 
      * @param from_cycle
      */
-    public void setFrom_cycle(java.lang.String from_cycle) {
+    public void setFrom_cycle(int from_cycle) {
         this.from_cycle = from_cycle;
     }
 
@@ -184,7 +184,7 @@ public class Dynamic_price_card_select_responseDynamic_price_card_select  implem
      * 
      * @return to_cycle
      */
-    public java.lang.String getTo_cycle() {
+    public int getTo_cycle() {
         return to_cycle;
     }
 
@@ -194,7 +194,7 @@ public class Dynamic_price_card_select_responseDynamic_price_card_select  implem
      * 
      * @param to_cycle
      */
-    public void setTo_cycle(java.lang.String to_cycle) {
+    public void setTo_cycle(int to_cycle) {
         this.to_cycle = to_cycle;
     }
 
@@ -244,7 +244,7 @@ public class Dynamic_price_card_select_responseDynamic_price_card_select  implem
      * 
      * @return price
      */
-    public java.lang.String getPrice() {
+    public java.math.BigDecimal getPrice() {
         return price;
     }
 
@@ -254,7 +254,7 @@ public class Dynamic_price_card_select_responseDynamic_price_card_select  implem
      * 
      * @param price
      */
-    public void setPrice(java.lang.String price) {
+    public void setPrice(java.math.BigDecimal price) {
         this.price = price;
     }
 
@@ -264,7 +264,7 @@ public class Dynamic_price_card_select_responseDynamic_price_card_select  implem
      * 
      * @return percentage
      */
-    public int getPercentage() {
+    public java.math.BigDecimal getPercentage() {
         return percentage;
     }
 
@@ -274,7 +274,7 @@ public class Dynamic_price_card_select_responseDynamic_price_card_select  implem
      * 
      * @param percentage
      */
-    public void setPercentage(int percentage) {
+    public void setPercentage(java.math.BigDecimal percentage) {
         this.percentage = percentage;
     }
 
@@ -299,12 +299,8 @@ public class Dynamic_price_card_select_responseDynamic_price_card_select  implem
               this.description.equals(other.getDescription()))) &&
             this.isactive == other.getIsactive() &&
             this.dynamic_price_seq == other.getDynamic_price_seq() &&
-            ((this.from_cycle==null && other.getFrom_cycle()==null) || 
-             (this.from_cycle!=null &&
-              this.from_cycle.equals(other.getFrom_cycle()))) &&
-            ((this.to_cycle==null && other.getTo_cycle()==null) || 
-             (this.to_cycle!=null &&
-              this.to_cycle.equals(other.getTo_cycle()))) &&
+            this.from_cycle == other.getFrom_cycle() &&
+            this.to_cycle == other.getTo_cycle() &&
             this.dynamic_price_type == other.getDynamic_price_type() &&
             ((this.currency==null && other.getCurrency()==null) || 
              (this.currency!=null &&
@@ -312,7 +308,9 @@ public class Dynamic_price_card_select_responseDynamic_price_card_select  implem
             ((this.price==null && other.getPrice()==null) || 
              (this.price!=null &&
               this.price.equals(other.getPrice()))) &&
-            this.percentage == other.getPercentage();
+            ((this.percentage==null && other.getPercentage()==null) || 
+             (this.percentage!=null &&
+              this.percentage.equals(other.getPercentage())));
         __equalsCalc = null;
         return _equals;
     }
@@ -333,12 +331,8 @@ public class Dynamic_price_card_select_responseDynamic_price_card_select  implem
         }
         _hashCode += getIsactive();
         _hashCode += getDynamic_price_seq();
-        if (getFrom_cycle() != null) {
-            _hashCode += getFrom_cycle().hashCode();
-        }
-        if (getTo_cycle() != null) {
-            _hashCode += getTo_cycle().hashCode();
-        }
+        _hashCode += getFrom_cycle();
+        _hashCode += getTo_cycle();
         _hashCode += getDynamic_price_type();
         if (getCurrency() != null) {
             _hashCode += getCurrency().hashCode();
@@ -346,7 +340,9 @@ public class Dynamic_price_card_select_responseDynamic_price_card_select  implem
         if (getPrice() != null) {
             _hashCode += getPrice().hashCode();
         }
-        _hashCode += getPercentage();
+        if (getPercentage() != null) {
+            _hashCode += getPercentage().hashCode();
+        }
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -385,12 +381,12 @@ public class Dynamic_price_card_select_responseDynamic_price_card_select  implem
         attrField = new org.apache.axis.description.AttributeDesc();
         attrField.setFieldName("from_cycle");
         attrField.setXmlName(new javax.xml.namespace.QName("", "from_cycle"));
-        attrField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        attrField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         typeDesc.addFieldDesc(attrField);
         attrField = new org.apache.axis.description.AttributeDesc();
         attrField.setFieldName("to_cycle");
         attrField.setXmlName(new javax.xml.namespace.QName("", "to_cycle"));
-        attrField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        attrField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         typeDesc.addFieldDesc(attrField);
         attrField = new org.apache.axis.description.AttributeDesc();
         attrField.setFieldName("dynamic_price_type");
@@ -405,12 +401,12 @@ public class Dynamic_price_card_select_responseDynamic_price_card_select  implem
         attrField = new org.apache.axis.description.AttributeDesc();
         attrField.setFieldName("price");
         attrField.setXmlName(new javax.xml.namespace.QName("", "price"));
-        attrField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        attrField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "decimal"));
         typeDesc.addFieldDesc(attrField);
         attrField = new org.apache.axis.description.AttributeDesc();
         attrField.setFieldName("percentage");
-        attrField.setXmlName(new javax.xml.namespace.QName("", "percentage"));
-        attrField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        attrField.setXmlName(new javax.xml.namespace.QName("", "Percentage"));
+        attrField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "decimal"));
         typeDesc.addFieldDesc(attrField);
     }
 
