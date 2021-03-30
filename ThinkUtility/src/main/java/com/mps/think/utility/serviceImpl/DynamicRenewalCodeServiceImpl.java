@@ -33,12 +33,45 @@ import Think.XmlWebServices.Dynamic_price_select_request;
 import Think.XmlWebServices.Dynamic_price_select_responseDynamic_price_select;
 import Think.XmlWebServices.ThinkSoap;
 import Think.XmlWebServices.ThinkWSLocator;
+import Think.XmlWebServices.User_authenticate_request;
+import Think.XmlWebServices.User_authenticate_response;
 import Think.XmlWebServices.User_login_data;
 
 @Service
 public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService {
 	
 	Logger log = LoggerFactory.getLogger(this.getClass());
+	
+	@Override
+	public boolean getAuthenticationStatus(LoginModel loginModel) {
+		log.info("Inside getAuthenticationStatus");
+		
+		boolean status = false;
+		try {
+			ThinkSoap soap = null;
+			ThinkWSLocator locator = new ThinkWSLocator();
+			soap = locator.getThinkSoap();
+			
+			User_authenticate_request user = new User_authenticate_request();
+			
+			User_login_data userLogin = new User_login_data();
+			user.setDsn(loginModel.getDsn());
+			userLogin.setLogin(loginModel.getUsername());
+			userLogin.setPassword(loginModel.getPassword());
+			user.setUser_login_data(userLogin);
+			
+			User_authenticate_response userAuthenticateResponse = new User_authenticate_response();
+			userAuthenticateResponse = soap.userAuthenticate(user);
+			 if ("yes".equals(userAuthenticateResponse.getAuthenticated().toString())) {
+				 status = true;	
+			 }
+			 
+		return status;
+		}
+		catch(Exception e) {
+			return status;
+		}
+	}
 
 	@Override
 	public List<Dynamic_price_select_responseDynamic_price_select> getDynamicCodesList(LoginModel loginModel)

@@ -6,4 +6,5 @@ public class SecurityConstants {
     public static final String SUCCESS = "OK";
     public static final String ERROR = "Error"; 
     public static final String STATUS = "Status";
+    public static final long EXPIRATION_TIME = 7200000; // 2 Hour
 }

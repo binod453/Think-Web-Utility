@@ -1,26 +1,18 @@
 package com.mps.think.utility.controller;
 
+import static com.mps.think.utility.utils.Constants.EXPIRATION_TIME;
+import static com.mps.think.utility.utils.Constants.SECRET;
+import static com.mps.think.utility.utils.Constants.TOKEN;
+
 import java.rmi.RemoteException;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
+import java.util.Date;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import javax.validation.Valid;
 import javax.xml.rpc.ServiceException;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,18 +26,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import com.mps.think.utility.model.DynamicRenewalCodeModel;
 import com.mps.think.utility.model.LoginModel;
 import com.mps.think.utility.service.DynamicRenewalCodeService;
-import com.mps.think.utility.utils.Constants;
 import com.mps.think.utility.utils.SecurityConstants;
 
-import Think.XmlWebServices.Dynamic_price_select_responseDynamic_price_select; 
+import Think.XmlWebServices.Dynamic_price_select_responseDynamic_price_select;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm; 
 
 
 @Controller
@@ -71,59 +60,37 @@ public class LoginController {
 	}
 
 	@RequestMapping(value = "/dynamicRenewalCodes")
-	//@ResponseBody
 	public String login(@RequestParam(value = "username") String username,
-			@RequestParam(value = "password") String password,@RequestParam(value = "dsn") String dsn,@Valid @ModelAttribute("loginModel")LoginModel loginModel, 
+			@RequestParam(value = "password") String password,@RequestParam(value = "dsn") String dsn, @ModelAttribute("loginModel")LoginModel loginModel, 
 			  BindingResult result,  ModelMap model) {
 		
-		ModelAndView modelAndView = new ModelAndView();
-		Map<String, Object> responseObject = new LinkedHashMap<String, Object>(); 
+		HttpSession session = request.getSession();
+		boolean authenticationStatus = false;
 		if(result.hasErrors()) {
 			return "login";
 		}else {
 			try {			
-				HttpSession session = request.getSession();
-				 StringBuilder url = new StringBuilder(Constants.LOGIN_URL);
-				 HttpPost post = new HttpPost(url.toString());
-				 List<NameValuePair> urlParameters = new ArrayList<NameValuePair>();
-				   urlParameters.add(new BasicNameValuePair("username", username));
-				   urlParameters.add(new BasicNameValuePair("password", password));
-				   post.setEntity(new UrlEncodedFormEntity(urlParameters));
-				    
-				   HttpClient client = HttpClientBuilder.create().build();
-				   HttpResponse response = client.execute(post);
-				   HttpEntity entity = response.getEntity();
-				   if(entity!=null) {
-					    String responseString = EntityUtils.toString(entity, "UTF-8");
-					    Gson gson = new Gson();
-					    JsonElement element = gson.fromJson (responseString, JsonElement.class);
-					    JsonObject jsonObj = element.getAsJsonObject();
-					    if("OK".equals(jsonObj.get("Status").getAsString())) {
-					    	LoginModel userDetails = dynamicRenewalCodeService.setLoginDetails(jsonObj);
-					    	userDetails.setPassword(password);
-					    	userDetails.setDsn(dsn);
-					    	
-							modelAndView.addObject(userDetails);
-							session.setAttribute("loginModel", userDetails);
-							
-							model.addAttribute("loginModel", loginModel);
-							
-					    }
-					    else {
-					    	responseObject.put(STATUS,ERROR);
-					    	model.addAttribute("message", "Invalid Credentials");
-					    	return "login";
-					    }
-					}else {
-						responseObject.put(STATUS,ERROR);
-						model.addAttribute("message", "Invalid Credentials");
-						return "login";
-					}
-				   
+				authenticationStatus = dynamicRenewalCodeService.getAuthenticationStatus(loginModel);
+				if(authenticationStatus) {
+					String jwtToken = Jwts.builder()
+			                .setSubject(loginModel.getUsername())
+			                .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
+			                .signWith(SignatureAlgorithm.HS512, SECRET)
+			                .compact();
+					
+					session.setAttribute("loginModel", loginModel);
+					session.setAttribute(TOKEN,jwtToken);
+					model.addAttribute("loginModel", loginModel);
+					
+				}else {
+			    	model.addAttribute("message", "Invalid Credentials");
+			    	return "login";
+			    }
+				
 			}catch(Exception e) {
 				LOGGER.error(ERROR + e);
-				responseObject.put(STATUS,ERROR+e);
 			}
+			session.setAttribute(STATUS, authenticationStatus);
 			return "redirect:getRenewalCode";
 		}
 		
@@ -221,7 +188,7 @@ public class LoginController {
 		return "redirect:getRenewalCode";
 	}
 
-	@PostMapping("/logout")
+	@RequestMapping("/logout")
 	public String destroySession(HttpServletRequest request) {
 		request.getSession().invalidate();
 		return "redirect:/";

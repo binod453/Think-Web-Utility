@@ -13,7 +13,7 @@
 			<div class="row justify-content-md-center">
 				<div class="col-md-6 my-2">
 					<div class="loginBox border p-4 mb-5">
-						<h4 class="loginHeading border-b">
+						<h4 class="border-b text-center">
 							Think Utility
 							- Login
 						</h4>
