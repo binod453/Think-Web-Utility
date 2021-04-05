@@ -5,7 +5,6 @@ let toValue = 0;
 let prevToValue = 0;
 $(document).ready(function() {
 	document.getElementById('errorDiv1').textContent = "";
-	//document.getElementById('errorDiv2').textContent = "";
 	
 	 $("#success-alert").hide();
 	 $("#danger-alert").hide();
@@ -16,7 +15,6 @@ $(document).ready(function() {
 			'click',
 			'#editCode',
 			function() {
-//				var id = $('#dynamicRenewalCodesTable').DataTable().row($(this).parents('tr')).data()[0];
 				var id = $(this).parents('tr').find('input[type="hidden"]').val();
 				 $.ajax({
 			                  url : "/editNewRenewalCode/"+id,
@@ -40,24 +38,20 @@ $(document).ready(function() {
 			                	  
 			                	  for(var i = 0; i < data.renewalCodeDataDetailsList.length ; i++) {
 			                		var row = $('<tr id="dynamic">');
-			                	    row.append($('<td><input type="text" id="renewalCodeDataDetailsList-'+ i +'_fromCycle" name="renewalCodeDataDetailsList['+ i +'].fromCycle" class="form-control" value="'+data.renewalCodeDataDetailsList[i].fromCycle+'" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkFromCycleForEdit(this)"/></td>'));
-			                	    row.append($('<td><input type="text" id="renewalCodeDataDetailsList-'+ i +'_toCycle" name="renewalCodeDataDetailsList['+ i +'].toCycle" class="form-control" value="'+data.renewalCodeDataDetailsList[i].toCycle+'" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkToCycleForEdit(this)"/></td>'));
+			                	    row.append($('<td><input type="text" id="renewalCodeDataDetailsList-'+ i +'_fromCycle" name="renewalCodeDataDetailsList['+ i +'].fromCycle" class="form-control" value="'+data.renewalCodeDataDetailsList[i].fromCycle+'" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkFromCycleForEdit(this)" disabled/></td>'));
+			                	    row.append($('<td><input type="text" id="renewalCodeDataDetailsList-'+ i +'_toCycle" name="renewalCodeDataDetailsList['+ i +'].toCycle" class="form-control" value="'+data.renewalCodeDataDetailsList[i].toCycle+'" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkToCycleForEdit(this)" disabled/></td>'));
 			                	    if(data.renewalCodeDataDetailsList[i].type === 0){
-			                	    	row.append($('<td><select id = "renewalCodeDataDetailsList-'+ i +'_type" class="form-control" onchange="typeChange(this)" name="renewalCodeDataDetailsList['+ i +'].type"> <option value = "0" label = "Amount" id="AmountType" selected>Amount</option> <option value = "1"  label = "Percentage" id="percentageType" >Percentage</option>'));
+			                	    	row.append($('<td><select id = "renewalCodeDataDetailsList-'+ i +'_type" class="form-control" onchange="typeChange(this)" name="renewalCodeDataDetailsList['+ i +'].type" disabled> <option value = "0" label = "Amount" id="AmountType" selected>Amount</option> <option value = "1"  label = "Percentage" id="percentageType" >Percentage</option>'));
 			                	    	row.append($('</select></td>'));
-			                	    	row.append($('<td><input id = "renewalCodeDataDetailsList-'+ i +'_value" type="text" class="form-control" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkValue(this)" name="renewalCodeDataDetailsList['+ i +'].value" value="'+data.renewalCodeDataDetailsList[i].value+'"/></td>'));
-					                	row.append($('<td><input type="text" name="renewalCodeDataDetailsList['+ i +'].currency" class="form-control" value="'+data.renewalCodeDataDetailsList[i].currency+'" id = "renewalCodeDataDetailsList-'+ i +'_currency"/></td>'));
-//					                	    
+			                	    	row.append($('<td><input id = "renewalCodeDataDetailsList-'+ i +'_value" type="text" class="form-control" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkValue(this)" name="renewalCodeDataDetailsList['+ i +'].value" value="'+data.renewalCodeDataDetailsList[i].value+'" disabled/></td>'));
+					                	row.append($('<td><input type="text" name="renewalCodeDataDetailsList['+ i +'].currency" class="form-control" value="'+data.renewalCodeDataDetailsList[i].currency+'" id = "renewalCodeDataDetailsList-'+ i +'_currency" disabled/></td>'));
 			                	    }
 			                	    if(data.renewalCodeDataDetailsList[i].type === 1){
-			                	     	row.append($('<td><select id = "renewalCodeDataDetailsList-'+ i +'_type" class="form-control" onchange="typeChange(this)" name="renewalCodeDataDetailsList['+ i +'].type"><option value = "0" label = "Amount" id="AmountType">Amount</option><option value = "1"  label = "Percentage" id="percentageType" selected>Percentage</option>'));
+			                	     	row.append($('<td><select id = "renewalCodeDataDetailsList-'+ i +'_type" class="form-control" onchange="typeChange(this)" name="renewalCodeDataDetailsList['+ i +'].type" disabled><option value = "0" label = "Amount" id="AmountType">Amount</option><option value = "1"  label = "Percentage" id="percentageType" selected>Percentage</option>'));
 			                	    	row.append($('</select></td>'));
-			                	    	row.append($('<td><input id = "renewalCodeDataDetailsList-'+ i +'_value" type="text" class="form-control" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkValue(this)" name="renewalCodeDataDetailsList['+ i +'].value" value="'+data.renewalCodeDataDetailsList[i].value+'"/></td>'));
+			                	    	row.append($('<td><input id = "renewalCodeDataDetailsList-'+ i +'_value" type="text" class="form-control" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkValue(this)" name="renewalCodeDataDetailsList['+ i +'].value" value="'+data.renewalCodeDataDetailsList[i].value+'" disabled/></td>'));
 					                	row.append($('<td><input type="text" name="renewalCodeDataDetailsList['+ i +'].currency" class="form-control" value="'+data.renewalCodeDataDetailsList[i].currency+'" id = "renewalCodeDataDetailsList-'+ i +'_currency" disabled/></td>'));
-//					                	    
 			                	    }
-			                	   row.append($('<td><a href=# class="btn btn-outline-secondary table-btn" id="deleteCode" title="Delete" ><i class="fa fa-trash"></i></a>'));
-//			                	    row.append($('</td>'));
 			                	    row.append($('<input type="hidden" name="renewalCodeDataDetailsList['+ i +'].dynamicPriceSeq" id = "renewalCodeDataDetailsList'+ i +'.dynamicPriceSeq"  value="'+ i +'"/>'));
 			                	    row.append($('</tr>'));
 			                	   
@@ -90,10 +84,6 @@ $(document).ready(function() {
 		 
 	});
 	
-
-	// Append table with add row form on add new button click
-	// Add row on add button click
-  
 	$(document).on("click", ".add", function(){
 		var empty = false;
 		var index = $("table tbody tr:last-child").index();
@@ -110,25 +100,6 @@ $(document).ready(function() {
 			} else{
                 $(this).removeClass("error");
                 document.getElementById('errorDiv2').textContent = "";
-               /* if($(this).context.name.includes('fromCycle')){
-                	fromValue = $(this).val();
-                	if($(this).val() < toValue && $(this).val() > prevToValue){
-    					 $(this).removeClass("error");
-    				}else{
-    					$(this).addClass("error");
-    					empty = true;
-    					//add message : fromCycle Value should not be less than previous toCycle value
-    				}
-                }else if($(this).context.name.includes('toCycle')){
-                	if($(this).val() > fromValue){
-    					prevToValue = $(this).val();
-    					 $(this).removeClass("error");
-    				}else{
-    					$(this).addClass("error");
-    					empty = true;
-    					//add message : toCycle Value should not be less than fromCycle value
-    				}
-                }*/
             }
 		});
         
@@ -325,7 +296,7 @@ function checkRenewalCode(obj){
 		$('#dynamicRenewalCode').addClass("error");
 		document.getElementById('errorDiv1').textContent = "Please Enter Dynamic Renewal Code";
 	}else{
-		if($('#priceNameList').val().indexOf(obj.value) !== -1){
+		if($('#priceNameList').val().toLowerCase().indexOf(obj.value) !== -1){
 			$('#dynamicRenewalCode').addClass("error");
 			$('#dynamicRenewalCode').val('');
 			document.getElementById('errorDiv1').textContent = "Duplicate Dynamic Renewal Code Found";

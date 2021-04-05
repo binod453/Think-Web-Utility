@@ -16,10 +16,12 @@ spring:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
       
-      
 server:
-  port: 1438
-
   error:
     whitelabel:
-      enabled: false
+      enabled: true
+      
+#server:
+#  port: 1438
+
+  

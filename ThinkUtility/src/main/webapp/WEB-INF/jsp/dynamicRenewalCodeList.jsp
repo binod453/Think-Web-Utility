@@ -91,7 +91,7 @@
 								<form:input path="isActive" type="hidden" id="isActive"/>
 							</div>
 						</div>
-						
+						<div class="table-responsive">
 					<table class="table table-bordered  table-striped mt-4" id="tableForInstallment">
 						<thead>
 							<tr>
@@ -107,6 +107,7 @@
 							
 						</tbody>
 					</table>
+					</div>
 					<div class="col-sm-12 textError" id="errorDiv2"></div>
 				<!-- 	<div class="text-right">
 						<button type="button" class="btn btn-dark btn-sm " id="addNewInstallment" onclick="insNewRow()">Click to Add New</button>
@@ -155,8 +156,8 @@
 								<form:input path="isActive" type="hidden" id="isActiveEdit"/>
 							</div>
 						</div>
-					
-					<table class="table table-bordered  table-striped mt-4" id="tableForInstallment" style='display:block'>
+					<div class="table-responsive">
+					<table class="table table-bordered  table-striped mt-4" id="editTable" >
 						<thead>
 							<tr>
 								<th>From Cycle</th>
@@ -170,6 +171,7 @@
 						<tbody id="editTableBody">
 						</tbody>
 					</table>
+					</div>
 					<div class="col-sm-12 textError" id="errorDiv3"></div>
 					<!-- <button type="button" class="btn btn-primary btn-lg btn-block" id="editInstallment" style="display: block" onclick="insEditRow()">Click to Add New</button> -->
 					</fieldset>

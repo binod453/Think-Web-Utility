@@ -61,10 +61,17 @@ public class LoginController {
 
 	@RequestMapping(value = "/dynamicRenewalCodes")
 	public String login(@RequestParam(value = "username") String username,
-			@RequestParam(value = "password") String password,@RequestParam(value = "dsn") String dsn, @ModelAttribute("loginModel")LoginModel loginModel, 
+						@RequestParam(value = "password") String password,
+						@RequestParam(value = "dsn") String dsn,
+						@RequestParam(value = "ipAddress") String ipAddress,
+						@RequestParam(value = "port") String port,
+						@ModelAttribute("loginModel")LoginModel loginModel, 
 			  BindingResult result,  ModelMap model) {
 		
 		HttpSession session = request.getSession();
+		StringBuffer address = new StringBuffer("http://");
+		address.append(loginModel.getIpAddress()+":"+loginModel.getPort()+"/soap.slap");
+		loginModel.setSoapAddress(address.toString());
 		boolean authenticationStatus = false;
 		if(result.hasErrors()) {
 			return "login";
@@ -106,7 +113,7 @@ public class LoginController {
 			model.addAttribute("dynamicRenewalCodeModel", codeModel);
 			model.addAttribute("codeModelList", codeModelList);
 			
-			List<String> priceNameList = codeModelList.stream().map(e -> e.getDynamic_price_name()).collect(Collectors.toList());
+			List<String> priceNameList = codeModelList.stream().map(e -> e.getDynamic_price_name().toLowerCase()).collect(Collectors.toList());
 			model.addAttribute("priceNameList", priceNameList);
 		}
 		catch(Exception e) {

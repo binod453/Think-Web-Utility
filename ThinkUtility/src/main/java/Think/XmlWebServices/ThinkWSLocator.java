@@ -28,13 +28,18 @@ public class ThinkWSLocator extends org.apache.axis.client.Service implements Th
     }
 
     // Use to get a proxy class for ThinkSoap
-    private java.lang.String ThinkSoap_address = Constants.ThinkSoap_address;
+    
+    private java.lang.String ThinkSoap_address;
 
     public java.lang.String getThinkSoapAddress() {
         return ThinkSoap_address;
     }
 
-    // The WSDD service name defaults to the port name.
+    public void setThinkSoap_address(java.lang.String thinkSoap_address) {
+		ThinkSoap_address = thinkSoap_address;
+	}
+
+	// The WSDD service name defaults to the port name.
     private java.lang.String ThinkSoapWSDDServiceName = "ThinkSoap";
 
     public java.lang.String getThinkSoapWSDDServiceName() {

@@ -1,0 +1,8 @@
+    <service>
+      <id>DynamicPricingUtility</id>
+      <name>DynamicPricingUtility</name>
+      <description>Think Dynamic Pricing Utility</description>
+      <executable>C:\Program Files\Java\jre1.8.0_202\bin\java</executable>
+      <arguments>-jar "%BASE%\DynamicPricingUtility.war"</arguments>
+      <logmode>rotate</logmode>
+    </service>

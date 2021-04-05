@@ -48,9 +48,7 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 		
 		boolean status = false;
 		try {
-			ThinkSoap soap = null;
-			ThinkWSLocator locator = new ThinkWSLocator();
-			soap = locator.getThinkSoap();
+			ThinkSoap soap = extracted(loginModel);
 			
 			User_authenticate_request user = new User_authenticate_request();
 			
@@ -64,6 +62,8 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 			userAuthenticateResponse = soap.userAuthenticate(user);
 			 if ("yes".equals(userAuthenticateResponse.getAuthenticated().toString())) {
 				 status = true;	
+			 }else {
+				 status=false;
 			 }
 			 
 		return status;
@@ -73,6 +73,8 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 		}
 	}
 
+	
+
 	@Override
 	public List<Dynamic_price_select_responseDynamic_price_select> getDynamicCodesList(LoginModel loginModel)
 			throws ServiceException, RemoteException {
@@ -80,9 +82,7 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 
 		List<Dynamic_price_select_responseDynamic_price_select> dynamicPriceSelectResponse = new ArrayList<Dynamic_price_select_responseDynamic_price_select>();
 
-		ThinkSoap soap = null;
-		ThinkWSLocator locator = new ThinkWSLocator();
-		soap = locator.getThinkSoap();
+		ThinkSoap soap = extracted(loginModel);
 
 		User_login_data loginData = new User_login_data();
 		Dynamic_price_select_request dynamicPriceSelectrequest = new Dynamic_price_select_request();
@@ -105,9 +105,7 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 	public int addNewDynamicRenewalCode(DynamicRenewalCodeModel dynamicRenewalCodeModel)
 			throws ServiceException, RemoteException {
 		log.info("Inside method : addNewDynamicRenewalCode");
-		ThinkSoap soap = null;
-		ThinkWSLocator locator = new ThinkWSLocator();
-		soap = locator.getThinkSoap();
+		ThinkSoap soap = extracted(dynamicRenewalCodeModel.getLoginModel());
 
 		int seq = 0;
 
@@ -160,9 +158,7 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 	public DynamicRenewalCodeModel getDynamicCodesById(LoginModel userDetails, int id)
 			throws ServiceException, RemoteException {
 		log.info("Inside method : getDynamicCodesById");
-		ThinkSoap soap = null;
-		ThinkWSLocator locator = new ThinkWSLocator();
-		soap = locator.getThinkSoap();
+		ThinkSoap soap = extracted(userDetails);;
 
 		User_login_data loginData = new User_login_data();
 		Dynamic_price_select_request dynamicPriceSelectrequest = new Dynamic_price_select_request();
@@ -223,9 +219,7 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 	public int updateDynamicRenewalCode(DynamicRenewalCodeModel dynamicRenewalCodeModel)
 			throws ServiceException, RemoteException {
 		log.info("Inside method : updateDynamicRenewalCode");
-		ThinkSoap soap = null;
-		ThinkWSLocator locator = new ThinkWSLocator();
-		soap = locator.getThinkSoap();
+		ThinkSoap soap = extracted(dynamicRenewalCodeModel.getLoginModel());
 
 		User_login_data loginData = new User_login_data();
 		Dynamic_price dynamicPrice = new Dynamic_price();
@@ -360,5 +354,13 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 
 		log.info("Complete method : setDynamicPriceAddRequest");
 		return priceAddRequest;
+	}
+	
+	private ThinkSoap extracted(LoginModel loginModel) throws ServiceException {
+		ThinkSoap soap = null;
+		ThinkWSLocator locator = new ThinkWSLocator();
+		locator.setThinkSoap_address(loginModel.getSoapAddress());
+		soap = locator.getThinkSoap();
+		return soap;
 	}
 }

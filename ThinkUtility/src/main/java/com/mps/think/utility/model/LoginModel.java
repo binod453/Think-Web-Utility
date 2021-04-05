@@ -22,4 +22,7 @@ public class LoginModel implements Serializable{
 	private String token;
 	private String status;
 	private String role;
+	private String ipAddress;
+	private String port;
+	private String soapAddress;
 }
