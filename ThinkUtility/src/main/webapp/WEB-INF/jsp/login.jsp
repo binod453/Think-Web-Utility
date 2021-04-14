@@ -92,10 +92,10 @@ function ValidateIPaddress(inputText){
 function removeMessege(){
 	$('#errorDiv').text('');
 }
-
+/* 
  $(document).on("click", "login", function(){
 	 debugger
 	 $('#loading').show();
-}); 
+});  */
 </script>
 </html>

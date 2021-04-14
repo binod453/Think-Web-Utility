@@ -15,24 +15,25 @@
 				<div class="col-sm-12 text-right">
 					
 				
-				<button type="button" class="btn btn-dark btn-sm" id="addNew"><i class="fa fa-plus"></i> Add New</button>
+				<button type="button" class="btn btn-dark btn-sm" id="addNew"><em class="fa fa-plus"></em> Add New</button>
 				
 				</div>
 				<div class="col-sm-12  mt-3">
 					<table class="table table-bordered  table-striped   mt-4" id="dynamicRenewalCodesTable">
+					<caption></caption>
 						<thead>
 							<tr>
-								<th>Sl No</th>
-								<th>Dynamic Code</th>
-								<th>Description</th>
-								<th>Status</th>
-								<th>Action</th>
+								<th id="slNo">Dynamic Code ID</th>
+								<th id="dynamic_code">Dynamic Code</th>
+								<th id="description">Description</th>
+								<th id="status">Status</th>
+								<th id="action">Action</th>
 							</tr>
 						</thead>
 						<tbody>
 							<c:forEach items="${codeModelList}" var="dynamicCodeList" varStatus="counter">
 								<tr>
-									<td id="dynamic_price_id"><c:out value="${counter.count}" /></td>
+									<td id="dynamic_price_id"><c:out value="${dynamicCodeList.dynamic_price_id}" /></td>
 									<td id="dynamic_price_name"><c:out value="${dynamicCodeList.dynamic_price_name}" /></td>
 									<td id="description"><c:out value="${dynamicCodeList.description}" /></td>
 									<td id="status">
@@ -46,7 +47,7 @@
 										</c:choose>	
 									</td>
 									<input type="hidden" id="dynamic_price_id" value="${dynamicCodeList.dynamic_price_id}"/>
-									<td><a href=# class='btn' id="editCode" title='Edit'><i class='fa fa-edit'></i></a></td>
+									<td><a href=# class='btn' id="editCode" title='Edit'><em class='fa fa-edit'></em></a></td>
 									
 								</tr>
 							</c:forEach>
@@ -93,14 +94,15 @@
 						</div>
 						<div class="table-responsive">
 					<table class="table table-bordered  table-striped mt-4" id="tableForInstallment">
+					<caption></caption>
 						<thead>
 							<tr>
-								<th>From Cycle</th>
-								<th>To Cycle</th>
-								<th>Type</th>
-								<th>Value</th>
-								<th>Currency</th>
-								<th>Action</th>
+								<th id="add_from_cycle">From Cycle</th>
+								<th id="add_to_cycle">To Cycle</th>
+								<th id="add_type">Type</th>
+								<th id="add_value">Value</th>
+								<th id="add_currency">Currency</th>
+								<th id="add_action">Action</th>
 							</tr>
 						</thead>
 						<tbody id="tbodyContainer">
@@ -109,9 +111,6 @@
 					</table>
 					</div>
 					<div class="col-sm-12 textError" id="errorDiv2"></div>
-				<!-- 	<div class="text-right">
-						<button type="button" class="btn btn-dark btn-sm " id="addNewInstallment" onclick="insNewRow()">Click to Add New</button>
-					</div> -->
 					
 					</fieldset>
 				</form:form>
@@ -157,15 +156,15 @@
 							</div>
 						</div>
 					<div class="table-responsive">
-					<table class="table table-bordered  table-striped mt-4" id="editTable" >
+					<table class="table table-bordered  table-striped mt-4" id="editTable">
+					<caption></caption>
 						<thead>
 							<tr>
-								<th>From Cycle</th>
-								<th>To Cycle</th>
-								<th  style="width: 20%;">Type</th>
-								<th>Value</th>
-								<th>Currency</th>
-								<!-- <th style="width: 20%;">Action</th> -->
+								<th id="edit_from_cycle">From Cycle</th>
+								<th id="edit_to_cycle">To Cycle</th>
+								<th id="edit_type" style="width: 20%;">Type</th>
+								<th id="edit_value">Value</th>
+								<th id="edit_currency">Currency</th>
 							</tr>
 						</thead>
 						<tbody id="editTableBody">
@@ -173,7 +172,6 @@
 					</table>
 					</div>
 					<div class="col-sm-12 textError" id="errorDiv3"></div>
-					<!-- <button type="button" class="btn btn-primary btn-lg btn-block" id="editInstallment" style="display: block" onclick="insEditRow()">Click to Add New</button> -->
 					</fieldset>
 				</form:form>
             </div>

@@ -1,6 +1,7 @@
 package com.mps.think.utility.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 import lombok.Data;
 
@@ -17,4 +18,5 @@ public class RenewalCodeDataDetails implements Serializable{
 	private String currency;
 	private int currencyType;
 	private int dynamicPriceSeq;
+	private List<String> currencyList;
 }

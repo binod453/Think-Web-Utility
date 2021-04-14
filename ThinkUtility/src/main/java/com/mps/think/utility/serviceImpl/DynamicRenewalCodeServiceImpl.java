@@ -107,7 +107,7 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 		log.info("Inside method : addNewDynamicRenewalCode");
 		ThinkSoap soap = extracted(dynamicRenewalCodeModel.getLoginModel());
 
-		int seq = 0;
+		int seq = 1;
 
 		User_login_data loginData = new User_login_data();
 		Dynamic_price dynamicPrice = new Dynamic_price();
