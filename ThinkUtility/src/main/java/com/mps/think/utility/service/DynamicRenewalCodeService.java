@@ -9,11 +9,12 @@ import com.google.gson.JsonObject;
 import com.mps.think.utility.model.DynamicRenewalCodeModel;
 import com.mps.think.utility.model.LoginModel;
 
+import Think.XmlWebServices.Dynamic_price_select_responseDynamic_price;
 import Think.XmlWebServices.Dynamic_price_select_responseDynamic_price_select;
 
 public interface DynamicRenewalCodeService {
 
-	public List<Dynamic_price_select_responseDynamic_price_select> getDynamicCodesList(LoginModel userDetails) throws ServiceException, RemoteException;
+	public List<Dynamic_price_select_responseDynamic_price> getDynamicCodesList(LoginModel userDetails) throws ServiceException, RemoteException;
 
 	public int addNewDynamicRenewalCode(DynamicRenewalCodeModel dynamicRenewalCodeModel) throws ServiceException, RemoteException;
 
@@ -26,5 +27,7 @@ public interface DynamicRenewalCodeService {
 	public int updateDynamicRenewalCode(DynamicRenewalCodeModel dynamicRenewalCodeModel) throws ServiceException, RemoteException;
 	
 	public boolean getAuthenticationStatus(LoginModel loginModel) throws Exception;
+
+	public String getDSNLists(String string);
 
 }

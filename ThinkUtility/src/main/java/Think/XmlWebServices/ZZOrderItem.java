@@ -96,6 +96,12 @@ public class ZZOrderItem  implements java.io.Serializable {
 
     private int duration;  // attribute
 
+    private int dynamic_price_effort;  // attribute
+
+    private int dynamic_price_seq;  // attribute
+
+    private int dynamic_pricing_code;  // attribute
+
     private int electronic_delivery;  // attribute
 
     private java.lang.String electronic_document_identifier;  // attribute
@@ -155,8 +161,6 @@ public class ZZOrderItem  implements java.io.Serializable {
     private java.util.Date last_inv_date;  // attribute
 
     private java.util.Date last_ren_date;  // attribute
-
-    private int dynamic_pricing_code;  // attribute
 
     private java.util.Calendar last_tax_invoice_date;  // attribute
 
@@ -372,6 +376,9 @@ public class ZZOrderItem  implements java.io.Serializable {
            int discount_class_id,
            java.lang.String distribution_method,
            int duration,
+           int dynamic_price_effort,
+           int dynamic_price_seq,
+           int dynamic_pricing_code,
            int electronic_delivery,
            java.lang.String electronic_document_identifier,
            int ex_rate_class_effective_seq,
@@ -402,7 +409,6 @@ public class ZZOrderItem  implements java.io.Serializable {
            java.lang.String item_url,
            java.util.Date last_inv_date,
            java.util.Date last_ren_date,
-           int dynamic_pricing_code,
            java.util.Calendar last_tax_invoice_date,
            java.math.BigDecimal manual_disc_amt_base,
            java.math.BigDecimal manual_disc_amt_local,
@@ -530,6 +536,9 @@ public class ZZOrderItem  implements java.io.Serializable {
            this.discount_class_id = discount_class_id;
            this.distribution_method = distribution_method;
            this.duration = duration;
+           this.dynamic_price_effort = dynamic_price_effort;
+           this.dynamic_price_seq = dynamic_price_seq;
+           this.dynamic_pricing_code = dynamic_pricing_code;
            this.electronic_delivery = electronic_delivery;
            this.electronic_document_identifier = electronic_document_identifier;
            this.ex_rate_class_effective_seq = ex_rate_class_effective_seq;
@@ -560,7 +569,6 @@ public class ZZOrderItem  implements java.io.Serializable {
            this.item_url = item_url;
            this.last_inv_date = last_inv_date;
            this.last_ren_date = last_ren_date;
-           this.dynamic_pricing_code = dynamic_pricing_code;
            this.last_tax_invoice_date = last_tax_invoice_date;
            this.manual_disc_amt_base = manual_disc_amt_base;
            this.manual_disc_amt_local = manual_disc_amt_local;
@@ -1528,6 +1536,66 @@ public class ZZOrderItem  implements java.io.Serializable {
 
 
     /**
+     * Gets the dynamic_price_effort value for this ZZOrderItem.
+     * 
+     * @return dynamic_price_effort
+     */
+    public int getDynamic_price_effort() {
+        return dynamic_price_effort;
+    }
+
+
+    /**
+     * Sets the dynamic_price_effort value for this ZZOrderItem.
+     * 
+     * @param dynamic_price_effort
+     */
+    public void setDynamic_price_effort(int dynamic_price_effort) {
+        this.dynamic_price_effort = dynamic_price_effort;
+    }
+
+
+    /**
+     * Gets the dynamic_price_seq value for this ZZOrderItem.
+     * 
+     * @return dynamic_price_seq
+     */
+    public int getDynamic_price_seq() {
+        return dynamic_price_seq;
+    }
+
+
+    /**
+     * Sets the dynamic_price_seq value for this ZZOrderItem.
+     * 
+     * @param dynamic_price_seq
+     */
+    public void setDynamic_price_seq(int dynamic_price_seq) {
+        this.dynamic_price_seq = dynamic_price_seq;
+    }
+
+
+    /**
+     * Gets the dynamic_pricing_code value for this ZZOrderItem.
+     * 
+     * @return dynamic_pricing_code
+     */
+    public int getDynamic_pricing_code() {
+        return dynamic_pricing_code;
+    }
+
+
+    /**
+     * Sets the dynamic_pricing_code value for this ZZOrderItem.
+     * 
+     * @param dynamic_pricing_code
+     */
+    public void setDynamic_pricing_code(int dynamic_pricing_code) {
+        this.dynamic_pricing_code = dynamic_pricing_code;
+    }
+
+
+    /**
      * Gets the electronic_delivery value for this ZZOrderItem.
      * 
      * @return electronic_delivery
@@ -2124,26 +2192,6 @@ public class ZZOrderItem  implements java.io.Serializable {
      */
     public void setLast_ren_date(java.util.Date last_ren_date) {
         this.last_ren_date = last_ren_date;
-    }
-
-
-    /**
-     * Gets the dynamic_pricing_code value for this ZZOrderItem.
-     * 
-     * @return dynamic_pricing_code
-     */
-    public int getDynamic_pricing_code() {
-        return dynamic_pricing_code;
-    }
-
-
-    /**
-     * Sets the dynamic_pricing_code value for this ZZOrderItem.
-     * 
-     * @param dynamic_pricing_code
-     */
-    public void setDynamic_pricing_code(int dynamic_pricing_code) {
-        this.dynamic_pricing_code = dynamic_pricing_code;
     }
 
 
@@ -3878,6 +3926,9 @@ public class ZZOrderItem  implements java.io.Serializable {
              (this.distribution_method!=null &&
               this.distribution_method.equals(other.getDistribution_method()))) &&
             this.duration == other.getDuration() &&
+            this.dynamic_price_effort == other.getDynamic_price_effort() &&
+            this.dynamic_price_seq == other.getDynamic_price_seq() &&
+            this.dynamic_pricing_code == other.getDynamic_pricing_code() &&
             this.electronic_delivery == other.getElectronic_delivery() &&
             ((this.electronic_document_identifier==null && other.getElectronic_document_identifier()==null) || 
              (this.electronic_document_identifier!=null &&
@@ -3930,7 +3981,6 @@ public class ZZOrderItem  implements java.io.Serializable {
             ((this.last_ren_date==null && other.getLast_ren_date()==null) || 
              (this.last_ren_date!=null &&
               this.last_ren_date.equals(other.getLast_ren_date()))) &&
-            this.dynamic_pricing_code == other.getDynamic_pricing_code() &&
             ((this.last_tax_invoice_date==null && other.getLast_tax_invoice_date()==null) || 
              (this.last_tax_invoice_date!=null &&
               this.last_tax_invoice_date.equals(other.getLast_tax_invoice_date()))) &&
@@ -4123,6 +4173,9 @@ public class ZZOrderItem  implements java.io.Serializable {
             _hashCode += getDistribution_method().hashCode();
         }
         _hashCode += getDuration();
+        _hashCode += getDynamic_price_effort();
+        _hashCode += getDynamic_price_seq();
+        _hashCode += getDynamic_pricing_code();
         _hashCode += getElectronic_delivery();
         if (getElectronic_document_identifier() != null) {
             _hashCode += getElectronic_document_identifier().hashCode();
@@ -4175,7 +4228,6 @@ public class ZZOrderItem  implements java.io.Serializable {
         if (getLast_ren_date() != null) {
             _hashCode += getLast_ren_date().hashCode();
         }
-        _hashCode += getDynamic_pricing_code();
         if (getLast_tax_invoice_date() != null) {
             _hashCode += getLast_tax_invoice_date().hashCode();
         }
@@ -4528,6 +4580,21 @@ public class ZZOrderItem  implements java.io.Serializable {
         attrField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         typeDesc.addFieldDesc(attrField);
         attrField = new org.apache.axis.description.AttributeDesc();
+        attrField.setFieldName("dynamic_price_effort");
+        attrField.setXmlName(new javax.xml.namespace.QName("", "dynamic_price_effort"));
+        attrField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        typeDesc.addFieldDesc(attrField);
+        attrField = new org.apache.axis.description.AttributeDesc();
+        attrField.setFieldName("dynamic_price_seq");
+        attrField.setXmlName(new javax.xml.namespace.QName("", "dynamic_price_seq"));
+        attrField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        typeDesc.addFieldDesc(attrField);
+        attrField = new org.apache.axis.description.AttributeDesc();
+        attrField.setFieldName("dynamic_pricing_code");
+        attrField.setXmlName(new javax.xml.namespace.QName("", "dynamic_pricing_code"));
+        attrField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        typeDesc.addFieldDesc(attrField);
+        attrField = new org.apache.axis.description.AttributeDesc();
         attrField.setFieldName("electronic_delivery");
         attrField.setXmlName(new javax.xml.namespace.QName("", "electronic_delivery"));
         attrField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
@@ -4676,11 +4743,6 @@ public class ZZOrderItem  implements java.io.Serializable {
         attrField.setFieldName("last_ren_date");
         attrField.setXmlName(new javax.xml.namespace.QName("", "last_ren_date"));
         attrField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
-        typeDesc.addFieldDesc(attrField);
-        attrField = new org.apache.axis.description.AttributeDesc();
-        attrField.setFieldName("dynamic_pricing_code");
-        attrField.setXmlName(new javax.xml.namespace.QName("", "dynamic_pricing_code"));
-        attrField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         typeDesc.addFieldDesc(attrField);
         attrField = new org.apache.axis.description.AttributeDesc();
         attrField.setFieldName("last_tax_invoice_date");

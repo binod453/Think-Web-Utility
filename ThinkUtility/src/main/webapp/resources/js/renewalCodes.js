@@ -39,20 +39,38 @@ $(document).ready(function() {
 			                	  for(var i = 0; i < data.renewalCodeDataDetailsList.length ; i++) {
 			                		  editableIndex = i+1;
 			                		var row = $('<tr id="dynamic">');
-			                	    row.append($('<td><input type="text" id="renewalCodeDataDetailsList-'+ i +'_fromCycle" name="renewalCodeDataDetailsList['+ i +'].fromCycle" class="form-control" value="'+data.renewalCodeDataDetailsList[i].fromCycle+'" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkFromCycleForEdit(this)" readonly/></td>'));
-			                	    row.append($('<td><input type="text" id="renewalCodeDataDetailsList-'+ i +'_toCycle" name="renewalCodeDataDetailsList['+ i +'].toCycle" class="form-control" value="'+data.renewalCodeDataDetailsList[i].toCycle+'" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkToCycleForEdit(this)" readonly/></td>'));
-			                	    if(data.renewalCodeDataDetailsList[i].type === 0){
-			                	    	row.append($('<td><select id = "renewalCodeDataDetailsList-'+ i +'_type" class="form-control" onchange="typeChange(this)" name="renewalCodeDataDetailsList['+ i +'].type" readonly> <option value = "0" label = "Amount" id="AmountType" selected>Amount</option> <option value = "1"  label = "Percentage" id="percentageType" >Percentage</option>'));
-			                	    	row.append($('</select></td>'));
-			                	    	row.append($('<td><input id = "renewalCodeDataDetailsList-'+ i +'_value" type="text" class="form-control" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkValue(this)" name="renewalCodeDataDetailsList['+ i +'].value" value="'+data.renewalCodeDataDetailsList[i].value+'" readonly/></td>'));
-					                	row.append($('<td><input type="text" name="renewalCodeDataDetailsList['+ i +'].currency" class="form-control" value="'+data.renewalCodeDataDetailsList[i].currency+'" id = "renewalCodeDataDetailsList-'+ i +'_currency" readonly/></td>'));
-			                	    }
-			                	    if(data.renewalCodeDataDetailsList[i].type === 1){
-			                	     	row.append($('<td><select id = "renewalCodeDataDetailsList-'+ i +'_type" class="form-control" onchange="typeChange(this)" name="renewalCodeDataDetailsList['+ i +'].type" readonly><option value = "0" label = "Amount" id="AmountType">Amount</option><option value = "1"  label = "Percentage" id="percentageType" selected>Percentage</option>'));
-			                	    	row.append($('</select></td>'));
-			                	    	row.append($('<td><input id = "renewalCodeDataDetailsList-'+ i +'_value" type="text" class="form-control" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkValue(this)" name="renewalCodeDataDetailsList['+ i +'].value" value="'+data.renewalCodeDataDetailsList[i].value+'" readonly/></td>'));
-					                	row.append($('<td><input type="text" name="renewalCodeDataDetailsList['+ i +'].currency" class="form-control" value="'+data.renewalCodeDataDetailsList[i].currency+'" id = "renewalCodeDataDetailsList-'+ i +'_currency" readonly/></td>'));
-			                	    }
+			                		if(data.editable){
+			                		    row.append($('<td><input type="text" id="renewalCodeDataDetailsList-'+ i +'_fromCycle" name="renewalCodeDataDetailsList['+ i +'].fromCycle" class="form-control" value="'+data.renewalCodeDataDetailsList[i].fromCycle+'" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkFromCycleForEdit(this)" /></td>'));
+				                	    row.append($('<td><input type="text" id="renewalCodeDataDetailsList-'+ i +'_toCycle" name="renewalCodeDataDetailsList['+ i +'].toCycle" class="form-control" value="'+data.renewalCodeDataDetailsList[i].toCycle+'" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkToCycleForEdit(this)" /></td>'));
+				                	    if(data.renewalCodeDataDetailsList[i].type === 0){
+				                	    	row.append($('<td><select id = "renewalCodeDataDetailsList-'+ i +'_type" class="form-control" onchange="typeChange(this)" name="renewalCodeDataDetailsList['+ i +'].type" > <option value = "0" label = "Amount" id="AmountType" selected>Amount</option> <option value = "1"  label = "Percentage" id="percentageType" >Percentage</option>'));
+				                	    	row.append($('</select></td>'));
+				                	    	row.append($('<td><input id = "renewalCodeDataDetailsList-'+ i +'_value" type="text" class="form-control" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkValue(this)" name="renewalCodeDataDetailsList['+ i +'].value" value="'+data.renewalCodeDataDetailsList[i].value+'" /></td>'));
+						                	row.append($('<td><input type="text" name="renewalCodeDataDetailsList['+ i +'].currency" class="form-control" value="'+data.renewalCodeDataDetailsList[i].currency+'" id = "renewalCodeDataDetailsList-'+ i +'_currency" /></td>'));
+				                	    }
+				                	    if(data.renewalCodeDataDetailsList[i].type === 1){
+				                	     	row.append($('<td><select id = "renewalCodeDataDetailsList-'+ i +'_type" class="form-control" onchange="typeChange(this)" name="renewalCodeDataDetailsList['+ i +'].type" ><option value = "0" label = "Amount" id="AmountType">Amount</option><option value = "1"  label = "Percentage" id="percentageType" selected>Percentage</option>'));
+				                	    	row.append($('</select></td>'));
+				                	    	row.append($('<td><input id = "renewalCodeDataDetailsList-'+ i +'_value" type="text" class="form-control" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkValue(this)" name="renewalCodeDataDetailsList['+ i +'].value" value="'+data.renewalCodeDataDetailsList[i].value+'" /></td>'));
+						                	row.append($('<td><input type="text" name="renewalCodeDataDetailsList['+ i +'].currency" class="form-control" value="'+data.renewalCodeDataDetailsList[i].currency+'" id = "renewalCodeDataDetailsList-'+ i +'_currency" /></td>'));
+				                	    }
+			                		}else{
+			                		    row.append($('<td><input type="text" id="renewalCodeDataDetailsList-'+ i +'_fromCycle" name="renewalCodeDataDetailsList['+ i +'].fromCycle" class="form-control" value="'+data.renewalCodeDataDetailsList[i].fromCycle+'" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkFromCycleForEdit(this)" readonly/></td>'));
+				                	    row.append($('<td><input type="text" id="renewalCodeDataDetailsList-'+ i +'_toCycle" name="renewalCodeDataDetailsList['+ i +'].toCycle" class="form-control" value="'+data.renewalCodeDataDetailsList[i].toCycle+'" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkToCycleForEdit(this)" readonly/></td>'));
+				                	    if(data.renewalCodeDataDetailsList[i].type === 0){
+				                	    	row.append($('<td><select id = "renewalCodeDataDetailsList-'+ i +'_type" class="form-control" onchange="typeChange(this)" name="renewalCodeDataDetailsList['+ i +'].type" readonly> <option value = "0" label = "Amount" id="AmountType" selected>Amount</option> <option value = "1"  label = "Percentage" id="percentageType" >Percentage</option>'));
+				                	    	row.append($('</select></td>'));
+				                	    	row.append($('<td><input id = "renewalCodeDataDetailsList-'+ i +'_value" type="text" class="form-control" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkValue(this)" name="renewalCodeDataDetailsList['+ i +'].value" value="'+data.renewalCodeDataDetailsList[i].value+'" readonly/></td>'));
+						                	row.append($('<td><input type="text" name="renewalCodeDataDetailsList['+ i +'].currency" class="form-control" value="'+data.renewalCodeDataDetailsList[i].currency+'" id = "renewalCodeDataDetailsList-'+ i +'_currency" readonly/></td>'));
+				                	    }
+				                	    if(data.renewalCodeDataDetailsList[i].type === 1){
+				                	     	row.append($('<td><select id = "renewalCodeDataDetailsList-'+ i +'_type" class="form-control" onchange="typeChange(this)" name="renewalCodeDataDetailsList['+ i +'].type" readonly><option value = "0" label = "Amount" id="AmountType">Amount</option><option value = "1"  label = "Percentage" id="percentageType" selected>Percentage</option>'));
+				                	    	row.append($('</select></td>'));
+				                	    	row.append($('<td><input id = "renewalCodeDataDetailsList-'+ i +'_value" type="text" class="form-control" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocusout = "checkValue(this)" name="renewalCodeDataDetailsList['+ i +'].value" value="'+data.renewalCodeDataDetailsList[i].value+'" readonly/></td>'));
+						                	row.append($('<td><input type="text" name="renewalCodeDataDetailsList['+ i +'].currency" class="form-control" value="'+data.renewalCodeDataDetailsList[i].currency+'" id = "renewalCodeDataDetailsList-'+ i +'_currency" readonly/></td>'));
+				                	    }
+			                		}
+			                	
 			                	    row.append($('<input type="hidden" name="renewalCodeDataDetailsList['+ i +'].dynamicPriceSeq" id = "renewalCodeDataDetailsList'+ i +'.dynamicPriceSeq"  value="'+ editableIndex +'"/>'));
 			                	    row.append($('</tr>'));
 			                	   

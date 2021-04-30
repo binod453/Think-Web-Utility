@@ -160,6 +160,8 @@ public class Pub_select_responsePub  implements java.io.Serializable {
 
     private int suppress_enumeration;  // attribute
 
+    private int max_qual_date_age;  // attribute
+
     public Pub_select_responsePub() {
     }
 
@@ -239,7 +241,8 @@ public class Pub_select_responsePub  implements java.io.Serializable {
            int revenue_method,
            int start_date_type_date_based,
            int start_n_days_date_based,
-           int suppress_enumeration) {
+           int suppress_enumeration,
+           int max_qual_date_age) {
            this.oc_id = oc_id;
            this.issn = issn;
            this.inherited_from = inherited_from;
@@ -316,6 +319,7 @@ public class Pub_select_responsePub  implements java.io.Serializable {
            this.start_date_type_date_based = start_date_type_date_based;
            this.start_n_days_date_based = start_n_days_date_based;
            this.suppress_enumeration = suppress_enumeration;
+           this.max_qual_date_age = max_qual_date_age;
     }
 
 
@@ -1838,6 +1842,26 @@ public class Pub_select_responsePub  implements java.io.Serializable {
         this.suppress_enumeration = suppress_enumeration;
     }
 
+
+    /**
+     * Gets the max_qual_date_age value for this Pub_select_responsePub.
+     * 
+     * @return max_qual_date_age
+     */
+    public int getMax_qual_date_age() {
+        return max_qual_date_age;
+    }
+
+
+    /**
+     * Sets the max_qual_date_age value for this Pub_select_responsePub.
+     * 
+     * @param max_qual_date_age
+     */
+    public void setMax_qual_date_age(int max_qual_date_age) {
+        this.max_qual_date_age = max_qual_date_age;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof Pub_select_responsePub)) return false;
@@ -1957,7 +1981,8 @@ public class Pub_select_responsePub  implements java.io.Serializable {
             this.revenue_method == other.getRevenue_method() &&
             this.start_date_type_date_based == other.getStart_date_type_date_based() &&
             this.start_n_days_date_based == other.getStart_n_days_date_based() &&
-            this.suppress_enumeration == other.getSuppress_enumeration();
+            this.suppress_enumeration == other.getSuppress_enumeration() &&
+            this.max_qual_date_age == other.getMax_qual_date_age();
         __equalsCalc = null;
         return _equals;
     }
@@ -2077,6 +2102,7 @@ public class Pub_select_responsePub  implements java.io.Serializable {
         _hashCode += getStart_date_type_date_based();
         _hashCode += getStart_n_days_date_based();
         _hashCode += getSuppress_enumeration();
+        _hashCode += getMax_qual_date_age();
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -2465,6 +2491,11 @@ public class Pub_select_responsePub  implements java.io.Serializable {
         attrField = new org.apache.axis.description.AttributeDesc();
         attrField.setFieldName("suppress_enumeration");
         attrField.setXmlName(new javax.xml.namespace.QName("", "suppress_enumeration"));
+        attrField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        typeDesc.addFieldDesc(attrField);
+        attrField = new org.apache.axis.description.AttributeDesc();
+        attrField.setFieldName("max_qual_date_age");
+        attrField.setXmlName(new javax.xml.namespace.QName("", "max_qual_date_age"));
         attrField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         typeDesc.addFieldDesc(attrField);
     }

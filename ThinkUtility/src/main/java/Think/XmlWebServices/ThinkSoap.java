@@ -10,8 +10,6 @@ package Think.XmlWebServices;
 public interface ThinkSoap extends java.rmi.Remote {
     public Think.XmlWebServices.Px_header_select_response pxHeaderSelect(Think.XmlWebServices.Px_header_select_request parameters) throws java.rmi.RemoteException;
     public Think.XmlWebServices.Payment_type_select_responsePayment_type[] paymentTypeSelect(Think.XmlWebServices.Payment_type_select_request parameters) throws java.rmi.RemoteException;
-    public Think.XmlWebServices.Dynamic_price_select_responseDynamic_price_select[] dynamicPriceSelect(Think.XmlWebServices.Dynamic_price_select_request parameters) throws java.rmi.RemoteException;
-    public Think.XmlWebServices.Dynamic_price_card_select_responseDynamic_price_card_select[] dynamicPriceCardSelect(Think.XmlWebServices.Dynamic_price_card_select_request parameters) throws java.rmi.RemoteException;
     public Think.XmlWebServices.Oc_list_by_topic_select_responseOc_list_by_topic[] ocListByTopicSelect(Think.XmlWebServices.Oc_list_by_topic_select_request parameters) throws java.rmi.RemoteException;
     public Think.XmlWebServices.Oc_descr_select_response ocDescrSelect(Think.XmlWebServices.Oc_descr_select_request parameters) throws java.rmi.RemoteException;
     public Think.XmlWebServices.Oc_for_prospect_select_response ocForProspectSelect(Think.XmlWebServices.Oc_for_prospect_select_request parameters) throws java.rmi.RemoteException;
@@ -119,6 +117,9 @@ public interface ThinkSoap extends java.rmi.Remote {
     public Think.XmlWebServices.Gpc_lookup_select_response gpcLookupSelect(Think.XmlWebServices.Gpc_lookup_select_request parameters) throws java.rmi.RemoteException;
     public Think.XmlWebServices.Paybreak_by_item_break_select_responsePaybreak[] paybreakByItemBreakSelect(Think.XmlWebServices.Paybreak_by_item_break_select_request parameters) throws java.rmi.RemoteException;
     public Think.XmlWebServices.Payment_account_with_pending_payments_select_responsePayment_account[] paymentAccountWithPendingPaymentsSelect(Think.XmlWebServices.Payment_account_with_pending_payments_select_request parameters) throws java.rmi.RemoteException;
+    public Think.XmlWebServices.Dynamic_price_select_responseDynamic_price[] dynamicPriceSelect(Think.XmlWebServices.Dynamic_price_select_request parameters) throws java.rmi.RemoteException;
+    public Think.XmlWebServices.Dynamic_price_card_select_responseView_dynamic_price_card[] dynamicPriceCardSelect(Think.XmlWebServices.Dynamic_price_card_select_request parameters) throws java.rmi.RemoteException;
+    public Think.XmlWebServices.Dynamic_price_isusedinorder_select_responseDynamic_price[] dynamicPriceIsusedinorderSelect(Think.XmlWebServices.Dynamic_price_isusedinorder_select_request parameters) throws java.rmi.RemoteException;
     public Think.XmlWebServices.Customer[] ipOverlapList(Think.XmlWebServices.Ip_overlap_list_request parameters) throws java.rmi.RemoteException;
     public Think.XmlWebServices.Customer[] customerListByIpAddress(Think.XmlWebServices.Customer_list_by_ip_address_request parameters) throws java.rmi.RemoteException;
     public Think.XmlWebServices.ThresholdOption[][] thresholdOptionList(Think.XmlWebServices.Threshold_option_list_request parameters) throws java.rmi.RemoteException;
@@ -201,10 +202,6 @@ public interface ThinkSoap extends java.rmi.Remote {
     public Think.XmlWebServices.Promotion_card_offer_list_response promotionCardOfferList(Think.XmlWebServices.Promotion_card_offer_list_request parameters) throws java.rmi.RemoteException;
     public Think.XmlWebServices.Password_email_send_response passwordEmailSend(Think.XmlWebServices.Password_email_send_request parameters) throws java.rmi.RemoteException;
     public Think.XmlWebServices.Event_queue_add_response eventQueueAdd(Think.XmlWebServices.Event_queue_add_request parameters) throws java.rmi.RemoteException;
-    public Think.XmlWebServices.Dynamic_price_add_response dynamicPriceAdd(Think.XmlWebServices.Dynamic_price_add_request parameters) throws java.rmi.RemoteException;
-    public Think.XmlWebServices.Dynamic_price_edit_response dynamicPriceEdit(Think.XmlWebServices.Dynamic_price_edit_request parameters) throws java.rmi.RemoteException;
-    public Think.XmlWebServices.Dynamic_price_card_add_response dynamicPricecardAdd(Think.XmlWebServices.Dynamic_price_card_add_request parameters) throws java.rmi.RemoteException;
-    public Think.XmlWebServices.Dynamic_price_card_edit_response dynamicPricecardEdit(Think.XmlWebServices.Dynamic_price_card_edit_request parameters) throws java.rmi.RemoteException;
     public Think.XmlWebServices.ZZEventQueue[] eventQueueDelete(Think.XmlWebServices.Event_queue_delete_request parameters) throws java.rmi.RemoteException;
     public Think.XmlWebServices.Payment_cancel_response paymentCancel(Think.XmlWebServices.Payment_cancel_request parameters) throws java.rmi.RemoteException;
     public Think.XmlWebServices.Order_item_for_payment[] paymentItemsList(Think.XmlWebServices.Payment_items_list_request parameters) throws java.rmi.RemoteException;
@@ -305,4 +302,8 @@ public interface ThinkSoap extends java.rmi.Remote {
     public Think.XmlWebServices.Edit_trail[] editTrail(Think.XmlWebServices.Edit_trail_request parameters) throws java.rmi.RemoteException;
     public Think.XmlWebServices.Security_check_response securityCheck(Think.XmlWebServices.Security_check_request parameters) throws java.rmi.RemoteException;
     public Think.XmlWebServices.Customer_auth_response customerAuth(Think.XmlWebServices.Customer_auth_request parameters) throws java.rmi.RemoteException;
+    public Think.XmlWebServices.Dynamic_price_add_response dynamicPriceAdd(Think.XmlWebServices.Dynamic_price_add_request parameters) throws java.rmi.RemoteException;
+    public Think.XmlWebServices.Dynamic_price_edit_response dynamicPriceEdit(Think.XmlWebServices.Dynamic_price_edit_request parameters) throws java.rmi.RemoteException;
+    public Think.XmlWebServices.Dynamic_price_card_add_response dynamicPriceCardAdd(Think.XmlWebServices.Dynamic_price_card_add_request parameters) throws java.rmi.RemoteException;
+    public Think.XmlWebServices.Dynamic_price_card_edit_response dynamicPriceCardEdit(Think.XmlWebServices.Dynamic_price_card_edit_request parameters) throws java.rmi.RemoteException;
 }

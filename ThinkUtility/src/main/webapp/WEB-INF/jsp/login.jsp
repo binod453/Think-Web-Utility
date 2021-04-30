@@ -36,20 +36,22 @@
 							</div>
 							<form:errors path="password" cssClass="error" />
 								 <form:select path="dsn" class="form-control" required="required">
-									 <form:option value = ""  label = "Select DSN"></form:option>
-									 <form:option value = "QADB-Local" label = "QADB-Local"></form:option>
+								  <c:forEach items="${dsnLists}" var="s" varStatus="status">
+								   <option value="${s}">${s}</option>
+								  </c:forEach>
 								 </form:select>
 								 <form:errors path="dsn" cssClass="error" />
 							
 							<div class="form-group mt-4 row">	 
 								<div class="form-group mb-2 col">
-								    <input type="text" class="form-control" id="ipAddress" name="ipAddress"  placeholder="SLAP IPAddress" required="required" onfocus="removeMessege()" onfocusout = "ValidateIPaddress(this)" onkeypress="return event.charCode >= 46 && event.charCode <= 57 && event.charCode != 47"  >
-								 	<div class="" id="errorDiv" style="color: red;"></div>
+								    <select class="form-control" id="ipAddress" name="ipAddress"  placeholder="SLAP IPAddress" required="required" onfocus="removeMessege()" >
+								 	<c:forEach items="${soapURI}" var="uri" varStatus="status">
+								   <option value="${uri}">${uri}</option>
+								  </c:forEach>
+								  </select>
 								 </div>
 								 
-								 <div class="form-group mb-2 col">
-								    <input type="text" class="form-control" id="port" name="port" placeholder="Port" required="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
-								 </div>
+								
 							</div>
 							<div class="form-group clearfix mt-4">
 								<button type="submit" class="btn float-right btn-primary" name="login" tabindex="3">

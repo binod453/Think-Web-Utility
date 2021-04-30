@@ -20,4 +20,5 @@ public class DynamicRenewalCodeModel implements Serializable{
 	private List<RenewalCodeDataDetails> renewalCodeDataDetailsList;
 	private LoginModel loginModel;
 	private int isActive;
+	private boolean isEditable;
 }

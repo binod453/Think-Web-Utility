@@ -4,7 +4,10 @@ import static com.mps.think.utility.utils.Constants.EXPIRATION_TIME;
 import static com.mps.think.utility.utils.Constants.SECRET;
 import static com.mps.think.utility.utils.Constants.TOKEN;
 
+import java.io.InputStream;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -13,16 +16,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.xml.rpc.ServiceException;
 
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -32,7 +36,7 @@ import com.mps.think.utility.model.LoginModel;
 import com.mps.think.utility.service.DynamicRenewalCodeService;
 import com.mps.think.utility.utils.SecurityConstants;
 
-import Think.XmlWebServices.Dynamic_price_select_responseDynamic_price_select;
+import Think.XmlWebServices.Dynamic_price_select_responseDynamic_price;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm; 
 
@@ -51,11 +55,24 @@ public class LoginController {
 	
 	@Autowired
 	DynamicRenewalCodeService dynamicRenewalCodeService;
+	
+//	@Value(value = "spring.config.location")
+//	String xmllFile;
 
 	@RequestMapping(value = { "/" })
 	public String login(Model model) {
 		LoginModel loginModel = new LoginModel();
 		model.addAttribute("loginModel", loginModel);
+		String data = dynamicRenewalCodeService.getDSNLists("DSNLists.xml");
+		List<String> dsnLists = new ArrayList<String>();
+		List<String> uri = new ArrayList<String>();
+		if(StringUtils.isNotBlank(data)) {
+			dsnLists = Arrays.stream(data.trim().split("\n\t\t")).filter(s->!s.trim().startsWith("http")).collect(Collectors.toList());
+			uri = Arrays.stream(data.trim().split("\n\t\t")).filter(s->s.trim().startsWith("http")).collect(Collectors.toList());
+		}
+		HttpSession session = request.getSession();
+		session.setAttribute("dsnLists", dsnLists);
+		session.setAttribute("soapURI", uri);
 		return "login";
 	}
 
@@ -63,15 +80,13 @@ public class LoginController {
 	public String login(@RequestParam(value = "username") String username,
 						@RequestParam(value = "password") String password,
 						@RequestParam(value = "dsn") String dsn,
+						
 						@RequestParam(value = "ipAddress") String ipAddress,
-						@RequestParam(value = "port") String port,
 						@ModelAttribute("loginModel")LoginModel loginModel, 
 			  BindingResult result,  ModelMap model) {
 		
 		HttpSession session = request.getSession();
-		StringBuffer address = new StringBuffer("http://");
-		address.append(loginModel.getIpAddress()+":"+loginModel.getPort()+"/soap.slap");
-		loginModel.setSoapAddress(address.toString());
+		loginModel.setSoapAddress(ipAddress);
 		boolean authenticationStatus = false;
 		if(result.hasErrors()) {
 			return "login";
@@ -108,7 +123,7 @@ public class LoginController {
 		try {
 			LoginModel userDetails = (LoginModel) request.getSession().getAttribute("loginModel");
 			
-			List<Dynamic_price_select_responseDynamic_price_select> codeModelList = dynamicRenewalCodeService.getDynamicCodesList(userDetails);
+			List<Dynamic_price_select_responseDynamic_price> codeModelList = dynamicRenewalCodeService.getDynamicCodesList(userDetails);
 			DynamicRenewalCodeModel codeModel = new DynamicRenewalCodeModel();
 			model.addAttribute("dynamicRenewalCodeModel", codeModel);
 			model.addAttribute("codeModelList", codeModelList);

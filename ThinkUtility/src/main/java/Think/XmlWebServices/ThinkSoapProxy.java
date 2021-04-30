@@ -56,18 +56,6 @@ public class ThinkSoapProxy implements Think.XmlWebServices.ThinkSoap {
     return thinkSoap.paymentTypeSelect(parameters);
   }
   
-  public Think.XmlWebServices.Dynamic_price_select_responseDynamic_price_select[] dynamicPriceSelect(Think.XmlWebServices.Dynamic_price_select_request parameters) throws java.rmi.RemoteException{
-    if (thinkSoap == null)
-      _initThinkSoapProxy();
-    return thinkSoap.dynamicPriceSelect(parameters);
-  }
-  
-  public Think.XmlWebServices.Dynamic_price_card_select_responseDynamic_price_card_select[] dynamicPriceCardSelect(Think.XmlWebServices.Dynamic_price_card_select_request parameters) throws java.rmi.RemoteException{
-    if (thinkSoap == null)
-      _initThinkSoapProxy();
-    return thinkSoap.dynamicPriceCardSelect(parameters);
-  }
-  
   public Think.XmlWebServices.Oc_list_by_topic_select_responseOc_list_by_topic[] ocListByTopicSelect(Think.XmlWebServices.Oc_list_by_topic_select_request parameters) throws java.rmi.RemoteException{
     if (thinkSoap == null)
       _initThinkSoapProxy();
@@ -710,6 +698,24 @@ public class ThinkSoapProxy implements Think.XmlWebServices.ThinkSoap {
     return thinkSoap.paymentAccountWithPendingPaymentsSelect(parameters);
   }
   
+  public Think.XmlWebServices.Dynamic_price_select_responseDynamic_price[] dynamicPriceSelect(Think.XmlWebServices.Dynamic_price_select_request parameters) throws java.rmi.RemoteException{
+    if (thinkSoap == null)
+      _initThinkSoapProxy();
+    return thinkSoap.dynamicPriceSelect(parameters);
+  }
+  
+  public Think.XmlWebServices.Dynamic_price_card_select_responseView_dynamic_price_card[] dynamicPriceCardSelect(Think.XmlWebServices.Dynamic_price_card_select_request parameters) throws java.rmi.RemoteException{
+    if (thinkSoap == null)
+      _initThinkSoapProxy();
+    return thinkSoap.dynamicPriceCardSelect(parameters);
+  }
+  
+  public Think.XmlWebServices.Dynamic_price_isusedinorder_select_responseDynamic_price[] dynamicPriceIsusedinorderSelect(Think.XmlWebServices.Dynamic_price_isusedinorder_select_request parameters) throws java.rmi.RemoteException{
+    if (thinkSoap == null)
+      _initThinkSoapProxy();
+    return thinkSoap.dynamicPriceIsusedinorderSelect(parameters);
+  }
+  
   public Think.XmlWebServices.Customer[] ipOverlapList(Think.XmlWebServices.Ip_overlap_list_request parameters) throws java.rmi.RemoteException{
     if (thinkSoap == null)
       _initThinkSoapProxy();
@@ -1200,30 +1206,6 @@ public class ThinkSoapProxy implements Think.XmlWebServices.ThinkSoap {
     if (thinkSoap == null)
       _initThinkSoapProxy();
     return thinkSoap.eventQueueAdd(parameters);
-  }
-  
-  public Think.XmlWebServices.Dynamic_price_add_response dynamicPriceAdd(Think.XmlWebServices.Dynamic_price_add_request parameters) throws java.rmi.RemoteException{
-    if (thinkSoap == null)
-      _initThinkSoapProxy();
-    return thinkSoap.dynamicPriceAdd(parameters);
-  }
-  
-  public Think.XmlWebServices.Dynamic_price_edit_response dynamicPriceEdit(Think.XmlWebServices.Dynamic_price_edit_request parameters) throws java.rmi.RemoteException{
-    if (thinkSoap == null)
-      _initThinkSoapProxy();
-    return thinkSoap.dynamicPriceEdit(parameters);
-  }
-  
-  public Think.XmlWebServices.Dynamic_price_card_add_response dynamicPricecardAdd(Think.XmlWebServices.Dynamic_price_card_add_request parameters) throws java.rmi.RemoteException{
-    if (thinkSoap == null)
-      _initThinkSoapProxy();
-    return thinkSoap.dynamicPricecardAdd(parameters);
-  }
-  
-  public Think.XmlWebServices.Dynamic_price_card_edit_response dynamicPricecardEdit(Think.XmlWebServices.Dynamic_price_card_edit_request parameters) throws java.rmi.RemoteException{
-    if (thinkSoap == null)
-      _initThinkSoapProxy();
-    return thinkSoap.dynamicPricecardEdit(parameters);
   }
   
   public Think.XmlWebServices.ZZEventQueue[] eventQueueDelete(Think.XmlWebServices.Event_queue_delete_request parameters) throws java.rmi.RemoteException{
@@ -1824,6 +1806,30 @@ public class ThinkSoapProxy implements Think.XmlWebServices.ThinkSoap {
     if (thinkSoap == null)
       _initThinkSoapProxy();
     return thinkSoap.customerAuth(parameters);
+  }
+  
+  public Think.XmlWebServices.Dynamic_price_add_response dynamicPriceAdd(Think.XmlWebServices.Dynamic_price_add_request parameters) throws java.rmi.RemoteException{
+    if (thinkSoap == null)
+      _initThinkSoapProxy();
+    return thinkSoap.dynamicPriceAdd(parameters);
+  }
+  
+  public Think.XmlWebServices.Dynamic_price_edit_response dynamicPriceEdit(Think.XmlWebServices.Dynamic_price_edit_request parameters) throws java.rmi.RemoteException{
+    if (thinkSoap == null)
+      _initThinkSoapProxy();
+    return thinkSoap.dynamicPriceEdit(parameters);
+  }
+  
+  public Think.XmlWebServices.Dynamic_price_card_add_response dynamicPriceCardAdd(Think.XmlWebServices.Dynamic_price_card_add_request parameters) throws java.rmi.RemoteException{
+    if (thinkSoap == null)
+      _initThinkSoapProxy();
+    return thinkSoap.dynamicPriceCardAdd(parameters);
+  }
+  
+  public Think.XmlWebServices.Dynamic_price_card_edit_response dynamicPriceCardEdit(Think.XmlWebServices.Dynamic_price_card_edit_request parameters) throws java.rmi.RemoteException{
+    if (thinkSoap == null)
+      _initThinkSoapProxy();
+    return thinkSoap.dynamicPriceCardEdit(parameters);
   }
   
   

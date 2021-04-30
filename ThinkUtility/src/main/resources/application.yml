@@ -21,7 +21,6 @@ server:
     whitelabel:
       enabled: true
       
-#server:
-#  port: 1438
+
 
   

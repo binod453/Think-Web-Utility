@@ -16,7 +16,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
     static org.apache.axis.description.OperationDesc [] _operations;
 
     static {
-        _operations = new org.apache.axis.description.OperationDesc[297];
+        _operations = new org.apache.axis.description.OperationDesc[298];
         _initOperationDesc1();
         _initOperationDesc2();
         _initOperationDesc3();
@@ -77,32 +77,6 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         _operations[1] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("DynamicPriceSelect");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_select_request"), Think.XmlWebServices.Dynamic_price_select_request.class, false, false);
-        oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_select_response"));
-        oper.setReturnClass(Think.XmlWebServices.Dynamic_price_select_responseDynamic_price_select[].class);
-        oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_select_response"));
-        param = oper.getReturnParamDesc();
-        param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_select"));
-        oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
-        oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[2] = oper;
-
-        oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("DynamicPriceCardSelect");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_card_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_card_select_request"), Think.XmlWebServices.Dynamic_price_card_select_request.class, false, false);
-        oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_card_select_response"));
-        oper.setReturnClass(Think.XmlWebServices.Dynamic_price_card_select_responseDynamic_price_card_select[].class);
-        oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_card_select_response"));
-        param = oper.getReturnParamDesc();
-        param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_card_select"));
-        oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
-        oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[3] = oper;
-
-        oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OcListByTopicSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "oc_list_by_topic_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">oc_list_by_topic_select_request"), Think.XmlWebServices.Oc_list_by_topic_select_request.class, false, false);
         oper.addParameter(param);
@@ -113,7 +87,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "oc_list_by_topic"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[4] = oper;
+        _operations[2] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OcDescrSelect");
@@ -124,57 +98,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "oc_descr_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[5] = oper;
+        _operations[3] = oper;
 
-        oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("DynamicPriceAdd");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_add_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_add_request"), Think.XmlWebServices.Dynamic_price_add_request.class, false, false);
-        oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_add_response"));
-        oper.setReturnClass(Think.XmlWebServices.Dynamic_price_add_response.class);
-        oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_add_response"));
-        oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
-        oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[6] = oper;
-
-        oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("DynamicPriceEdit");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_edit_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_edit_request"), Think.XmlWebServices.Dynamic_price_edit_request.class, false, false);
-        oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_edit_response"));
-        oper.setReturnClass(Think.XmlWebServices.Dynamic_price_edit_response.class);
-        oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_edit_response"));
-        oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
-        oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[7] = oper;
-
-        oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("DynamicPricecardAdd");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_card_add_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_card_add_request"), Think.XmlWebServices.Dynamic_price_card_add_request.class, false, false);
-        oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_card_add_response"));
-        oper.setReturnClass(Think.XmlWebServices.Dynamic_price_card_add_response.class);
-        oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_card_add_response"));
-        oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
-        oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[8] = oper;
-
-        oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("DynamicPricecardEdit");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_card_edit_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_card_edit_request"), Think.XmlWebServices.Dynamic_price_card_edit_request.class, false, false);
-        oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_card_edit_response"));
-        oper.setReturnClass(Think.XmlWebServices.Dynamic_price_card_edit_response.class);
-        oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_card_edit_response"));
-        oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
-        oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[9] = oper;
-
-    }
-
-    private static void _initOperationDesc2(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OcForProspectSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "oc_for_prospect_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">oc_for_prospect_select_request"), Think.XmlWebServices.Oc_for_prospect_select_request.class, false, false);
@@ -184,7 +109,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "oc_for_prospect_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[10] = oper;
+        _operations[4] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SpecialOffersSelect");
@@ -195,7 +120,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "special_offers_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[11] = oper;
+        _operations[5] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderPaymentSelect");
@@ -206,7 +131,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_payment_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[12] = oper;
+        _operations[6] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("BaseCurrencySelect");
@@ -217,7 +142,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "base_currency_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[13] = oper;
+        _operations[7] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ConfigSelect");
@@ -228,7 +153,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "config_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[14] = oper;
+        _operations[8] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CurrencySelect");
@@ -241,8 +166,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "currency"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[15] = oper;
+        _operations[9] = oper;
 
+    }
+
+    private static void _initOperationDesc2(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("StateSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "state_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">state_select_request"), Think.XmlWebServices.State_select_request.class, false, false);
@@ -254,7 +184,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "state"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[16] = oper;
+        _operations[10] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("StateNonsuppressedSelect");
@@ -267,7 +197,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "state"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[17] = oper;
+        _operations[11] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PubListSelect");
@@ -280,7 +210,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "pub"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[18] = oper;
+        _operations[12] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PubSelect");
@@ -293,13 +223,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "pub"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[19] = oper;
+        _operations[13] = oper;
 
-    }
-
-    private static void _initOperationDesc3(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ProductListSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "product_list_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">product_list_select_request"), Think.XmlWebServices.Product_list_select_request.class, false, false);
@@ -311,7 +236,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "oc"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[20] = oper;
+        _operations[14] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PackageListSelect");
@@ -324,7 +249,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_code_with_pkg_def"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[21] = oper;
+        _operations[15] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PackageDescrSelect");
@@ -335,7 +260,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "package_descr_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[22] = oper;
+        _operations[16] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PackageContentSelect");
@@ -348,7 +273,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "view_pkg_def_content"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[23] = oper;
+        _operations[17] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerInfoSelect");
@@ -359,7 +284,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_info_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[24] = oper;
+        _operations[18] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentAccountInfoSelect");
@@ -370,8 +295,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_account_info_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[25] = oper;
+        _operations[19] = oper;
 
+    }
+
+    private static void _initOperationDesc3(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AddressInfoSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "address_info_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">address_info_select_request"), Think.XmlWebServices.Address_info_select_request.class, false, false);
@@ -381,7 +311,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "address_info_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[26] = oper;
+        _operations[20] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SubscripListSelect");
@@ -392,7 +322,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "subscrip_list_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[27] = oper;
+        _operations[21] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PackageOrderListSelect");
@@ -403,7 +333,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "package_order_list_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[28] = oper;
+        _operations[22] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentClearStatusDescrSelect");
@@ -414,13 +344,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_clear_status_descr_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[29] = oper;
+        _operations[23] = oper;
 
-    }
-
-    private static void _initOperationDesc4(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentListSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_list_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">payment_list_select_request"), Think.XmlWebServices.Payment_list_select_request.class, false, false);
@@ -430,7 +355,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_list_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[30] = oper;
+        _operations[24] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentAmountInfoSelect");
@@ -443,7 +368,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[31] = oper;
+        _operations[25] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ProductOrderListSelect");
@@ -454,7 +379,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "product_order_list_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[32] = oper;
+        _operations[26] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CurrentIssueSelect");
@@ -465,7 +390,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "current_issue_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[33] = oper;
+        _operations[27] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SourceCodeSelect");
@@ -476,7 +401,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "source_code_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[34] = oper;
+        _operations[28] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderAddressesSelect");
@@ -489,8 +414,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_item"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[35] = oper;
+        _operations[29] = oper;
 
+    }
+
+    private static void _initOperationDesc4(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("IssueListSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "issue_list_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">issue_list_select_request"), Think.XmlWebServices.Issue_list_select_request.class, false, false);
@@ -502,7 +432,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "issue"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[36] = oper;
+        _operations[30] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("IssueSelect");
@@ -513,7 +443,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "issue_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[37] = oper;
+        _operations[31] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ProspectSelect");
@@ -524,7 +454,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "prospect_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[38] = oper;
+        _operations[32] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PromotionHistoryOfferListSelect");
@@ -535,13 +465,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "promotion_history_offer_list_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[39] = oper;
+        _operations[33] = oper;
 
-    }
-
-    private static void _initOperationDesc5(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RenewalHistoryOfferListSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "renewal_history_offer_list_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">renewal_history_offer_list_select_request"), Think.XmlWebServices.Renewal_history_offer_list_select_request.class, false, false);
@@ -553,7 +478,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "renewal_history_offer"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[40] = oper;
+        _operations[34] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SourceCodeLookupSelect");
@@ -566,7 +491,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "source_code"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[41] = oper;
+        _operations[35] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ItemsByOrderhdrSelect");
@@ -579,7 +504,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_item"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[42] = oper;
+        _operations[36] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ActiveOrdersForGroupSelect");
@@ -590,7 +515,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "active_orders_for_group_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[43] = oper;
+        _operations[37] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerGroupInfoSelect");
@@ -601,7 +526,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_group_info_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[44] = oper;
+        _operations[38] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ReplacementOrderCodeListSelect");
@@ -614,8 +539,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_code"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[45] = oper;
+        _operations[39] = oper;
 
+    }
+
+    private static void _initOperationDesc5(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ServiceNoteSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "service_note_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">service_note_select_request"), Think.XmlWebServices.Service_note_select_request.class, false, false);
@@ -625,7 +555,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "service_note_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[46] = oper;
+        _operations[40] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderItemNoteSelect");
@@ -638,7 +568,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_item_note"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[47] = oper;
+        _operations[41] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentNoteSelect");
@@ -651,7 +581,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_note"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[48] = oper;
+        _operations[42] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderCodeInstallPlanSelect");
@@ -664,13 +594,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_code_install_plan"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[49] = oper;
+        _operations[43] = oper;
 
-    }
-
-    private static void _initOperationDesc6(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerLoginInfoSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_login_info_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">customer_login_info_select_request"), Think.XmlWebServices.Customer_login_info_select_request.class, false, false);
@@ -680,7 +605,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_login_info_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[50] = oper;
+        _operations[44] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PasswordInfoSelect");
@@ -691,7 +616,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "password_info_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[51] = oper;
+        _operations[45] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerLoginQuestionListSelect");
@@ -704,7 +629,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_login_question"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[52] = oper;
+        _operations[46] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderCodeSelect");
@@ -717,7 +642,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_code"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[53] = oper;
+        _operations[47] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderCodeListSelect");
@@ -730,7 +655,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_code"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[54] = oper;
+        _operations[48] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ItemsNeedingDistributionSelect");
@@ -741,8 +666,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "items_needing_distribution_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[55] = oper;
+        _operations[49] = oper;
 
+    }
+
+    private static void _initOperationDesc6(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UserAuthoritySelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "user_authority_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">user_authority_select_request"), Think.XmlWebServices.User_authority_select_request.class, false, false);
@@ -752,7 +682,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "user_authority_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[56] = oper;
+        _operations[50] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UserGroupRightsSelect");
@@ -765,7 +695,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "user_group_rights"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[57] = oper;
+        _operations[51] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerCreditStatusSelect");
@@ -776,7 +706,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_credit_status_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[58] = oper;
+        _operations[52] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentAccountOrderItemSelect");
@@ -787,13 +717,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_account_order_item_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[59] = oper;
+        _operations[53] = oper;
 
-    }
-
-    private static void _initOperationDesc7(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RenewalChainSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "renewal_chain_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">renewal_chain_select_request"), Think.XmlWebServices.Renewal_chain_select_request.class, false, false);
@@ -805,7 +730,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_item"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[60] = oper;
+        _operations[54] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JobProcessRunningSelect");
@@ -818,7 +743,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "job_process_running"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[61] = oper;
+        _operations[55] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JournalSelect");
@@ -831,7 +756,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "journal"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[62] = oper;
+        _operations[56] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CheckedOutUnitListSelect");
@@ -842,7 +767,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "checked_out_unit_list_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[63] = oper;
+        _operations[57] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AddressListSelect");
@@ -853,7 +778,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "address_list_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[64] = oper;
+        _operations[58] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CompanyListSelect");
@@ -864,8 +789,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "company_list_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[65] = oper;
+        _operations[59] = oper;
 
+    }
+
+    private static void _initOperationDesc7(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SalesRepresentativeListSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "sales_representative_list_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">sales_representative_list_select_request"), Think.XmlWebServices.Sales_representative_list_select_request.class, false, false);
@@ -877,7 +807,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "sales_representative"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[66] = oper;
+        _operations[60] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ReviewPaymentsListSelect");
@@ -890,7 +820,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "view_payment_review"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[67] = oper;
+        _operations[61] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderItemAccountSelect");
@@ -903,7 +833,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_item_account"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[68] = oper;
+        _operations[62] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderItemAccBreakSelect");
@@ -916,13 +846,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_item_acc_break"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[69] = oper;
+        _operations[63] = oper;
 
-    }
-
-    private static void _initOperationDesc8(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderItemAmtBreakSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_item_amt_break_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">order_item_amt_break_select_request"), Think.XmlWebServices.Order_item_amt_break_select_request.class, false, false);
@@ -934,7 +859,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_item_amt_break"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[70] = oper;
+        _operations[64] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderItemSelect");
@@ -947,7 +872,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_item"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[71] = oper;
+        _operations[65] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SuspensionListSelect");
@@ -960,7 +885,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "suspension"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[72] = oper;
+        _operations[66] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("BackIssueListSelect");
@@ -973,7 +898,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "back_issue"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[73] = oper;
+        _operations[67] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("BackIssueFullListSelect");
@@ -986,7 +911,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "back_issue"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[74] = oper;
+        _operations[68] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("MissedIssuesListSelect");
@@ -999,8 +924,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "missed_issues"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[75] = oper;
+        _operations[69] = oper;
 
+    }
+
+    private static void _initOperationDesc8(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RequestLogSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "request_log_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">request_log_select_request"), Think.XmlWebServices.Request_log_select_request.class, false, false);
@@ -1012,7 +942,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "request_log"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[76] = oper;
+        _operations[70] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ServiceWithNotesSelect");
@@ -1025,7 +955,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "service_item"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[77] = oper;
+        _operations[71] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("LastEditDateSelect");
@@ -1036,7 +966,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "last_edit_date_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[78] = oper;
+        _operations[72] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerServiceItemsByUserSelect");
@@ -1049,13 +979,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "service"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[79] = oper;
+        _operations[73] = oper;
 
-    }
-
-    private static void _initOperationDesc9(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OcFullListSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "oc_full_list_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">oc_full_list_select_request"), Think.XmlWebServices.Oc_full_list_select_request.class, false, false);
@@ -1067,7 +992,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "oc"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[80] = oper;
+        _operations[74] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderCodeFullListSelect");
@@ -1080,7 +1005,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_code"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[81] = oper;
+        _operations[75] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsConfigSelect");
@@ -1093,7 +1018,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_config"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[82] = oper;
+        _operations[76] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsMachineByNameSelect");
@@ -1106,7 +1031,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_machine"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[83] = oper;
+        _operations[77] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsMachineSelect");
@@ -1119,7 +1044,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_machine"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[84] = oper;
+        _operations[78] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsQueueByMachineSelect");
@@ -1132,8 +1057,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_queue"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[85] = oper;
+        _operations[79] = oper;
 
+    }
+
+    private static void _initOperationDesc9(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JobsReadyByQueueSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jobs_ready_by_queue_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">jobs_ready_by_queue_select_request"), Think.XmlWebServices.Jobs_ready_by_queue_select_request.class, false, false);
@@ -1145,7 +1075,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "job"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[86] = oper;
+        _operations[80] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("QueueSelect");
@@ -1158,7 +1088,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "queue"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[87] = oper;
+        _operations[81] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsAlertSelect");
@@ -1171,7 +1101,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_alert"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[88] = oper;
+        _operations[82] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JobsQueueableSelect");
@@ -1184,13 +1114,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "job"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[89] = oper;
+        _operations[83] = oper;
 
-    }
-
-    private static void _initOperationDesc10(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JobLogSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "job_log_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">job_log_select_request"), Think.XmlWebServices.Job_log_select_request.class, false, false);
@@ -1202,7 +1127,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "job_log"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[90] = oper;
+        _operations[84] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsWorkTableErrorLogSelect");
@@ -1215,7 +1140,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_work_table_error_log"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[91] = oper;
+        _operations[85] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DomainValueDescrSelect");
@@ -1226,7 +1151,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "domain_value_descr_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[92] = oper;
+        _operations[86] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ProcessSelect");
@@ -1239,7 +1164,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "process"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[93] = oper;
+        _operations[87] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JobsDoneByProcessSelect");
@@ -1252,7 +1177,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "job"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[94] = oper;
+        _operations[88] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JobSelect");
@@ -1265,8 +1190,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "job"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[95] = oper;
+        _operations[89] = oper;
 
+    }
+
+    private static void _initOperationDesc10(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JobRenewalEffortSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "job_renewal_effort_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">job_renewal_effort_select_request"), Think.XmlWebServices.Job_renewal_effort_select_request.class, false, false);
@@ -1278,7 +1208,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "job_renewal_effort"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[96] = oper;
+        _operations[90] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JobBillingEffortSelect");
@@ -1291,7 +1221,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "job_billing_effort"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[97] = oper;
+        _operations[91] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ViewLabelHistDtlSelect");
@@ -1304,7 +1234,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "view_label_hist_dtl"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[98] = oper;
+        _operations[92] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ViewRenewalEffortByOcSelect");
@@ -1317,13 +1247,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "view_renewal_effort_by_oc"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[99] = oper;
+        _operations[93] = oper;
 
-    }
-
-    private static void _initOperationDesc11(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ViewRenewalEffortByEffortSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "view_renewal_effort_by_effort_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">view_renewal_effort_by_effort_select_request"), Think.XmlWebServices.View_renewal_effort_by_effort_select_request.class, false, false);
@@ -1335,7 +1260,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "view_renewal_effort_by_effort"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[100] = oper;
+        _operations[94] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ViewRenewalEffortByExpireSelect");
@@ -1348,7 +1273,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "view_renewal_effort_by_expire"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[101] = oper;
+        _operations[95] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ViewBillingEffortByOcSelect");
@@ -1361,7 +1286,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "view_billing_effort_by_oc"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[102] = oper;
+        _operations[96] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ViewBillingEffortByEffortSelect");
@@ -1374,7 +1299,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "view_billing_effort_by_effort"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[103] = oper;
+        _operations[97] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ViewBillingEffortByExpireSelect");
@@ -1387,7 +1312,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "view_billing_effort_by_expire"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[104] = oper;
+        _operations[98] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("WorkTableSelect");
@@ -1400,8 +1325,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "work_table"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[105] = oper;
+        _operations[99] = oper;
 
+    }
+
+    private static void _initOperationDesc11(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("WorkTablePaymentSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "work_table_payment_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">work_table_payment_select_request"), Think.XmlWebServices.Work_table_payment_select_request.class, false, false);
@@ -1413,7 +1343,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "work_table_payment"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[106] = oper;
+        _operations[100] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RenewalHistorySelect");
@@ -1424,7 +1354,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "renewal_history_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[107] = oper;
+        _operations[101] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CatalogContentSelect");
@@ -1437,7 +1367,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "catalog_content"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[108] = oper;
+        _operations[102] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("TenantSelect");
@@ -1450,13 +1380,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "tenant"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[109] = oper;
+        _operations[103] = oper;
 
-    }
-
-    private static void _initOperationDesc12(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AuxFieldSelect");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "aux_field_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">aux_field_select_request"), Think.XmlWebServices.Aux_field_select_request.class, false, false);
@@ -1468,7 +1393,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "aux_field"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[110] = oper;
+        _operations[104] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AttachmentSelect");
@@ -1481,7 +1406,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "attachment"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[111] = oper;
+        _operations[105] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GpcLookupSelect");
@@ -1492,7 +1417,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "gpc_lookup_select_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[112] = oper;
+        _operations[106] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaybreakByItemBreakSelect");
@@ -1505,7 +1430,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "paybreak"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[113] = oper;
+        _operations[107] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentAccountWithPendingPaymentsSelect");
@@ -1518,7 +1443,51 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_account"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[114] = oper;
+        _operations[108] = oper;
+
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("DynamicPriceSelect");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_select_request"), Think.XmlWebServices.Dynamic_price_select_request.class, false, false);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_select_response"));
+        oper.setReturnClass(Think.XmlWebServices.Dynamic_price_select_responseDynamic_price[].class);
+        oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_select_response"));
+        param = oper.getReturnParamDesc();
+        param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price"));
+        oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[109] = oper;
+
+    }
+
+    private static void _initOperationDesc12(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("DynamicPriceCardSelect");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_card_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_card_select_request"), Think.XmlWebServices.Dynamic_price_card_select_request.class, false, false);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_card_select_response"));
+        oper.setReturnClass(Think.XmlWebServices.Dynamic_price_card_select_responseView_dynamic_price_card[].class);
+        oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_card_select_response"));
+        param = oper.getReturnParamDesc();
+        param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "view_dynamic_price_card"));
+        oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[110] = oper;
+
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("DynamicPriceIsusedinorderSelect");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_isusedinorder_select_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_isusedinorder_select_request"), Think.XmlWebServices.Dynamic_price_isusedinorder_select_request.class, false, false);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_isusedinorder_select_response"));
+        oper.setReturnClass(Think.XmlWebServices.Dynamic_price_isusedinorder_select_responseDynamic_price[].class);
+        oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_isusedinorder_select_response"));
+        param = oper.getReturnParamDesc();
+        param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price"));
+        oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[111] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("IpOverlapList");
@@ -1529,7 +1498,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "ip_overlap_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[115] = oper;
+        _operations[112] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerListByIpAddress");
@@ -1540,7 +1509,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_list_by_ip_address_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[116] = oper;
+        _operations[113] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ThresholdOptionList");
@@ -1551,7 +1520,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "threshold_option_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[117] = oper;
+        _operations[114] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UserAuthenticate");
@@ -1562,7 +1531,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "user_authenticate_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[118] = oper;
+        _operations[115] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UserPasswordChange");
@@ -1573,13 +1542,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "user_password_change_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[119] = oper;
+        _operations[116] = oper;
 
-    }
-
-    private static void _initOperationDesc13(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UserPasswordInvalidate");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "user_password_invalidate_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">user_password_invalidate_request"), Think.XmlWebServices.User_password_invalidate_request.class, false, false);
@@ -1589,7 +1553,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "user_password_invalidate_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[120] = oper;
+        _operations[117] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UserPasswordReset");
@@ -1600,7 +1564,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "user_password_reset_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[121] = oper;
+        _operations[118] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("LoginAuthenticate");
@@ -1611,8 +1575,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "login_authenticate_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[122] = oper;
+        _operations[119] = oper;
 
+    }
+
+    private static void _initOperationDesc13(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("IpAuthenticate");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "ip_authenticate_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">ip_authenticate_request"), Think.XmlWebServices.Ip_authenticate_request.class, false, false);
@@ -1622,7 +1591,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "ip_authenticate_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[123] = oper;
+        _operations[120] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UserCodeActivityAdd");
@@ -1633,7 +1602,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "user_code_activity_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[124] = oper;
+        _operations[121] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderItemInformation");
@@ -1644,7 +1613,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_item_information_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[125] = oper;
+        _operations[122] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderAdd");
@@ -1655,7 +1624,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[126] = oper;
+        _operations[123] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderAddEffectList");
@@ -1666,7 +1635,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_add_effect_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[127] = oper;
+        _operations[124] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderAddPaymentAddEffectList");
@@ -1677,7 +1646,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_add_payment_add_effect_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[128] = oper;
+        _operations[125] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderhdrEdit");
@@ -1688,13 +1657,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "orderhdr_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[129] = oper;
+        _operations[126] = oper;
 
-    }
-
-    private static void _initOperationDesc14(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderItemEdit");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_item_edit_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">order_item_edit_request"), Think.XmlWebServices.Order_item_edit_request.class, false, false);
@@ -1704,7 +1668,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_item_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[130] = oper;
+        _operations[127] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RenewableOrderItemEdit");
@@ -1715,7 +1679,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "renewable_order_item_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[131] = oper;
+        _operations[128] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderAddPaymentAdd");
@@ -1726,8 +1690,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_add_payment_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[132] = oper;
+        _operations[129] = oper;
 
+    }
+
+    private static void _initOperationDesc14(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderAddDepositUse");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_add_deposit_use_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">order_add_deposit_use_request"), Think.XmlWebServices.Order_add_deposit_use_request.class, false, false);
@@ -1737,7 +1706,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_add_deposit_use_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[133] = oper;
+        _operations[130] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DepositUse");
@@ -1748,7 +1717,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "deposit_use_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[134] = oper;
+        _operations[131] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DepositUseEffectList");
@@ -1759,7 +1728,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "deposit_use_effect_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[135] = oper;
+        _operations[132] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DepositRefund");
@@ -1770,7 +1739,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "deposit_refund_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[136] = oper;
+        _operations[133] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerAddOrderAdd");
@@ -1781,7 +1750,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_add_order_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[137] = oper;
+        _operations[134] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerAddOrderAddPaymentAdd");
@@ -1792,7 +1761,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_add_order_add_payment_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[138] = oper;
+        _operations[135] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerAddPaymentAdd");
@@ -1803,13 +1772,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_add_payment_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[139] = oper;
+        _operations[136] = oper;
 
-    }
-
-    private static void _initOperationDesc15(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SubgroupAdd");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "subgroup_add_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">subgroup_add_request"), Think.XmlWebServices.Subgroup_add_request.class, false, false);
@@ -1819,7 +1783,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "subgroup_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[140] = oper;
+        _operations[137] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SubgroupDelete");
@@ -1830,7 +1794,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "subgroup_delete_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[141] = oper;
+        _operations[138] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SubgroupMove");
@@ -1841,8 +1805,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "subgroup_move_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[142] = oper;
+        _operations[139] = oper;
 
+    }
+
+    private static void _initOperationDesc15(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderTransferInformation");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_transfer_information_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">order_transfer_information_request"), Think.XmlWebServices.Order_transfer_information_request.class, false, false);
@@ -1852,7 +1821,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_transfer_information_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[143] = oper;
+        _operations[140] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderTransfer");
@@ -1863,7 +1832,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_transfer_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[144] = oper;
+        _operations[141] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerEdit");
@@ -1874,7 +1843,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[145] = oper;
+        _operations[142] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CreditCardPaymentClear");
@@ -1885,7 +1854,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "credit_card_payment_clear_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[146] = oper;
+        _operations[143] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentAccountAdd");
@@ -1896,7 +1865,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_account_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[147] = oper;
+        _operations[144] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentAccountEdit");
@@ -1907,7 +1876,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_account_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[148] = oper;
+        _operations[145] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentAccountEditEx");
@@ -1918,13 +1887,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_account_edit_ex_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[149] = oper;
+        _operations[146] = oper;
 
-    }
-
-    private static void _initOperationDesc16(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentAccountClear");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_account_clear_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">payment_account_clear_request"), Think.XmlWebServices.Payment_account_clear_request.class, false, false);
@@ -1934,7 +1898,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_account_clear_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[150] = oper;
+        _operations[147] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentAccountClearEx");
@@ -1945,7 +1909,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_account_clear_ex_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[151] = oper;
+        _operations[148] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerAddressAdd");
@@ -1956,8 +1920,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_address_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[152] = oper;
+        _operations[149] = oper;
 
+    }
+
+    private static void _initOperationDesc16(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerAddressEdit");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_address_edit_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">customer_address_edit_request"), Think.XmlWebServices.Customer_address_edit_request.class, false, false);
@@ -1967,7 +1936,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_address_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[153] = oper;
+        _operations[150] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerAddressEditFromFutureTemp");
@@ -1978,7 +1947,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_address_edit_from_future_temp_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[154] = oper;
+        _operations[151] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerAddressDeleteFutureTemp");
@@ -1989,7 +1958,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_address_delete_future_temp_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[155] = oper;
+        _operations[152] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerAddressEditEffectList");
@@ -2000,7 +1969,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_address_edit_effect_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[156] = oper;
+        _operations[153] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerLoginClaim");
@@ -2011,7 +1980,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_login_claim_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[157] = oper;
+        _operations[154] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("LoginClaim");
@@ -2022,7 +1991,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "login_claim_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[158] = oper;
+        _operations[155] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SubscriptionIsDuplicate");
@@ -2033,13 +2002,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "subscription_is_duplicate_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[159] = oper;
+        _operations[156] = oper;
 
-    }
-
-    private static void _initOperationDesc17(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DemogForm");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "demog_form_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">demog_form_request"), Think.XmlWebServices.Demog_form_request.class, false, false);
@@ -2049,7 +2013,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "demog_form_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[160] = oper;
+        _operations[157] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DemographicCheck");
@@ -2060,7 +2024,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "demographic_check_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[161] = oper;
+        _operations[158] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DemographicUpdate");
@@ -2071,8 +2035,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "demographic_update_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[162] = oper;
+        _operations[159] = oper;
 
+    }
+
+    private static void _initOperationDesc17(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DemographicDelete");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "demographic_delete_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">demographic_delete_request"), Think.XmlWebServices.Demographic_delete_request.class, false, false);
@@ -2082,7 +2051,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "demographic_delete_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[163] = oper;
+        _operations[160] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("InventoryCheck");
@@ -2093,7 +2062,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "inventory_check_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[164] = oper;
+        _operations[161] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("InventorySufficientForSample");
@@ -2104,7 +2073,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "inventory_sufficient_for_sample_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[165] = oper;
+        _operations[162] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AmountConversion");
@@ -2115,7 +2084,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "amount_conversion_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[166] = oper;
+        _operations[163] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentAdd");
@@ -2126,7 +2095,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[167] = oper;
+        _operations[164] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentEdit");
@@ -2137,7 +2106,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[168] = oper;
+        _operations[165] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentInformation");
@@ -2148,13 +2117,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_information_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[169] = oper;
+        _operations[166] = oper;
 
-    }
-
-    private static void _initOperationDesc18(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentEffectList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_effect_list_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">payment_effect_list_request"), Think.XmlWebServices.Payment_effect_list_request.class, false, false);
@@ -2164,7 +2128,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_effect_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[170] = oper;
+        _operations[167] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DepositPaymentInformation");
@@ -2175,7 +2139,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "deposit_payment_information_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[171] = oper;
+        _operations[168] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaybreakInformation");
@@ -2186,8 +2150,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "paybreak_information_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[172] = oper;
+        _operations[169] = oper;
 
+    }
+
+    private static void _initOperationDesc18(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderCancelList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_cancel_list_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">order_cancel_list_request"), Think.XmlWebServices.Order_cancel_list_request.class, false, false);
@@ -2197,7 +2166,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_cancel_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[173] = oper;
+        _operations[170] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderCancel");
@@ -2208,7 +2177,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_cancel_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[174] = oper;
+        _operations[171] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SupplementalRefundAdd");
@@ -2219,7 +2188,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "supplemental_refund_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[175] = oper;
+        _operations[172] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ItemsRenewableList");
@@ -2230,7 +2199,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "items_renewable_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[176] = oper;
+        _operations[173] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RefundCalculate");
@@ -2241,7 +2210,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "refund_calculate_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[177] = oper;
+        _operations[174] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UnitItemInformation");
@@ -2252,7 +2221,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "unit_item_information_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[178] = oper;
+        _operations[175] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UnitItemListInformation");
@@ -2263,13 +2232,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "unit_item_list_information_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[179] = oper;
+        _operations[176] = oper;
 
-    }
-
-    private static void _initOperationDesc19(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UnitExcessPrice");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "unit_excess_price_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">unit_excess_price_request"), Think.XmlWebServices.Unit_excess_price_request.class, false, false);
@@ -2279,7 +2243,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "unit_excess_price_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[180] = oper;
+        _operations[177] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UnitUsePaymentAdd");
@@ -2290,7 +2254,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "unit_use_payment_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[181] = oper;
+        _operations[178] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UnitUse");
@@ -2301,8 +2265,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "unit_use_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[182] = oper;
+        _operations[179] = oper;
 
+    }
+
+    private static void _initOperationDesc19(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UnitCheckOut");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "unit_check_out_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">unit_check_out_request"), Think.XmlWebServices.Unit_check_out_request.class, false, false);
@@ -2312,7 +2281,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "unit_check_out_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[183] = oper;
+        _operations[180] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UnitCheckIn");
@@ -2323,7 +2292,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "unit_check_in_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[184] = oper;
+        _operations[181] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ProspectAdd");
@@ -2334,7 +2303,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "prospect_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[185] = oper;
+        _operations[182] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ProspectDelete");
@@ -2345,7 +2314,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "prospect_delete_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[186] = oper;
+        _operations[183] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerAdd");
@@ -2356,7 +2325,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[187] = oper;
+        _operations[184] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DisambiguationList");
@@ -2367,7 +2336,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "disambiguation_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[188] = oper;
+        _operations[185] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ItemList");
@@ -2378,13 +2347,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "item_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[189] = oper;
+        _operations[186] = oper;
 
-    }
-
-    private static void _initOperationDesc20(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ItemAlreadySubscribedList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "item_already_subscribed_list_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">item_already_subscribed_list_request"), Think.XmlWebServices.Item_already_subscribed_list_request.class, false, false);
@@ -2394,7 +2358,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "item_already_subscribed_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[190] = oper;
+        _operations[187] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ItemRenewalList");
@@ -2405,7 +2369,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "item_renewal_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[191] = oper;
+        _operations[188] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ItemRenewableList");
@@ -2416,8 +2380,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "item_renewable_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[192] = oper;
+        _operations[189] = oper;
 
+    }
+
+    private static void _initOperationDesc20(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RenewalCardOfferList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "renewal_card_offer_list_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">renewal_card_offer_list_request"), Think.XmlWebServices.Renewal_card_offer_list_request.class, false, false);
@@ -2427,7 +2396,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "renewal_card_offer_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[193] = oper;
+        _operations[190] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PromotionCardOfferList");
@@ -2438,7 +2407,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "promotion_card_offer_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[194] = oper;
+        _operations[191] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PasswordEmailSend");
@@ -2449,7 +2418,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "password_email_send_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[195] = oper;
+        _operations[192] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("EventQueueAdd");
@@ -2460,7 +2429,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "event_queue_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[196] = oper;
+        _operations[193] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("EventQueueDelete");
@@ -2471,7 +2440,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "event_queue_delete_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[197] = oper;
+        _operations[194] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentCancel");
@@ -2482,7 +2451,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_cancel_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[198] = oper;
+        _operations[195] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentItemsList");
@@ -2493,13 +2462,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_items_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[199] = oper;
+        _operations[196] = oper;
 
-    }
-
-    private static void _initOperationDesc21(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PriceList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "price_list_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">price_list_request"), Think.XmlWebServices.Price_list_request.class, false, false);
@@ -2509,7 +2473,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "price_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[200] = oper;
+        _operations[197] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SubscriptionUpgradeDowngradePriceList");
@@ -2520,7 +2484,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "subscription_upgrade_downgrade_price_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[201] = oper;
+        _operations[198] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentTransfer");
@@ -2531,8 +2495,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_transfer_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[202] = oper;
+        _operations[199] = oper;
 
+    }
+
+    private static void _initOperationDesc21(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ItemProrateValues");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "item_prorate_values_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">item_prorate_values_request"), Think.XmlWebServices.Item_prorate_values_request.class, false, false);
@@ -2542,7 +2511,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "item_prorate_values_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[203] = oper;
+        _operations[200] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("BundleQuantityOptionCalculate");
@@ -2553,7 +2522,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "bundle_quantity_option_calculate_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[204] = oper;
+        _operations[201] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("BundleQuantityDateOptionCalculate");
@@ -2564,7 +2533,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "bundle_quantity_date_option_calculate_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[205] = oper;
+        _operations[202] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderQuantityOptionCalculate");
@@ -2575,7 +2544,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_quantity_option_calculate_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[206] = oper;
+        _operations[203] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderDateOptionCalculate");
@@ -2586,7 +2555,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_date_option_calculate_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[207] = oper;
+        _operations[204] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SuspensionAdd");
@@ -2597,7 +2566,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "suspension_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[208] = oper;
+        _operations[205] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SuspensionEdit");
@@ -2608,13 +2577,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "suspension_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[209] = oper;
+        _operations[206] = oper;
 
-    }
-
-    private static void _initOperationDesc22(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ProductReturn");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "product_return_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">product_return_request"), Think.XmlWebServices.Product_return_request.class, false, false);
@@ -2624,7 +2588,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "product_return_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[210] = oper;
+        _operations[207] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AuditCheck");
@@ -2635,7 +2599,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "audit_check_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[211] = oper;
+        _operations[208] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DuplicateAddressList");
@@ -2646,8 +2610,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "duplicate_address_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[212] = oper;
+        _operations[209] = oper;
 
+    }
+
+    private static void _initOperationDesc22(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AddressClean");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "address_clean_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">address_clean_request"), Think.XmlWebServices.Address_clean_request.class, false, false);
@@ -2657,7 +2626,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "address_clean_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[213] = oper;
+        _operations[210] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("NoteAdd");
@@ -2668,7 +2637,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "note_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[214] = oper;
+        _operations[211] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("NoteEdit");
@@ -2679,7 +2648,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "note_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[215] = oper;
+        _operations[212] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("NoteDelete");
@@ -2690,7 +2659,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "note_delete_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[216] = oper;
+        _operations[213] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PxAdd");
@@ -2701,7 +2670,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "px_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[217] = oper;
+        _operations[214] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PxUpdate");
@@ -2712,7 +2681,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "px_update_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[218] = oper;
+        _operations[215] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PxDelete");
@@ -2723,13 +2692,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "px_delete_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[219] = oper;
+        _operations[216] = oper;
 
-    }
-
-    private static void _initOperationDesc23(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PxReplace");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "px_replace_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">px_replace_request"), Think.XmlWebServices.Px_replace_request.class, false, false);
@@ -2739,7 +2703,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "px_replace_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[220] = oper;
+        _operations[217] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OcNetDefaultSourceCode");
@@ -2750,7 +2714,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "oc_net_default_source_code_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[221] = oper;
+        _operations[218] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GroupOrderAdjustmentList");
@@ -2761,8 +2725,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "group_order_adjustment_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[222] = oper;
+        _operations[219] = oper;
 
+    }
+
+    private static void _initOperationDesc23(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GroupMemberChangeEffectList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "group_member_change_effect_list_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">group_member_change_effect_list_request"), Think.XmlWebServices.Group_member_change_effect_list_request.class, false, false);
@@ -2772,7 +2741,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "group_member_change_effect_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[223] = oper;
+        _operations[220] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DirectDebitVerify");
@@ -2783,7 +2752,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "direct_debit_verify_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[224] = oper;
+        _operations[221] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CreditCardVerify");
@@ -2794,7 +2763,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "credit_card_verify_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[225] = oper;
+        _operations[222] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CreditCardValidate");
@@ -2805,7 +2774,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "credit_card_validate_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[226] = oper;
+        _operations[223] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ReferenceCacheRecord");
@@ -2816,7 +2785,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "reference_cache_record_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[227] = oper;
+        _operations[224] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ReferenceCacheList");
@@ -2827,7 +2796,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "reference_cache_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[228] = oper;
+        _operations[225] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ReferenceCacheTableinfo");
@@ -2838,13 +2807,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "reference_cache_tableinfo_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[229] = oper;
+        _operations[226] = oper;
 
-    }
-
-    private static void _initOperationDesc24(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ReferenceCacheChangeCount");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "reference_cache_change_count_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">reference_cache_change_count_request"), Think.XmlWebServices.Reference_cache_change_count_request.class, false, false);
@@ -2856,7 +2820,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "table"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[230] = oper;
+        _operations[227] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OcAncestorList");
@@ -2869,7 +2833,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "oc_id"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[231] = oper;
+        _operations[228] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OcDescendantList");
@@ -2882,8 +2846,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "oc_id"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[232] = oper;
+        _operations[229] = oper;
 
+    }
+
+    private static void _initOperationDesc24(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OcCommonAncestorList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "oc_common_ancestor_list_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">oc_common_ancestor_list_request"), Think.XmlWebServices.Oc_common_ancestor_list_request.class, false, false);
@@ -2895,7 +2864,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "oc_id"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[233] = oper;
+        _operations[230] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PaymentWaitingAuthOrPost");
@@ -2906,7 +2875,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "payment_waiting_auth_or_post_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[234] = oper;
+        _operations[231] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderItemCanPay");
@@ -2917,7 +2886,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_item_can_pay_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[235] = oper;
+        _operations[232] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderItemNeedsPaymentSettled");
@@ -2928,7 +2897,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_item_needs_payment_settled_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[236] = oper;
+        _operations[233] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PxCheckCountsAndAmounts");
@@ -2939,7 +2908,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "px_check_counts_and_amounts_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[237] = oper;
+        _operations[234] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderItemMinimumActiveDateList");
@@ -2950,7 +2919,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_item_minimum_active_date_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[238] = oper;
+        _operations[235] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ServiceAdd");
@@ -2961,13 +2930,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "service_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[239] = oper;
+        _operations[236] = oper;
 
-    }
-
-    private static void _initOperationDesc25(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ServiceEdit");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "service_edit_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">service_edit_request"), Think.XmlWebServices.Service_edit_request.class, false, false);
@@ -2977,7 +2941,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "service_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[240] = oper;
+        _operations[237] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerClear");
@@ -2988,7 +2952,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_clear_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[241] = oper;
+        _operations[238] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerAddressClear");
@@ -2999,8 +2963,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_address_clear_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[242] = oper;
+        _operations[239] = oper;
 
+    }
+
+    private static void _initOperationDesc25(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerNameDiffFromAddressInfo");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_name_diff_from_address_info_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">customer_name_diff_from_address_info_request"), Think.XmlWebServices.Customer_name_diff_from_address_info_request.class, false, false);
@@ -3010,7 +2979,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_name_diff_from_address_info_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[243] = oper;
+        _operations[240] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("OrderUpsellInformation");
@@ -3021,7 +2990,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_upsell_information_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[244] = oper;
+        _operations[241] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AuxFieldValuesList");
@@ -3032,7 +3001,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "aux_field_values_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[245] = oper;
+        _operations[242] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("PackageEdit");
@@ -3043,7 +3012,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "package_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[246] = oper;
+        _operations[243] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GroupDelete");
@@ -3054,7 +3023,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "group_delete_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[247] = oper;
+        _operations[244] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ConsortiumOrderCheck");
@@ -3065,7 +3034,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "consortium_order_check_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[248] = oper;
+        _operations[245] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DealAdd");
@@ -3076,13 +3045,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "deal_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[249] = oper;
+        _operations[246] = oper;
 
-    }
-
-    private static void _initOperationDesc26(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DealEdit");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "deal_edit_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">deal_edit_request"), Think.XmlWebServices.Deal_edit_request.class, false, false);
@@ -3092,7 +3056,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "deal_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[250] = oper;
+        _operations[247] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerInformation");
@@ -3103,7 +3067,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_information_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[251] = oper;
+        _operations[248] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerInformationEx");
@@ -3114,8 +3078,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_information_ex_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[252] = oper;
+        _operations[249] = oper;
 
+    }
+
+    private static void _initOperationDesc26(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DispContextPopulate");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "disp_context_populate_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">disp_context_populate_request"), Think.XmlWebServices.Disp_context_populate_request.class, false, false);
@@ -3125,7 +3094,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "disp_context_populate_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[253] = oper;
+        _operations[250] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DocRefBatchList");
@@ -3136,7 +3105,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "doc_ref_batch_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[254] = oper;
+        _operations[251] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DocumentReferenceAdd");
@@ -3147,7 +3116,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "document_reference_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[255] = oper;
+        _operations[252] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DocumentReferenceEdit");
@@ -3158,7 +3127,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "document_reference_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[256] = oper;
+        _operations[253] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerOrdersList");
@@ -3169,7 +3138,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_orders_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[257] = oper;
+        _operations[254] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AlsoOrderedList");
@@ -3180,7 +3149,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "also_ordered_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[258] = oper;
+        _operations[255] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("InstallmentPlanList");
@@ -3193,13 +3162,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "installment_plan"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[259] = oper;
+        _operations[256] = oper;
 
-    }
-
-    private static void _initOperationDesc27(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ServerDatetimeList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "server_datetime_list_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">server_datetime_list_request"), Think.XmlWebServices.Server_datetime_list_request.class, false, false);
@@ -3209,7 +3173,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "server_datetime_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[260] = oper;
+        _operations[257] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RequestLogEdit");
@@ -3220,7 +3184,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "request_log_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[261] = oper;
+        _operations[258] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RequestLogDelete");
@@ -3231,8 +3195,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "request_log_delete_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[262] = oper;
+        _operations[259] = oper;
 
+    }
+
+    private static void _initOperationDesc27(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("TransactionData");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "transaction_data_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">transaction_data_request"), Think.XmlWebServices.Transaction_data_request.class, false, false);
@@ -3242,7 +3211,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "transaction_data_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[263] = oper;
+        _operations[260] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsAlertAdd");
@@ -3253,7 +3222,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_alert_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[264] = oper;
+        _operations[261] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsAlertEdit");
@@ -3264,7 +3233,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_alert_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[265] = oper;
+        _operations[262] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsAlertDelete");
@@ -3275,7 +3244,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_alert_delete_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[266] = oper;
+        _operations[263] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsClientAdd");
@@ -3286,7 +3255,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_client_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[267] = oper;
+        _operations[264] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsClientEdit");
@@ -3297,7 +3266,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_client_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[268] = oper;
+        _operations[265] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsClientDelete");
@@ -3308,13 +3277,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_client_delete_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[269] = oper;
+        _operations[266] = oper;
 
-    }
-
-    private static void _initOperationDesc28(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsClientList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_client_list_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">jqs_client_list_request"), Think.XmlWebServices.Jqs_client_list_request.class, false, false);
@@ -3326,7 +3290,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_client"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[270] = oper;
+        _operations[267] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsMachineAdd");
@@ -3337,7 +3301,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_machine_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[271] = oper;
+        _operations[268] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsMachineEdit");
@@ -3348,8 +3312,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_machine_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[272] = oper;
+        _operations[269] = oper;
 
+    }
+
+    private static void _initOperationDesc28(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsMachineDelete");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_machine_delete_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">jqs_machine_delete_request"), Think.XmlWebServices.Jqs_machine_delete_request.class, false, false);
@@ -3359,7 +3328,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_machine_delete_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[273] = oper;
+        _operations[270] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsQueueAdd");
@@ -3370,7 +3339,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_queue_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[274] = oper;
+        _operations[271] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsQueueEdit");
@@ -3381,7 +3350,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_queue_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[275] = oper;
+        _operations[272] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsQueueDelete");
@@ -3392,7 +3361,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_queue_delete_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[276] = oper;
+        _operations[273] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsQueueList");
@@ -3405,7 +3374,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         param.setItemQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_queue"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[277] = oper;
+        _operations[274] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JqsConfigEdit");
@@ -3416,7 +3385,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "jqs_config_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[278] = oper;
+        _operations[275] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JobEdit");
@@ -3427,13 +3396,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "job_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[279] = oper;
+        _operations[276] = oper;
 
-    }
-
-    private static void _initOperationDesc29(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("JobDelete");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "job_delete_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">job_delete_request"), Think.XmlWebServices.Job_delete_request.class, false, false);
@@ -3443,7 +3407,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "job_delete_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[280] = oper;
+        _operations[277] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ProcTypeInfoList");
@@ -3454,7 +3418,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "proc_type_info_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[281] = oper;
+        _operations[278] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("WorkTableSelectionUpdate");
@@ -3465,8 +3429,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "work_table_selection_update_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[282] = oper;
+        _operations[279] = oper;
 
+    }
+
+    private static void _initOperationDesc29(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("WorkTablePaymentEdit");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "work_table_payment_edit_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">work_table_payment_edit_request"), Think.XmlWebServices.Work_table_payment_edit_request.class, false, false);
@@ -3476,7 +3445,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "work_table_payment_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[283] = oper;
+        _operations[280] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ProcessEdit");
@@ -3487,7 +3456,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "process_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[284] = oper;
+        _operations[281] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SubscripEdit");
@@ -3498,7 +3467,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "subscrip_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[285] = oper;
+        _operations[282] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AttachmentAdd");
@@ -3509,7 +3478,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "attachment_add_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[286] = oper;
+        _operations[283] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AttachmentEdit");
@@ -3520,7 +3489,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "attachment_edit_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[287] = oper;
+        _operations[284] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AttachmentView");
@@ -3531,7 +3500,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "attachment_view_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[288] = oper;
+        _operations[285] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AttachmentDelete");
@@ -3542,13 +3511,8 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "attachment_delete_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[289] = oper;
+        _operations[286] = oper;
 
-    }
-
-    private static void _initOperationDesc30(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SubscriptionProrateCalculate");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "subscription_prorate_calculate_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">subscription_prorate_calculate_request"), Think.XmlWebServices.Subscription_prorate_calculate_request.class, false, false);
@@ -3558,7 +3522,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "subscription_prorate_calculate_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[290] = oper;
+        _operations[287] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RegistrationEmailSend");
@@ -3569,7 +3533,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "registration_email_send_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[291] = oper;
+        _operations[288] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("LoginEmailSend");
@@ -3580,8 +3544,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "login_email_send_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[292] = oper;
+        _operations[289] = oper;
 
+    }
+
+    private static void _initOperationDesc30(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("HistoryList");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "history_list_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">history_list_request"), Think.XmlWebServices.History_list_request.class, false, false);
@@ -3591,7 +3560,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "history_list_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[293] = oper;
+        _operations[290] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("EditTrail");
@@ -3602,7 +3571,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "edit_trail_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[294] = oper;
+        _operations[291] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SecurityCheck");
@@ -3613,7 +3582,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "security_check_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[295] = oper;
+        _operations[292] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CustomerAuth");
@@ -3624,7 +3593,51 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
         oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "customer_auth_response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[293] = oper;
+
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("DynamicPriceAdd");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_add_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_add_request"), Think.XmlWebServices.Dynamic_price_add_request.class, false, false);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_add_response"));
+        oper.setReturnClass(Think.XmlWebServices.Dynamic_price_add_response.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_add_response"));
+        oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[294] = oper;
+
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("DynamicPriceEdit");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_edit_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_edit_request"), Think.XmlWebServices.Dynamic_price_edit_request.class, false, false);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_edit_response"));
+        oper.setReturnClass(Think.XmlWebServices.Dynamic_price_edit_response.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_edit_response"));
+        oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[295] = oper;
+
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("DynamicPriceCardAdd");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_card_add_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_card_add_request"), Think.XmlWebServices.Dynamic_price_card_add_request.class, false, false);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_card_add_response"));
+        oper.setReturnClass(Think.XmlWebServices.Dynamic_price_card_add_response.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_card_add_response"));
+        oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
         _operations[296] = oper;
+
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("DynamicPriceCardEdit");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_card_edit_request"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_card_edit_request"), Think.XmlWebServices.Dynamic_price_card_edit_request.class, false, false);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_card_edit_response"));
+        oper.setReturnClass(Think.XmlWebServices.Dynamic_price_card_edit_response.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_card_edit_response"));
+        oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[297] = oper;
 
     }
 
@@ -3929,16 +3942,23 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">>dynamic_price_card_select_response>dynamic_price_card_select");
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">>dynamic_price_card_select_response>view_dynamic_price_card");
             cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.Dynamic_price_card_select_responseDynamic_price_card_select.class;
+            cls = Think.XmlWebServices.Dynamic_price_card_select_responseView_dynamic_price_card.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">>dynamic_price_select_response>dynamic_price_select");
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">>dynamic_price_isusedinorder_select_response>dynamic_price");
             cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.Dynamic_price_select_responseDynamic_price_select.class;
+            cls = Think.XmlWebServices.Dynamic_price_isusedinorder_select_responseDynamic_price.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">>dynamic_price_select_response>dynamic_price");
+            cachedSerQNames.add(qName);
+            cls = Think.XmlWebServices.Dynamic_price_select_responseDynamic_price.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
@@ -4397,13 +4417,6 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">>payment_account_with_pending_payments_select_response>payment_account");
-            cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.Payment_account_with_pending_payments_select_responsePayment_account.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
     }
     private void addBindings1() {
             java.lang.Class cls;
@@ -4419,6 +4432,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
             java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">>payment_account_with_pending_payments_select_response>payment_account");
+            cachedSerQNames.add(qName);
+            cls = Think.XmlWebServices.Payment_account_with_pending_payments_select_responsePayment_account.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">>payment_amount_info_select_response>payment");
             cachedSerQNames.add(qName);
             cls = Think.XmlWebServices.Payment_amount_info_select_responsePayment.class;
@@ -5126,13 +5146,6 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">aux_field_select_request");
-            cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.Aux_field_select_request.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
     }
     private void addBindings2() {
             java.lang.Class cls;
@@ -5148,6 +5161,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
             java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">aux_field_select_request");
+            cachedSerQNames.add(qName);
+            cls = Think.XmlWebServices.Aux_field_select_request.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">aux_field_select_response");
             cachedSerQNames.add(qName);
             cls = Think.XmlWebServices.Aux_field_select_responseAux_field[].class;
@@ -5865,13 +5885,6 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">customer_login_claim_request");
-            cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.Customer_login_claim_request.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
     }
     private void addBindings3() {
             java.lang.Class cls;
@@ -5887,6 +5900,13 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
             java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">customer_login_claim_request");
+            cachedSerQNames.add(qName);
+            cls = Think.XmlWebServices.Customer_login_claim_request.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">customer_login_claim_response");
             cachedSerQNames.add(qName);
             cls = Think.XmlWebServices.Customer_login_claim_response.class;
@@ -6448,13 +6468,6 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_card_select");
-            cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.Dynamic_price_card_select.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
             qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_card_select_request");
             cachedSerQNames.add(qName);
             cls = Think.XmlWebServices.Dynamic_price_card_select_request.class;
@@ -6464,10 +6477,10 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
 
             qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_card_select_response");
             cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.Dynamic_price_card_select_responseDynamic_price_card_select[].class;
+            cls = Think.XmlWebServices.Dynamic_price_card_select_responseView_dynamic_price_card[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">>dynamic_price_card_select_response>dynamic_price_card_select");
-            qName2 = new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_card_select");
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">>dynamic_price_card_select_response>view_dynamic_price_card");
+            qName2 = new javax.xml.namespace.QName("http://Think/XmlWebServices/", "view_dynamic_price_card");
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
@@ -6485,6 +6498,22 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_isusedinorder_select_request");
+            cachedSerQNames.add(qName);
+            cls = Think.XmlWebServices.Dynamic_price_isusedinorder_select_request.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_isusedinorder_select_response");
+            cachedSerQNames.add(qName);
+            cls = Think.XmlWebServices.Dynamic_price_isusedinorder_select_responseDynamic_price[].class;
+            cachedSerClasses.add(cls);
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">>dynamic_price_isusedinorder_select_response>dynamic_price");
+            qName2 = new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price");
+            cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
+            cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
+
             qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_select_request");
             cachedSerQNames.add(qName);
             cls = Think.XmlWebServices.Dynamic_price_select_request.class;
@@ -6494,10 +6523,10 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
 
             qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">dynamic_price_select_response");
             cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.Dynamic_price_select_responseDynamic_price_select[].class;
+            cls = Think.XmlWebServices.Dynamic_price_select_responseDynamic_price[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">>dynamic_price_select_response>dynamic_price_select");
-            qName2 = new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price_select");
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">>dynamic_price_select_response>dynamic_price");
+            qName2 = new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_price");
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
@@ -6605,20 +6634,6 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">group_delete_request");
-            cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.Group_delete_request.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">group_delete_response");
-            cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.Group_delete_response.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
     }
     private void addBindings4() {
             java.lang.Class cls;
@@ -6634,6 +6649,20 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
             java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">group_delete_request");
+            cachedSerQNames.add(qName);
+            cls = Think.XmlWebServices.Group_delete_request.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">group_delete_response");
+            cachedSerQNames.add(qName);
+            cls = Think.XmlWebServices.Group_delete_response.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">group_member_change_effect_list_request");
             cachedSerQNames.add(qName);
             cls = Think.XmlWebServices.Group_member_change_effect_list_request.class;
@@ -7366,6 +7395,21 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+    }
+    private void addBindings5() {
+            java.lang.Class cls;
+            javax.xml.namespace.QName qName;
+            javax.xml.namespace.QName qName2;
+            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
+            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
+            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
+            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
+            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
+            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
+            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
+            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
+            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
+            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">jqs_machine_by_name_select_response");
             cachedSerQNames.add(qName);
             cls = Think.XmlWebServices.Jqs_machine_by_name_select_responseJqs_machine[].class;
@@ -7382,21 +7426,6 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-    }
-    private void addBindings5() {
-            java.lang.Class cls;
-            javax.xml.namespace.QName qName;
-            javax.xml.namespace.QName qName2;
-            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
-            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
-            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
-            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
-            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
-            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
-            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
-            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
-            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
-            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">jqs_machine_delete_request");
             cachedSerQNames.add(qName);
             cls = Think.XmlWebServices.Jqs_machine_delete_request.class;
@@ -8131,20 +8160,6 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">order_item_edit_request");
-            cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.Order_item_edit_request.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">order_item_edit_response");
-            cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.Order_item_edit_response.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
     }
     private void addBindings6() {
             java.lang.Class cls;
@@ -8160,6 +8175,20 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
             java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">order_item_edit_request");
+            cachedSerQNames.add(qName);
+            cls = Think.XmlWebServices.Order_item_edit_request.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">order_item_edit_response");
+            cachedSerQNames.add(qName);
+            cls = Think.XmlWebServices.Order_item_edit_response.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">order_item_for_payment");
             cachedSerQNames.add(qName);
             cls = Think.XmlWebServices.Order_item_for_payment.class;
@@ -8870,20 +8899,6 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">payment_waiting_auth_or_post_request");
-            cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.Payment_waiting_auth_or_post_request.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">payment_waiting_auth_or_post_response");
-            cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.Payment_waiting_auth_or_post_response.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
     }
     private void addBindings7() {
             java.lang.Class cls;
@@ -8899,6 +8914,20 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
             java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">payment_waiting_auth_or_post_request");
+            cachedSerQNames.add(qName);
+            cls = Think.XmlWebServices.Payment_waiting_auth_or_post_request.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">payment_waiting_auth_or_post_response");
+            cachedSerQNames.add(qName);
+            cls = Think.XmlWebServices.Payment_waiting_auth_or_post_response.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">pending_xaction_header");
             cachedSerQNames.add(qName);
             cls = Think.XmlWebServices.Pending_xaction_header.class;
@@ -9617,20 +9646,6 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">request_log_edit_request");
-            cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.Request_log_edit_request.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">request_log_edit_response");
-            cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.Request_log_edit_response.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
     }
     private void addBindings8() {
             java.lang.Class cls;
@@ -9646,6 +9661,20 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
             java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">request_log_edit_request");
+            cachedSerQNames.add(qName);
+            cls = Think.XmlWebServices.Request_log_edit_request.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">request_log_edit_response");
+            cachedSerQNames.add(qName);
+            cls = Think.XmlWebServices.Request_log_edit_response.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">request_log_select_request");
             cachedSerQNames.add(qName);
             cls = Think.XmlWebServices.Request_log_select_request.class;
@@ -10358,20 +10387,6 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">trusted_data");
-            cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.Trusted_data.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">unit_check_in_request");
-            cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.Unit_check_in_request.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
     }
     private void addBindings9() {
             java.lang.Class cls;
@@ -10387,6 +10402,20 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
             java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">trusted_data");
+            cachedSerQNames.add(qName);
+            cls = Think.XmlWebServices.Trusted_data.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">unit_check_in_request");
+            cachedSerQNames.add(qName);
+            cls = Think.XmlWebServices.Unit_check_in_request.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", ">unit_check_in_response");
             cachedSerQNames.add(qName);
             cls = Think.XmlWebServices.Unit_check_in_response.class;
@@ -11097,20 +11126,6 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", "ZZDemographic");
-            cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.ZZDemographic.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
-            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", "ZZDistributor");
-            cachedSerQNames.add(qName);
-            cls = Think.XmlWebServices.ZZDistributor.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
     }
     private void addBindings10() {
             java.lang.Class cls;
@@ -11126,6 +11141,20 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
             java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", "ZZDemographic");
+            cachedSerQNames.add(qName);
+            cls = Think.XmlWebServices.ZZDemographic.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", "ZZDistributor");
+            cachedSerQNames.add(qName);
+            cls = Think.XmlWebServices.ZZDistributor.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://Think/XmlWebServices/", "ZZDocumentReference");
             cachedSerQNames.add(qName);
             cls = Think.XmlWebServices.ZZDocumentReference.class;
@@ -11645,80 +11674,12 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
 }
     }
 
-    public Think.XmlWebServices.Dynamic_price_select_responseDynamic_price_select[] dynamicPriceSelect(Think.XmlWebServices.Dynamic_price_select_request parameters) throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[2]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("http://Think/XmlWebServices/DynamicPriceSelect");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("", "DynamicPriceSelect"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {parameters});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (Think.XmlWebServices.Dynamic_price_select_responseDynamic_price_select[]) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (Think.XmlWebServices.Dynamic_price_select_responseDynamic_price_select[]) org.apache.axis.utils.JavaUtils.convert(_resp, Think.XmlWebServices.Dynamic_price_select_responseDynamic_price_select[].class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
-    public Think.XmlWebServices.Dynamic_price_card_select_responseDynamic_price_card_select[] dynamicPriceCardSelect(Think.XmlWebServices.Dynamic_price_card_select_request parameters) throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[3]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("http://Think/XmlWebServices/DynamicPriceCardSelect");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("", "DynamicPriceCardSelect"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {parameters});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (Think.XmlWebServices.Dynamic_price_card_select_responseDynamic_price_card_select[]) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (Think.XmlWebServices.Dynamic_price_card_select_responseDynamic_price_card_select[]) org.apache.axis.utils.JavaUtils.convert(_resp, Think.XmlWebServices.Dynamic_price_card_select_responseDynamic_price_card_select[].class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
     public Think.XmlWebServices.Oc_list_by_topic_select_responseOc_list_by_topic[] ocListByTopicSelect(Think.XmlWebServices.Oc_list_by_topic_select_request parameters) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[4]);
+        _call.setOperation(_operations[2]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OcListByTopicSelect");
         _call.setEncodingStyle(null);
@@ -11752,7 +11713,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[5]);
+        _call.setOperation(_operations[3]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OcDescrSelect");
         _call.setEncodingStyle(null);
@@ -11781,148 +11742,12 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
 }
     }
 
-    public Think.XmlWebServices.Dynamic_price_add_response dynamicPriceAdd(Think.XmlWebServices.Dynamic_price_add_request parameters) throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[6]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("http://Think/XmlWebServices/DynamicPriceAdd");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("", "DynamicPriceAdd"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {parameters});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (Think.XmlWebServices.Dynamic_price_add_response) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (Think.XmlWebServices.Dynamic_price_add_response) org.apache.axis.utils.JavaUtils.convert(_resp, Think.XmlWebServices.Dynamic_price_add_response.class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
-    public Think.XmlWebServices.Dynamic_price_edit_response dynamicPriceEdit(Think.XmlWebServices.Dynamic_price_edit_request parameters) throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[7]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("http://Think/XmlWebServices/DynamicPriceEdit");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("", "DynamicPriceEdit"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {parameters});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (Think.XmlWebServices.Dynamic_price_edit_response) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (Think.XmlWebServices.Dynamic_price_edit_response) org.apache.axis.utils.JavaUtils.convert(_resp, Think.XmlWebServices.Dynamic_price_edit_response.class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
-    public Think.XmlWebServices.Dynamic_price_card_add_response dynamicPricecardAdd(Think.XmlWebServices.Dynamic_price_card_add_request parameters) throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[8]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("http://Think/XmlWebServices/DynamicPricecardAdd");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("", "DynamicPricecardAdd"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {parameters});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (Think.XmlWebServices.Dynamic_price_card_add_response) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (Think.XmlWebServices.Dynamic_price_card_add_response) org.apache.axis.utils.JavaUtils.convert(_resp, Think.XmlWebServices.Dynamic_price_card_add_response.class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
-    public Think.XmlWebServices.Dynamic_price_card_edit_response dynamicPricecardEdit(Think.XmlWebServices.Dynamic_price_card_edit_request parameters) throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[9]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("http://Think/XmlWebServices/DynamicPricecardEdit");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("", "DynamicPricecardEdit"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {parameters});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (Think.XmlWebServices.Dynamic_price_card_edit_response) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (Think.XmlWebServices.Dynamic_price_card_edit_response) org.apache.axis.utils.JavaUtils.convert(_resp, Think.XmlWebServices.Dynamic_price_card_edit_response.class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
     public Think.XmlWebServices.Oc_for_prospect_select_response ocForProspectSelect(Think.XmlWebServices.Oc_for_prospect_select_request parameters) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[10]);
+        _call.setOperation(_operations[4]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OcForProspectSelect");
         _call.setEncodingStyle(null);
@@ -11956,7 +11781,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[11]);
+        _call.setOperation(_operations[5]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/SpecialOffersSelect");
         _call.setEncodingStyle(null);
@@ -11990,7 +11815,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[12]);
+        _call.setOperation(_operations[6]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderPaymentSelect");
         _call.setEncodingStyle(null);
@@ -12024,7 +11849,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[13]);
+        _call.setOperation(_operations[7]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/BaseCurrencySelect");
         _call.setEncodingStyle(null);
@@ -12058,7 +11883,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[14]);
+        _call.setOperation(_operations[8]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ConfigSelect");
         _call.setEncodingStyle(null);
@@ -12092,7 +11917,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[15]);
+        _call.setOperation(_operations[9]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CurrencySelect");
         _call.setEncodingStyle(null);
@@ -12126,7 +11951,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[16]);
+        _call.setOperation(_operations[10]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/StateSelect");
         _call.setEncodingStyle(null);
@@ -12160,7 +11985,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[17]);
+        _call.setOperation(_operations[11]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/StateNonsuppressedSelect");
         _call.setEncodingStyle(null);
@@ -12194,7 +12019,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[18]);
+        _call.setOperation(_operations[12]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PubListSelect");
         _call.setEncodingStyle(null);
@@ -12228,7 +12053,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[19]);
+        _call.setOperation(_operations[13]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PubSelect");
         _call.setEncodingStyle(null);
@@ -12262,7 +12087,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[20]);
+        _call.setOperation(_operations[14]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ProductListSelect");
         _call.setEncodingStyle(null);
@@ -12296,7 +12121,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[21]);
+        _call.setOperation(_operations[15]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PackageListSelect");
         _call.setEncodingStyle(null);
@@ -12330,7 +12155,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[22]);
+        _call.setOperation(_operations[16]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PackageDescrSelect");
         _call.setEncodingStyle(null);
@@ -12364,7 +12189,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[23]);
+        _call.setOperation(_operations[17]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PackageContentSelect");
         _call.setEncodingStyle(null);
@@ -12398,7 +12223,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[24]);
+        _call.setOperation(_operations[18]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerInfoSelect");
         _call.setEncodingStyle(null);
@@ -12432,7 +12257,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[25]);
+        _call.setOperation(_operations[19]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentAccountInfoSelect");
         _call.setEncodingStyle(null);
@@ -12466,7 +12291,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[26]);
+        _call.setOperation(_operations[20]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/AddressInfoSelect");
         _call.setEncodingStyle(null);
@@ -12500,7 +12325,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[27]);
+        _call.setOperation(_operations[21]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/SubscripListSelect");
         _call.setEncodingStyle(null);
@@ -12534,7 +12359,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[28]);
+        _call.setOperation(_operations[22]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PackageOrderListSelect");
         _call.setEncodingStyle(null);
@@ -12568,7 +12393,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[29]);
+        _call.setOperation(_operations[23]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentClearStatusDescrSelect");
         _call.setEncodingStyle(null);
@@ -12602,7 +12427,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[30]);
+        _call.setOperation(_operations[24]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentListSelect");
         _call.setEncodingStyle(null);
@@ -12636,7 +12461,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[31]);
+        _call.setOperation(_operations[25]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentAmountInfoSelect");
         _call.setEncodingStyle(null);
@@ -12670,7 +12495,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[32]);
+        _call.setOperation(_operations[26]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ProductOrderListSelect");
         _call.setEncodingStyle(null);
@@ -12704,7 +12529,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[33]);
+        _call.setOperation(_operations[27]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CurrentIssueSelect");
         _call.setEncodingStyle(null);
@@ -12738,7 +12563,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[34]);
+        _call.setOperation(_operations[28]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/SourceCodeSelect");
         _call.setEncodingStyle(null);
@@ -12772,7 +12597,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[35]);
+        _call.setOperation(_operations[29]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderAddressesSelect");
         _call.setEncodingStyle(null);
@@ -12806,7 +12631,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[36]);
+        _call.setOperation(_operations[30]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/IssueListSelect");
         _call.setEncodingStyle(null);
@@ -12840,7 +12665,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[37]);
+        _call.setOperation(_operations[31]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/IssueSelect");
         _call.setEncodingStyle(null);
@@ -12874,7 +12699,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[38]);
+        _call.setOperation(_operations[32]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ProspectSelect");
         _call.setEncodingStyle(null);
@@ -12908,7 +12733,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[39]);
+        _call.setOperation(_operations[33]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PromotionHistoryOfferListSelect");
         _call.setEncodingStyle(null);
@@ -12942,7 +12767,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[40]);
+        _call.setOperation(_operations[34]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/RenewalHistoryOfferListSelect");
         _call.setEncodingStyle(null);
@@ -12976,7 +12801,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[41]);
+        _call.setOperation(_operations[35]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/SourceCodeLookupSelect");
         _call.setEncodingStyle(null);
@@ -13010,7 +12835,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[42]);
+        _call.setOperation(_operations[36]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ItemsByOrderhdrSelect");
         _call.setEncodingStyle(null);
@@ -13044,7 +12869,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[43]);
+        _call.setOperation(_operations[37]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ActiveOrdersForGroupSelect");
         _call.setEncodingStyle(null);
@@ -13078,7 +12903,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[44]);
+        _call.setOperation(_operations[38]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerGroupInfoSelect");
         _call.setEncodingStyle(null);
@@ -13112,7 +12937,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[45]);
+        _call.setOperation(_operations[39]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ReplacementOrderCodeListSelect");
         _call.setEncodingStyle(null);
@@ -13146,7 +12971,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[46]);
+        _call.setOperation(_operations[40]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ServiceNoteSelect");
         _call.setEncodingStyle(null);
@@ -13180,7 +13005,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[47]);
+        _call.setOperation(_operations[41]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderItemNoteSelect");
         _call.setEncodingStyle(null);
@@ -13214,7 +13039,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[48]);
+        _call.setOperation(_operations[42]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentNoteSelect");
         _call.setEncodingStyle(null);
@@ -13248,7 +13073,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[49]);
+        _call.setOperation(_operations[43]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderCodeInstallPlanSelect");
         _call.setEncodingStyle(null);
@@ -13282,7 +13107,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[50]);
+        _call.setOperation(_operations[44]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerLoginInfoSelect");
         _call.setEncodingStyle(null);
@@ -13316,7 +13141,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[51]);
+        _call.setOperation(_operations[45]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PasswordInfoSelect");
         _call.setEncodingStyle(null);
@@ -13350,7 +13175,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[52]);
+        _call.setOperation(_operations[46]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerLoginQuestionListSelect");
         _call.setEncodingStyle(null);
@@ -13384,7 +13209,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[53]);
+        _call.setOperation(_operations[47]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderCodeSelect");
         _call.setEncodingStyle(null);
@@ -13418,7 +13243,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[54]);
+        _call.setOperation(_operations[48]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderCodeListSelect");
         _call.setEncodingStyle(null);
@@ -13452,7 +13277,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[55]);
+        _call.setOperation(_operations[49]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ItemsNeedingDistributionSelect");
         _call.setEncodingStyle(null);
@@ -13486,7 +13311,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[56]);
+        _call.setOperation(_operations[50]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/UserAuthoritySelect");
         _call.setEncodingStyle(null);
@@ -13520,7 +13345,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[57]);
+        _call.setOperation(_operations[51]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/UserGroupRightsSelect");
         _call.setEncodingStyle(null);
@@ -13554,7 +13379,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[58]);
+        _call.setOperation(_operations[52]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerCreditStatusSelect");
         _call.setEncodingStyle(null);
@@ -13588,7 +13413,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[59]);
+        _call.setOperation(_operations[53]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentAccountOrderItemSelect");
         _call.setEncodingStyle(null);
@@ -13622,7 +13447,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[60]);
+        _call.setOperation(_operations[54]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/RenewalChainSelect");
         _call.setEncodingStyle(null);
@@ -13656,7 +13481,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[61]);
+        _call.setOperation(_operations[55]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JobProcessRunningSelect");
         _call.setEncodingStyle(null);
@@ -13690,7 +13515,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[62]);
+        _call.setOperation(_operations[56]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JournalSelect");
         _call.setEncodingStyle(null);
@@ -13724,7 +13549,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[63]);
+        _call.setOperation(_operations[57]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CheckedOutUnitListSelect");
         _call.setEncodingStyle(null);
@@ -13758,7 +13583,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[64]);
+        _call.setOperation(_operations[58]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/AddressListSelect");
         _call.setEncodingStyle(null);
@@ -13792,7 +13617,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[65]);
+        _call.setOperation(_operations[59]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CompanyListSelect");
         _call.setEncodingStyle(null);
@@ -13826,7 +13651,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[66]);
+        _call.setOperation(_operations[60]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/SalesRepresentativeListSelect");
         _call.setEncodingStyle(null);
@@ -13860,7 +13685,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[67]);
+        _call.setOperation(_operations[61]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ReviewPaymentsListSelect");
         _call.setEncodingStyle(null);
@@ -13894,7 +13719,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[68]);
+        _call.setOperation(_operations[62]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderItemAccountSelect");
         _call.setEncodingStyle(null);
@@ -13928,7 +13753,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[69]);
+        _call.setOperation(_operations[63]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderItemAccBreakSelect");
         _call.setEncodingStyle(null);
@@ -13962,7 +13787,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[70]);
+        _call.setOperation(_operations[64]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderItemAmtBreakSelect");
         _call.setEncodingStyle(null);
@@ -13996,7 +13821,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[71]);
+        _call.setOperation(_operations[65]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderItemSelect");
         _call.setEncodingStyle(null);
@@ -14030,7 +13855,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[72]);
+        _call.setOperation(_operations[66]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/SuspensionListSelect");
         _call.setEncodingStyle(null);
@@ -14064,7 +13889,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[73]);
+        _call.setOperation(_operations[67]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/BackIssueListSelect");
         _call.setEncodingStyle(null);
@@ -14098,7 +13923,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[74]);
+        _call.setOperation(_operations[68]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/BackIssueFullListSelect");
         _call.setEncodingStyle(null);
@@ -14132,7 +13957,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[75]);
+        _call.setOperation(_operations[69]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/MissedIssuesListSelect");
         _call.setEncodingStyle(null);
@@ -14166,7 +13991,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[76]);
+        _call.setOperation(_operations[70]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/RequestLogSelect");
         _call.setEncodingStyle(null);
@@ -14200,7 +14025,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[77]);
+        _call.setOperation(_operations[71]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ServiceWithNotesSelect");
         _call.setEncodingStyle(null);
@@ -14234,7 +14059,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[78]);
+        _call.setOperation(_operations[72]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/LastEditDateSelect");
         _call.setEncodingStyle(null);
@@ -14268,7 +14093,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[79]);
+        _call.setOperation(_operations[73]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerServiceItemsByUserSelect");
         _call.setEncodingStyle(null);
@@ -14302,7 +14127,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[80]);
+        _call.setOperation(_operations[74]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OcFullListSelect");
         _call.setEncodingStyle(null);
@@ -14336,7 +14161,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[81]);
+        _call.setOperation(_operations[75]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderCodeFullListSelect");
         _call.setEncodingStyle(null);
@@ -14370,7 +14195,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[82]);
+        _call.setOperation(_operations[76]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsConfigSelect");
         _call.setEncodingStyle(null);
@@ -14404,7 +14229,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[83]);
+        _call.setOperation(_operations[77]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsMachineByNameSelect");
         _call.setEncodingStyle(null);
@@ -14438,7 +14263,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[84]);
+        _call.setOperation(_operations[78]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsMachineSelect");
         _call.setEncodingStyle(null);
@@ -14472,7 +14297,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[85]);
+        _call.setOperation(_operations[79]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsQueueByMachineSelect");
         _call.setEncodingStyle(null);
@@ -14506,7 +14331,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[86]);
+        _call.setOperation(_operations[80]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JobsReadyByQueueSelect");
         _call.setEncodingStyle(null);
@@ -14540,7 +14365,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[87]);
+        _call.setOperation(_operations[81]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/QueueSelect");
         _call.setEncodingStyle(null);
@@ -14574,7 +14399,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[88]);
+        _call.setOperation(_operations[82]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsAlertSelect");
         _call.setEncodingStyle(null);
@@ -14608,7 +14433,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[89]);
+        _call.setOperation(_operations[83]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JobsQueueableSelect");
         _call.setEncodingStyle(null);
@@ -14642,7 +14467,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[90]);
+        _call.setOperation(_operations[84]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JobLogSelect");
         _call.setEncodingStyle(null);
@@ -14676,7 +14501,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[91]);
+        _call.setOperation(_operations[85]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsWorkTableErrorLogSelect");
         _call.setEncodingStyle(null);
@@ -14710,7 +14535,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[92]);
+        _call.setOperation(_operations[86]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/DomainValueDescrSelect");
         _call.setEncodingStyle(null);
@@ -14744,7 +14569,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[93]);
+        _call.setOperation(_operations[87]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ProcessSelect");
         _call.setEncodingStyle(null);
@@ -14778,7 +14603,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[94]);
+        _call.setOperation(_operations[88]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JobsDoneByProcessSelect");
         _call.setEncodingStyle(null);
@@ -14812,7 +14637,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[95]);
+        _call.setOperation(_operations[89]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JobSelect");
         _call.setEncodingStyle(null);
@@ -14846,7 +14671,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[96]);
+        _call.setOperation(_operations[90]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JobRenewalEffortSelect");
         _call.setEncodingStyle(null);
@@ -14880,7 +14705,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[97]);
+        _call.setOperation(_operations[91]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JobBillingEffortSelect");
         _call.setEncodingStyle(null);
@@ -14914,7 +14739,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[98]);
+        _call.setOperation(_operations[92]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ViewLabelHistDtlSelect");
         _call.setEncodingStyle(null);
@@ -14948,7 +14773,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[99]);
+        _call.setOperation(_operations[93]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ViewRenewalEffortByOcSelect");
         _call.setEncodingStyle(null);
@@ -14982,7 +14807,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[100]);
+        _call.setOperation(_operations[94]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ViewRenewalEffortByEffortSelect");
         _call.setEncodingStyle(null);
@@ -15016,7 +14841,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[101]);
+        _call.setOperation(_operations[95]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ViewRenewalEffortByExpireSelect");
         _call.setEncodingStyle(null);
@@ -15050,7 +14875,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[102]);
+        _call.setOperation(_operations[96]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ViewBillingEffortByOcSelect");
         _call.setEncodingStyle(null);
@@ -15084,7 +14909,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[103]);
+        _call.setOperation(_operations[97]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ViewBillingEffortByEffortSelect");
         _call.setEncodingStyle(null);
@@ -15118,7 +14943,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[104]);
+        _call.setOperation(_operations[98]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ViewBillingEffortByExpireSelect");
         _call.setEncodingStyle(null);
@@ -15152,7 +14977,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[105]);
+        _call.setOperation(_operations[99]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/WorkTableSelect");
         _call.setEncodingStyle(null);
@@ -15186,7 +15011,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[106]);
+        _call.setOperation(_operations[100]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/WorkTablePaymentSelect");
         _call.setEncodingStyle(null);
@@ -15220,7 +15045,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[107]);
+        _call.setOperation(_operations[101]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/RenewalHistorySelect");
         _call.setEncodingStyle(null);
@@ -15254,7 +15079,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[108]);
+        _call.setOperation(_operations[102]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CatalogContentSelect");
         _call.setEncodingStyle(null);
@@ -15288,7 +15113,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[109]);
+        _call.setOperation(_operations[103]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/TenantSelect");
         _call.setEncodingStyle(null);
@@ -15322,7 +15147,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[110]);
+        _call.setOperation(_operations[104]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/AuxFieldSelect");
         _call.setEncodingStyle(null);
@@ -15356,7 +15181,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[111]);
+        _call.setOperation(_operations[105]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/AttachmentSelect");
         _call.setEncodingStyle(null);
@@ -15390,7 +15215,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[112]);
+        _call.setOperation(_operations[106]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/GpcLookupSelect");
         _call.setEncodingStyle(null);
@@ -15424,7 +15249,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[113]);
+        _call.setOperation(_operations[107]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaybreakByItemBreakSelect");
         _call.setEncodingStyle(null);
@@ -15458,7 +15283,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[114]);
+        _call.setOperation(_operations[108]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentAccountWithPendingPaymentsSelect");
         _call.setEncodingStyle(null);
@@ -15487,12 +15312,114 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
 }
     }
 
+    public Think.XmlWebServices.Dynamic_price_select_responseDynamic_price[] dynamicPriceSelect(Think.XmlWebServices.Dynamic_price_select_request parameters) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[109]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("http://Think/XmlWebServices/DynamicPriceSelect");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("", "DynamicPriceSelect"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {parameters});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (Think.XmlWebServices.Dynamic_price_select_responseDynamic_price[]) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (Think.XmlWebServices.Dynamic_price_select_responseDynamic_price[]) org.apache.axis.utils.JavaUtils.convert(_resp, Think.XmlWebServices.Dynamic_price_select_responseDynamic_price[].class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+    public Think.XmlWebServices.Dynamic_price_card_select_responseView_dynamic_price_card[] dynamicPriceCardSelect(Think.XmlWebServices.Dynamic_price_card_select_request parameters) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[110]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("http://Think/XmlWebServices/DynamicPriceCardSelect");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("", "DynamicPriceCardSelect"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {parameters});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (Think.XmlWebServices.Dynamic_price_card_select_responseView_dynamic_price_card[]) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (Think.XmlWebServices.Dynamic_price_card_select_responseView_dynamic_price_card[]) org.apache.axis.utils.JavaUtils.convert(_resp, Think.XmlWebServices.Dynamic_price_card_select_responseView_dynamic_price_card[].class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+    public Think.XmlWebServices.Dynamic_price_isusedinorder_select_responseDynamic_price[] dynamicPriceIsusedinorderSelect(Think.XmlWebServices.Dynamic_price_isusedinorder_select_request parameters) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[111]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("http://Think/XmlWebServices/DynamicPriceIsusedinorderSelect");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("", "DynamicPriceIsusedinorderSelect"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {parameters});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (Think.XmlWebServices.Dynamic_price_isusedinorder_select_responseDynamic_price[]) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (Think.XmlWebServices.Dynamic_price_isusedinorder_select_responseDynamic_price[]) org.apache.axis.utils.JavaUtils.convert(_resp, Think.XmlWebServices.Dynamic_price_isusedinorder_select_responseDynamic_price[].class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
     public Think.XmlWebServices.Customer[] ipOverlapList(Think.XmlWebServices.Ip_overlap_list_request parameters) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[115]);
+        _call.setOperation(_operations[112]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/IpOverlapList");
         _call.setEncodingStyle(null);
@@ -15526,7 +15453,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[116]);
+        _call.setOperation(_operations[113]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerListByIpAddress");
         _call.setEncodingStyle(null);
@@ -15560,7 +15487,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[117]);
+        _call.setOperation(_operations[114]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ThresholdOptionList");
         _call.setEncodingStyle(null);
@@ -15594,7 +15521,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[118]);
+        _call.setOperation(_operations[115]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/UserAuthenticate");
         _call.setEncodingStyle(null);
@@ -15628,7 +15555,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[119]);
+        _call.setOperation(_operations[116]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/UserPasswordChange");
         _call.setEncodingStyle(null);
@@ -15662,7 +15589,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[120]);
+        _call.setOperation(_operations[117]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/UserPasswordInvalidate");
         _call.setEncodingStyle(null);
@@ -15696,7 +15623,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[121]);
+        _call.setOperation(_operations[118]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/UserPasswordReset");
         _call.setEncodingStyle(null);
@@ -15730,7 +15657,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[122]);
+        _call.setOperation(_operations[119]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/LoginAuthenticate");
         _call.setEncodingStyle(null);
@@ -15764,7 +15691,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[123]);
+        _call.setOperation(_operations[120]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/IpAuthenticate");
         _call.setEncodingStyle(null);
@@ -15798,7 +15725,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[124]);
+        _call.setOperation(_operations[121]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/UserCodeActivityAdd");
         _call.setEncodingStyle(null);
@@ -15832,7 +15759,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[125]);
+        _call.setOperation(_operations[122]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderItemInformation");
         _call.setEncodingStyle(null);
@@ -15866,7 +15793,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[126]);
+        _call.setOperation(_operations[123]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderAdd");
         _call.setEncodingStyle(null);
@@ -15900,7 +15827,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[127]);
+        _call.setOperation(_operations[124]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderAddEffectList");
         _call.setEncodingStyle(null);
@@ -15934,7 +15861,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[128]);
+        _call.setOperation(_operations[125]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderAddPaymentAddEffectList");
         _call.setEncodingStyle(null);
@@ -15968,7 +15895,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[129]);
+        _call.setOperation(_operations[126]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderhdrEdit");
         _call.setEncodingStyle(null);
@@ -16002,7 +15929,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[130]);
+        _call.setOperation(_operations[127]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderItemEdit");
         _call.setEncodingStyle(null);
@@ -16036,7 +15963,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[131]);
+        _call.setOperation(_operations[128]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/RenewableOrderItemEdit");
         _call.setEncodingStyle(null);
@@ -16070,7 +15997,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[132]);
+        _call.setOperation(_operations[129]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderAddPaymentAdd");
         _call.setEncodingStyle(null);
@@ -16104,7 +16031,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[133]);
+        _call.setOperation(_operations[130]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderAddDepositUse");
         _call.setEncodingStyle(null);
@@ -16138,7 +16065,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[134]);
+        _call.setOperation(_operations[131]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/DepositUse");
         _call.setEncodingStyle(null);
@@ -16172,7 +16099,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[135]);
+        _call.setOperation(_operations[132]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/DepositUseEffectList");
         _call.setEncodingStyle(null);
@@ -16206,7 +16133,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[136]);
+        _call.setOperation(_operations[133]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/DepositRefund");
         _call.setEncodingStyle(null);
@@ -16240,7 +16167,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[137]);
+        _call.setOperation(_operations[134]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerAddOrderAdd");
         _call.setEncodingStyle(null);
@@ -16274,7 +16201,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[138]);
+        _call.setOperation(_operations[135]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerAddOrderAddPaymentAdd");
         _call.setEncodingStyle(null);
@@ -16308,7 +16235,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[139]);
+        _call.setOperation(_operations[136]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerAddPaymentAdd");
         _call.setEncodingStyle(null);
@@ -16342,7 +16269,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[140]);
+        _call.setOperation(_operations[137]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/SubgroupAdd");
         _call.setEncodingStyle(null);
@@ -16376,7 +16303,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[141]);
+        _call.setOperation(_operations[138]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/SubgroupDelete");
         _call.setEncodingStyle(null);
@@ -16410,7 +16337,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[142]);
+        _call.setOperation(_operations[139]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/SubgroupMove");
         _call.setEncodingStyle(null);
@@ -16444,7 +16371,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[143]);
+        _call.setOperation(_operations[140]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderTransferInformation");
         _call.setEncodingStyle(null);
@@ -16478,7 +16405,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[144]);
+        _call.setOperation(_operations[141]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderTransfer");
         _call.setEncodingStyle(null);
@@ -16512,7 +16439,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[145]);
+        _call.setOperation(_operations[142]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerEdit");
         _call.setEncodingStyle(null);
@@ -16546,7 +16473,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[146]);
+        _call.setOperation(_operations[143]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CreditCardPaymentClear");
         _call.setEncodingStyle(null);
@@ -16580,7 +16507,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[147]);
+        _call.setOperation(_operations[144]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentAccountAdd");
         _call.setEncodingStyle(null);
@@ -16614,7 +16541,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[148]);
+        _call.setOperation(_operations[145]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentAccountEdit");
         _call.setEncodingStyle(null);
@@ -16648,7 +16575,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[149]);
+        _call.setOperation(_operations[146]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentAccountEditEx");
         _call.setEncodingStyle(null);
@@ -16682,7 +16609,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[150]);
+        _call.setOperation(_operations[147]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentAccountClear");
         _call.setEncodingStyle(null);
@@ -16716,7 +16643,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[151]);
+        _call.setOperation(_operations[148]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentAccountClearEx");
         _call.setEncodingStyle(null);
@@ -16750,7 +16677,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[152]);
+        _call.setOperation(_operations[149]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerAddressAdd");
         _call.setEncodingStyle(null);
@@ -16784,7 +16711,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[153]);
+        _call.setOperation(_operations[150]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerAddressEdit");
         _call.setEncodingStyle(null);
@@ -16818,7 +16745,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[154]);
+        _call.setOperation(_operations[151]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerAddressEditFromFutureTemp");
         _call.setEncodingStyle(null);
@@ -16852,7 +16779,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[155]);
+        _call.setOperation(_operations[152]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerAddressDeleteFutureTemp");
         _call.setEncodingStyle(null);
@@ -16886,7 +16813,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[156]);
+        _call.setOperation(_operations[153]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerAddressEditEffectList");
         _call.setEncodingStyle(null);
@@ -16920,7 +16847,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[157]);
+        _call.setOperation(_operations[154]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerLoginClaim");
         _call.setEncodingStyle(null);
@@ -16954,7 +16881,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[158]);
+        _call.setOperation(_operations[155]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/LoginClaim");
         _call.setEncodingStyle(null);
@@ -16988,7 +16915,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[159]);
+        _call.setOperation(_operations[156]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/SubscriptionIsDuplicate");
         _call.setEncodingStyle(null);
@@ -17022,7 +16949,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[160]);
+        _call.setOperation(_operations[157]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/DemogForm");
         _call.setEncodingStyle(null);
@@ -17056,7 +16983,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[161]);
+        _call.setOperation(_operations[158]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/DemographicCheck");
         _call.setEncodingStyle(null);
@@ -17090,7 +17017,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[162]);
+        _call.setOperation(_operations[159]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/DemographicUpdate");
         _call.setEncodingStyle(null);
@@ -17124,7 +17051,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[163]);
+        _call.setOperation(_operations[160]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/DemographicDelete");
         _call.setEncodingStyle(null);
@@ -17158,7 +17085,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[164]);
+        _call.setOperation(_operations[161]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/InventoryCheck");
         _call.setEncodingStyle(null);
@@ -17192,7 +17119,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[165]);
+        _call.setOperation(_operations[162]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/InventorySufficientForSample");
         _call.setEncodingStyle(null);
@@ -17226,7 +17153,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[166]);
+        _call.setOperation(_operations[163]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/AmountConversion");
         _call.setEncodingStyle(null);
@@ -17260,7 +17187,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[167]);
+        _call.setOperation(_operations[164]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentAdd");
         _call.setEncodingStyle(null);
@@ -17294,7 +17221,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[168]);
+        _call.setOperation(_operations[165]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentEdit");
         _call.setEncodingStyle(null);
@@ -17328,7 +17255,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[169]);
+        _call.setOperation(_operations[166]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentInformation");
         _call.setEncodingStyle(null);
@@ -17362,7 +17289,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[170]);
+        _call.setOperation(_operations[167]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentEffectList");
         _call.setEncodingStyle(null);
@@ -17396,7 +17323,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[171]);
+        _call.setOperation(_operations[168]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/DepositPaymentInformation");
         _call.setEncodingStyle(null);
@@ -17430,7 +17357,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[172]);
+        _call.setOperation(_operations[169]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaybreakInformation");
         _call.setEncodingStyle(null);
@@ -17464,7 +17391,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[173]);
+        _call.setOperation(_operations[170]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderCancelList");
         _call.setEncodingStyle(null);
@@ -17498,7 +17425,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[174]);
+        _call.setOperation(_operations[171]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderCancel");
         _call.setEncodingStyle(null);
@@ -17532,7 +17459,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[175]);
+        _call.setOperation(_operations[172]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/SupplementalRefundAdd");
         _call.setEncodingStyle(null);
@@ -17566,7 +17493,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[176]);
+        _call.setOperation(_operations[173]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ItemsRenewableList");
         _call.setEncodingStyle(null);
@@ -17600,7 +17527,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[177]);
+        _call.setOperation(_operations[174]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/RefundCalculate");
         _call.setEncodingStyle(null);
@@ -17634,7 +17561,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[178]);
+        _call.setOperation(_operations[175]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/UnitItemInformation");
         _call.setEncodingStyle(null);
@@ -17668,7 +17595,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[179]);
+        _call.setOperation(_operations[176]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/UnitItemListInformation");
         _call.setEncodingStyle(null);
@@ -17702,7 +17629,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[180]);
+        _call.setOperation(_operations[177]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/UnitExcessPrice");
         _call.setEncodingStyle(null);
@@ -17736,7 +17663,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[181]);
+        _call.setOperation(_operations[178]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/UnitUsePaymentAdd");
         _call.setEncodingStyle(null);
@@ -17770,7 +17697,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[182]);
+        _call.setOperation(_operations[179]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/UnitUse");
         _call.setEncodingStyle(null);
@@ -17804,7 +17731,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[183]);
+        _call.setOperation(_operations[180]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/UnitCheckOut");
         _call.setEncodingStyle(null);
@@ -17838,7 +17765,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[184]);
+        _call.setOperation(_operations[181]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/UnitCheckIn");
         _call.setEncodingStyle(null);
@@ -17872,7 +17799,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[185]);
+        _call.setOperation(_operations[182]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ProspectAdd");
         _call.setEncodingStyle(null);
@@ -17906,7 +17833,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[186]);
+        _call.setOperation(_operations[183]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ProspectDelete");
         _call.setEncodingStyle(null);
@@ -17940,7 +17867,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[187]);
+        _call.setOperation(_operations[184]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerAdd");
         _call.setEncodingStyle(null);
@@ -17974,7 +17901,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[188]);
+        _call.setOperation(_operations[185]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/DisambiguationList");
         _call.setEncodingStyle(null);
@@ -18008,7 +17935,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[189]);
+        _call.setOperation(_operations[186]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ItemList");
         _call.setEncodingStyle(null);
@@ -18042,7 +17969,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[190]);
+        _call.setOperation(_operations[187]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ItemAlreadySubscribedList");
         _call.setEncodingStyle(null);
@@ -18076,7 +18003,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[191]);
+        _call.setOperation(_operations[188]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ItemRenewalList");
         _call.setEncodingStyle(null);
@@ -18110,7 +18037,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[192]);
+        _call.setOperation(_operations[189]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ItemRenewableList");
         _call.setEncodingStyle(null);
@@ -18144,7 +18071,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[193]);
+        _call.setOperation(_operations[190]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/RenewalCardOfferList");
         _call.setEncodingStyle(null);
@@ -18178,7 +18105,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[194]);
+        _call.setOperation(_operations[191]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PromotionCardOfferList");
         _call.setEncodingStyle(null);
@@ -18212,7 +18139,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[195]);
+        _call.setOperation(_operations[192]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PasswordEmailSend");
         _call.setEncodingStyle(null);
@@ -18246,7 +18173,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[196]);
+        _call.setOperation(_operations[193]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/EventQueueAdd");
         _call.setEncodingStyle(null);
@@ -18280,7 +18207,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[197]);
+        _call.setOperation(_operations[194]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/EventQueueDelete");
         _call.setEncodingStyle(null);
@@ -18314,7 +18241,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[198]);
+        _call.setOperation(_operations[195]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentCancel");
         _call.setEncodingStyle(null);
@@ -18348,7 +18275,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[199]);
+        _call.setOperation(_operations[196]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentItemsList");
         _call.setEncodingStyle(null);
@@ -18382,7 +18309,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[200]);
+        _call.setOperation(_operations[197]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PriceList");
         _call.setEncodingStyle(null);
@@ -18416,7 +18343,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[201]);
+        _call.setOperation(_operations[198]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/SubscriptionUpgradeDowngradePriceList");
         _call.setEncodingStyle(null);
@@ -18450,7 +18377,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[202]);
+        _call.setOperation(_operations[199]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentTransfer");
         _call.setEncodingStyle(null);
@@ -18484,7 +18411,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[203]);
+        _call.setOperation(_operations[200]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ItemProrateValues");
         _call.setEncodingStyle(null);
@@ -18518,7 +18445,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[204]);
+        _call.setOperation(_operations[201]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/BundleQuantityOptionCalculate");
         _call.setEncodingStyle(null);
@@ -18552,7 +18479,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[205]);
+        _call.setOperation(_operations[202]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/BundleQuantityDateOptionCalculate");
         _call.setEncodingStyle(null);
@@ -18586,7 +18513,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[206]);
+        _call.setOperation(_operations[203]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderQuantityOptionCalculate");
         _call.setEncodingStyle(null);
@@ -18620,7 +18547,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[207]);
+        _call.setOperation(_operations[204]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderDateOptionCalculate");
         _call.setEncodingStyle(null);
@@ -18654,7 +18581,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[208]);
+        _call.setOperation(_operations[205]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/SuspensionAdd");
         _call.setEncodingStyle(null);
@@ -18688,7 +18615,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[209]);
+        _call.setOperation(_operations[206]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/SuspensionEdit");
         _call.setEncodingStyle(null);
@@ -18722,7 +18649,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[210]);
+        _call.setOperation(_operations[207]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ProductReturn");
         _call.setEncodingStyle(null);
@@ -18756,7 +18683,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[211]);
+        _call.setOperation(_operations[208]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/AuditCheck");
         _call.setEncodingStyle(null);
@@ -18790,7 +18717,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[212]);
+        _call.setOperation(_operations[209]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/DuplicateAddressList");
         _call.setEncodingStyle(null);
@@ -18824,7 +18751,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[213]);
+        _call.setOperation(_operations[210]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/AddressClean");
         _call.setEncodingStyle(null);
@@ -18858,7 +18785,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[214]);
+        _call.setOperation(_operations[211]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/NoteAdd");
         _call.setEncodingStyle(null);
@@ -18892,7 +18819,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[215]);
+        _call.setOperation(_operations[212]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/NoteEdit");
         _call.setEncodingStyle(null);
@@ -18926,7 +18853,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[216]);
+        _call.setOperation(_operations[213]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/NoteDelete");
         _call.setEncodingStyle(null);
@@ -18960,7 +18887,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[217]);
+        _call.setOperation(_operations[214]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PxAdd");
         _call.setEncodingStyle(null);
@@ -18994,7 +18921,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[218]);
+        _call.setOperation(_operations[215]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PxUpdate");
         _call.setEncodingStyle(null);
@@ -19028,7 +18955,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[219]);
+        _call.setOperation(_operations[216]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PxDelete");
         _call.setEncodingStyle(null);
@@ -19062,7 +18989,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[220]);
+        _call.setOperation(_operations[217]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PxReplace");
         _call.setEncodingStyle(null);
@@ -19096,7 +19023,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[221]);
+        _call.setOperation(_operations[218]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OcNetDefaultSourceCode");
         _call.setEncodingStyle(null);
@@ -19130,7 +19057,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[222]);
+        _call.setOperation(_operations[219]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/GroupOrderAdjustmentList");
         _call.setEncodingStyle(null);
@@ -19164,7 +19091,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[223]);
+        _call.setOperation(_operations[220]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/GroupMemberChangeEffectList");
         _call.setEncodingStyle(null);
@@ -19198,7 +19125,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[224]);
+        _call.setOperation(_operations[221]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/DirectDebitVerify");
         _call.setEncodingStyle(null);
@@ -19232,7 +19159,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[225]);
+        _call.setOperation(_operations[222]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CreditCardVerify");
         _call.setEncodingStyle(null);
@@ -19266,7 +19193,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[226]);
+        _call.setOperation(_operations[223]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CreditCardValidate");
         _call.setEncodingStyle(null);
@@ -19300,7 +19227,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[227]);
+        _call.setOperation(_operations[224]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ReferenceCacheRecord");
         _call.setEncodingStyle(null);
@@ -19334,7 +19261,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[228]);
+        _call.setOperation(_operations[225]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ReferenceCacheList");
         _call.setEncodingStyle(null);
@@ -19368,7 +19295,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[229]);
+        _call.setOperation(_operations[226]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ReferenceCacheTableinfo");
         _call.setEncodingStyle(null);
@@ -19402,7 +19329,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[230]);
+        _call.setOperation(_operations[227]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ReferenceCacheChangeCount");
         _call.setEncodingStyle(null);
@@ -19436,7 +19363,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[231]);
+        _call.setOperation(_operations[228]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OcAncestorList");
         _call.setEncodingStyle(null);
@@ -19470,7 +19397,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[232]);
+        _call.setOperation(_operations[229]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OcDescendantList");
         _call.setEncodingStyle(null);
@@ -19504,7 +19431,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[233]);
+        _call.setOperation(_operations[230]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OcCommonAncestorList");
         _call.setEncodingStyle(null);
@@ -19538,7 +19465,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[234]);
+        _call.setOperation(_operations[231]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PaymentWaitingAuthOrPost");
         _call.setEncodingStyle(null);
@@ -19572,7 +19499,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[235]);
+        _call.setOperation(_operations[232]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderItemCanPay");
         _call.setEncodingStyle(null);
@@ -19606,7 +19533,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[236]);
+        _call.setOperation(_operations[233]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderItemNeedsPaymentSettled");
         _call.setEncodingStyle(null);
@@ -19640,7 +19567,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[237]);
+        _call.setOperation(_operations[234]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PxCheckCountsAndAmounts");
         _call.setEncodingStyle(null);
@@ -19674,7 +19601,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[238]);
+        _call.setOperation(_operations[235]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderItemMinimumActiveDateList");
         _call.setEncodingStyle(null);
@@ -19708,7 +19635,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[239]);
+        _call.setOperation(_operations[236]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ServiceAdd");
         _call.setEncodingStyle(null);
@@ -19742,7 +19669,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[240]);
+        _call.setOperation(_operations[237]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ServiceEdit");
         _call.setEncodingStyle(null);
@@ -19776,7 +19703,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[241]);
+        _call.setOperation(_operations[238]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerClear");
         _call.setEncodingStyle(null);
@@ -19810,7 +19737,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[242]);
+        _call.setOperation(_operations[239]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerAddressClear");
         _call.setEncodingStyle(null);
@@ -19844,7 +19771,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[243]);
+        _call.setOperation(_operations[240]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerNameDiffFromAddressInfo");
         _call.setEncodingStyle(null);
@@ -19878,7 +19805,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[244]);
+        _call.setOperation(_operations[241]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/OrderUpsellInformation");
         _call.setEncodingStyle(null);
@@ -19912,7 +19839,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[245]);
+        _call.setOperation(_operations[242]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/AuxFieldValuesList");
         _call.setEncodingStyle(null);
@@ -19946,7 +19873,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[246]);
+        _call.setOperation(_operations[243]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/PackageEdit");
         _call.setEncodingStyle(null);
@@ -19980,7 +19907,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[247]);
+        _call.setOperation(_operations[244]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/GroupDelete");
         _call.setEncodingStyle(null);
@@ -20014,7 +19941,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[248]);
+        _call.setOperation(_operations[245]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ConsortiumOrderCheck");
         _call.setEncodingStyle(null);
@@ -20048,7 +19975,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[249]);
+        _call.setOperation(_operations[246]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/DealAdd");
         _call.setEncodingStyle(null);
@@ -20082,7 +20009,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[250]);
+        _call.setOperation(_operations[247]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/DealEdit");
         _call.setEncodingStyle(null);
@@ -20116,7 +20043,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[251]);
+        _call.setOperation(_operations[248]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerInformation");
         _call.setEncodingStyle(null);
@@ -20150,7 +20077,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[252]);
+        _call.setOperation(_operations[249]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerInformationEx");
         _call.setEncodingStyle(null);
@@ -20184,7 +20111,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[253]);
+        _call.setOperation(_operations[250]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/DispContextPopulate");
         _call.setEncodingStyle(null);
@@ -20218,7 +20145,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[254]);
+        _call.setOperation(_operations[251]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/DocRefBatchList");
         _call.setEncodingStyle(null);
@@ -20252,7 +20179,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[255]);
+        _call.setOperation(_operations[252]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/DocumentReferenceAdd");
         _call.setEncodingStyle(null);
@@ -20286,7 +20213,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[256]);
+        _call.setOperation(_operations[253]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/DocumentReferenceEdit");
         _call.setEncodingStyle(null);
@@ -20320,7 +20247,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[257]);
+        _call.setOperation(_operations[254]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerOrdersList");
         _call.setEncodingStyle(null);
@@ -20354,7 +20281,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[258]);
+        _call.setOperation(_operations[255]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/AlsoOrderedList");
         _call.setEncodingStyle(null);
@@ -20388,7 +20315,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[259]);
+        _call.setOperation(_operations[256]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/InstallmentPlanList");
         _call.setEncodingStyle(null);
@@ -20422,7 +20349,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[260]);
+        _call.setOperation(_operations[257]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ServerDatetimeList");
         _call.setEncodingStyle(null);
@@ -20456,7 +20383,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[261]);
+        _call.setOperation(_operations[258]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/RequestLogEdit");
         _call.setEncodingStyle(null);
@@ -20490,7 +20417,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[262]);
+        _call.setOperation(_operations[259]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/RequestLogDelete");
         _call.setEncodingStyle(null);
@@ -20524,7 +20451,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[263]);
+        _call.setOperation(_operations[260]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/TransactionData");
         _call.setEncodingStyle(null);
@@ -20558,7 +20485,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[264]);
+        _call.setOperation(_operations[261]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsAlertAdd");
         _call.setEncodingStyle(null);
@@ -20592,7 +20519,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[265]);
+        _call.setOperation(_operations[262]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsAlertEdit");
         _call.setEncodingStyle(null);
@@ -20626,7 +20553,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[266]);
+        _call.setOperation(_operations[263]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsAlertDelete");
         _call.setEncodingStyle(null);
@@ -20660,7 +20587,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[267]);
+        _call.setOperation(_operations[264]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsClientAdd");
         _call.setEncodingStyle(null);
@@ -20694,7 +20621,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[268]);
+        _call.setOperation(_operations[265]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsClientEdit");
         _call.setEncodingStyle(null);
@@ -20728,7 +20655,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[269]);
+        _call.setOperation(_operations[266]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsClientDelete");
         _call.setEncodingStyle(null);
@@ -20762,7 +20689,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[270]);
+        _call.setOperation(_operations[267]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsClientList");
         _call.setEncodingStyle(null);
@@ -20796,7 +20723,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[271]);
+        _call.setOperation(_operations[268]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsMachineAdd");
         _call.setEncodingStyle(null);
@@ -20830,7 +20757,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[272]);
+        _call.setOperation(_operations[269]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsMachineEdit");
         _call.setEncodingStyle(null);
@@ -20864,7 +20791,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[273]);
+        _call.setOperation(_operations[270]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsMachineDelete");
         _call.setEncodingStyle(null);
@@ -20898,7 +20825,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[274]);
+        _call.setOperation(_operations[271]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsQueueAdd");
         _call.setEncodingStyle(null);
@@ -20932,7 +20859,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[275]);
+        _call.setOperation(_operations[272]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsQueueEdit");
         _call.setEncodingStyle(null);
@@ -20966,7 +20893,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[276]);
+        _call.setOperation(_operations[273]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsQueueDelete");
         _call.setEncodingStyle(null);
@@ -21000,7 +20927,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[277]);
+        _call.setOperation(_operations[274]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsQueueList");
         _call.setEncodingStyle(null);
@@ -21034,7 +20961,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[278]);
+        _call.setOperation(_operations[275]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JqsConfigEdit");
         _call.setEncodingStyle(null);
@@ -21068,7 +20995,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[279]);
+        _call.setOperation(_operations[276]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JobEdit");
         _call.setEncodingStyle(null);
@@ -21102,7 +21029,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[280]);
+        _call.setOperation(_operations[277]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/JobDelete");
         _call.setEncodingStyle(null);
@@ -21136,7 +21063,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[281]);
+        _call.setOperation(_operations[278]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ProcTypeInfoList");
         _call.setEncodingStyle(null);
@@ -21170,7 +21097,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[282]);
+        _call.setOperation(_operations[279]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/WorkTableSelectionUpdate");
         _call.setEncodingStyle(null);
@@ -21204,7 +21131,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[283]);
+        _call.setOperation(_operations[280]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/WorkTablePaymentEdit");
         _call.setEncodingStyle(null);
@@ -21238,7 +21165,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[284]);
+        _call.setOperation(_operations[281]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/ProcessEdit");
         _call.setEncodingStyle(null);
@@ -21272,7 +21199,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[285]);
+        _call.setOperation(_operations[282]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/SubscripEdit");
         _call.setEncodingStyle(null);
@@ -21306,7 +21233,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[286]);
+        _call.setOperation(_operations[283]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/AttachmentAdd");
         _call.setEncodingStyle(null);
@@ -21340,7 +21267,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[287]);
+        _call.setOperation(_operations[284]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/AttachmentEdit");
         _call.setEncodingStyle(null);
@@ -21374,7 +21301,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[288]);
+        _call.setOperation(_operations[285]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/AttachmentView");
         _call.setEncodingStyle(null);
@@ -21408,7 +21335,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[289]);
+        _call.setOperation(_operations[286]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/AttachmentDelete");
         _call.setEncodingStyle(null);
@@ -21442,7 +21369,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[290]);
+        _call.setOperation(_operations[287]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/SubscriptionProrateCalculate");
         _call.setEncodingStyle(null);
@@ -21476,7 +21403,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[291]);
+        _call.setOperation(_operations[288]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/RegistrationEmailSend");
         _call.setEncodingStyle(null);
@@ -21510,7 +21437,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[292]);
+        _call.setOperation(_operations[289]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/LoginEmailSend");
         _call.setEncodingStyle(null);
@@ -21544,7 +21471,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[293]);
+        _call.setOperation(_operations[290]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/HistoryList");
         _call.setEncodingStyle(null);
@@ -21578,7 +21505,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[294]);
+        _call.setOperation(_operations[291]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/EditTrail");
         _call.setEncodingStyle(null);
@@ -21612,7 +21539,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[295]);
+        _call.setOperation(_operations[292]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/SecurityCheck");
         _call.setEncodingStyle(null);
@@ -21646,7 +21573,7 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[296]);
+        _call.setOperation(_operations[293]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://Think/XmlWebServices/CustomerAuth");
         _call.setEncodingStyle(null);
@@ -21668,6 +21595,142 @@ public class ThinkSoapStub extends org.apache.axis.client.Stub implements Think.
                 return (Think.XmlWebServices.Customer_auth_response) _resp;
             } catch (java.lang.Exception _exception) {
                 return (Think.XmlWebServices.Customer_auth_response) org.apache.axis.utils.JavaUtils.convert(_resp, Think.XmlWebServices.Customer_auth_response.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+    public Think.XmlWebServices.Dynamic_price_add_response dynamicPriceAdd(Think.XmlWebServices.Dynamic_price_add_request parameters) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[294]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("http://Think/XmlWebServices/DynamicPriceAdd");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("", "DynamicPriceAdd"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {parameters});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (Think.XmlWebServices.Dynamic_price_add_response) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (Think.XmlWebServices.Dynamic_price_add_response) org.apache.axis.utils.JavaUtils.convert(_resp, Think.XmlWebServices.Dynamic_price_add_response.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+    public Think.XmlWebServices.Dynamic_price_edit_response dynamicPriceEdit(Think.XmlWebServices.Dynamic_price_edit_request parameters) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[295]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("http://Think/XmlWebServices/DynamicPriceEdit");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("", "DynamicPriceEdit"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {parameters});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (Think.XmlWebServices.Dynamic_price_edit_response) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (Think.XmlWebServices.Dynamic_price_edit_response) org.apache.axis.utils.JavaUtils.convert(_resp, Think.XmlWebServices.Dynamic_price_edit_response.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+    public Think.XmlWebServices.Dynamic_price_card_add_response dynamicPriceCardAdd(Think.XmlWebServices.Dynamic_price_card_add_request parameters) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[296]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("http://Think/XmlWebServices/DynamicPriceCardAdd");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("", "DynamicPriceCardAdd"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {parameters});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (Think.XmlWebServices.Dynamic_price_card_add_response) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (Think.XmlWebServices.Dynamic_price_card_add_response) org.apache.axis.utils.JavaUtils.convert(_resp, Think.XmlWebServices.Dynamic_price_card_add_response.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+    public Think.XmlWebServices.Dynamic_price_card_edit_response dynamicPriceCardEdit(Think.XmlWebServices.Dynamic_price_card_edit_request parameters) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[297]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("http://Think/XmlWebServices/DynamicPriceCardEdit");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("", "DynamicPriceCardEdit"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {parameters});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (Think.XmlWebServices.Dynamic_price_card_edit_response) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (Think.XmlWebServices.Dynamic_price_card_edit_response) org.apache.axis.utils.JavaUtils.convert(_resp, Think.XmlWebServices.Dynamic_price_card_edit_response.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {

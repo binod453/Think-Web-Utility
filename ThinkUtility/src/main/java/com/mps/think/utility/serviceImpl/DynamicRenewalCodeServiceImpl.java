@@ -1,19 +1,28 @@
 package com.mps.think.utility.serviceImpl;
 
+import java.io.File;
 import java.math.BigDecimal;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.rpc.ServiceException;
 
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import com.google.gson.JsonObject;
 import com.mps.think.utility.model.DynamicRenewalCodeModel;
@@ -27,10 +36,12 @@ import Think.XmlWebServices.Dynamic_price_card;
 import Think.XmlWebServices.Dynamic_price_card_add_request;
 import Think.XmlWebServices.Dynamic_price_card_edit_request;
 import Think.XmlWebServices.Dynamic_price_card_select_request;
-import Think.XmlWebServices.Dynamic_price_card_select_responseDynamic_price_card_select;
+import Think.XmlWebServices.Dynamic_price_card_select_responseView_dynamic_price_card;
 import Think.XmlWebServices.Dynamic_price_edit_request;
+import Think.XmlWebServices.Dynamic_price_isusedinorder_select_request;
+import Think.XmlWebServices.Dynamic_price_isusedinorder_select_responseDynamic_price;
 import Think.XmlWebServices.Dynamic_price_select_request;
-import Think.XmlWebServices.Dynamic_price_select_responseDynamic_price_select;
+import Think.XmlWebServices.Dynamic_price_select_responseDynamic_price;
 import Think.XmlWebServices.ThinkSoap;
 import Think.XmlWebServices.ThinkWSLocator;
 import Think.XmlWebServices.User_authenticate_request;
@@ -76,11 +87,11 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 	
 
 	@Override
-	public List<Dynamic_price_select_responseDynamic_price_select> getDynamicCodesList(LoginModel loginModel)
+	public List<Dynamic_price_select_responseDynamic_price> getDynamicCodesList(LoginModel loginModel)
 			throws ServiceException, RemoteException {
 		log.info("Inside method : getDynamicCodesList");
 
-		List<Dynamic_price_select_responseDynamic_price_select> dynamicPriceSelectResponse = new ArrayList<Dynamic_price_select_responseDynamic_price_select>();
+		List<Dynamic_price_select_responseDynamic_price> dynamicPriceSelectResponse = new ArrayList<Dynamic_price_select_responseDynamic_price>();
 
 		ThinkSoap soap = extracted(loginModel);
 
@@ -94,7 +105,7 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 		dynamicPriceSelectrequest.setUser_login_data(loginData);
 
 		dynamicPriceSelectResponse = Stream.of(soap.dynamicPriceSelect(dynamicPriceSelectrequest))
-				.sorted(Comparator.comparingInt(Dynamic_price_select_responseDynamic_price_select::getDynamic_price_id))
+				.sorted(Comparator.comparingInt(Dynamic_price_select_responseDynamic_price :: getDynamic_price_id))
 				.collect(Collectors.toList());
 
 		log.info("Complete method : getDynamicCodesList");
@@ -125,7 +136,7 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 			Dynamic_price_card dynamicPriceCard = new Dynamic_price_card();
 			Dynamic_price_card_add_request dynamicPriceCardAddRequest = setDynamicPriceCardAddRequest(
 					dynamicRenewalCodeModel, priceCardDetail, loginData, dynamicPriceCard);
-			soap.dynamicPricecardAdd(dynamicPriceCardAddRequest);
+			soap.dynamicPriceCardAdd(dynamicPriceCardAddRequest);
 		}
 
 		log.info("Complete method : addNewDynamicRenewalCode");
@@ -148,7 +159,7 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 	@Override
 	public int getMaxCodeId(LoginModel loginModel) throws ServiceException, RemoteException {
 		log.info("Inside method : getMaxCodeId");
-		List<Dynamic_price_select_responseDynamic_price_select> data = getDynamicCodesList(loginModel);
+		List<Dynamic_price_select_responseDynamic_price> data = getDynamicCodesList(loginModel);
 		int result = data.get(data.size() - 1).getDynamic_price_id();
 		log.info("Complete method : getMaxCodeId");
 		return result;
@@ -171,14 +182,14 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 		dynamicPriceSelectrequest.setUser_login_data(loginData);
 		dynamicPriceSelectrequest.setDynamic_price_id(id);
 
-		Dynamic_price_select_responseDynamic_price_select[] getCodeDetails = soap
+		Dynamic_price_select_responseDynamic_price[] getCodeDetails = soap
 				.dynamicPriceSelect(dynamicPriceSelectrequest);
 
 		dynamicPriceCardSelectrequest.setDsn(userDetails.getDsn());
 		dynamicPriceCardSelectrequest.setDynamic_price_id(id);
 		dynamicPriceCardSelectrequest.setUser_login_data(loginData);
 
-		Dynamic_price_card_select_responseDynamic_price_card_select[] getPriceCardDetails = soap
+		Dynamic_price_card_select_responseView_dynamic_price_card[] getPriceCardDetails = soap
 				.dynamicPriceCardSelect(dynamicPriceCardSelectrequest);
 
 		DynamicRenewalCodeModel dynamicRenewalCodeModel = new DynamicRenewalCodeModel();
@@ -190,7 +201,7 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 			dynamicRenewalCodeModel.setIsActive(getCodeDetails[0].getIsactive());
 		}
 		if (getPriceCardDetails != null && getPriceCardDetails.length > 0) {
-			for (Dynamic_price_card_select_responseDynamic_price_card_select select : getPriceCardDetails) {
+			for (Dynamic_price_card_select_responseView_dynamic_price_card select : getPriceCardDetails) {
 				RenewalCodeDataDetails codeDataDetails = new RenewalCodeDataDetails();
 				codeDataDetails.setFromCycle(Objects.isNull(select.getFrom_cycle()) ? 0 : select.getFrom_cycle());
 				codeDataDetails.setToCycle(Objects.isNull(select.getTo_cycle()) ? 0 : select.getTo_cycle());
@@ -211,6 +222,21 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 			}
 			dynamicRenewalCodeModel.setRenewalCodeDataDetailsList(codeDataDetailsList);
 		}
+		
+		Dynamic_price_isusedinorder_select_request dynamic_price_isusedinorder_select_request = new Dynamic_price_isusedinorder_select_request();
+		dynamic_price_isusedinorder_select_request.setDsn(userDetails.getDsn());
+		dynamic_price_isusedinorder_select_request.setUser_login_data(loginData);
+		dynamic_price_isusedinorder_select_request.setDynamic_price_id(id);
+		
+		Dynamic_price_isusedinorder_select_responseDynamic_price[] responseDynamic_price = soap.dynamicPriceIsusedinorderSelect(dynamic_price_isusedinorder_select_request);
+		
+		if (responseDynamic_price != null && responseDynamic_price.length > 0) {
+			dynamicRenewalCodeModel.setEditable(false);
+		}
+		else {
+			dynamicRenewalCodeModel.setEditable(true);
+		}
+		
 		log.info("Complete method : getDynamicCodesById");
 		return dynamicRenewalCodeModel;
 	}
@@ -235,7 +261,7 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 			Dynamic_price_card dynamicPriceCard = new Dynamic_price_card();
 			Dynamic_price_card_edit_request dynamicPriceCardEditRequest = setDynamicPriceCardEditRequest(
 					dynamicRenewalCodeModel, priceCardDetail, loginData, dynamicPriceCard);
-			soap.dynamicPricecardEdit(dynamicPriceCardEditRequest);
+			soap.dynamicPriceCardEdit(dynamicPriceCardEditRequest);
 		}
 		log.info("Complete method : updateDynamicRenewalCode");
 		return 0;
@@ -362,5 +388,40 @@ public class DynamicRenewalCodeServiceImpl implements DynamicRenewalCodeService 
 		locator.setThinkSoap_address(loginModel.getSoapAddress());
 		soap = locator.getThinkSoap();
 		return soap;
+	}
+
+
+
+	@Override
+	public String getDSNLists(String xmlFile) {
+		
+		String resultList = null;
+		try   
+		{  
+		File file = new File(xmlFile);  
+		DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();  
+		Document document = documentBuilder.parse(file); 
+		if (document.hasChildNodes())   
+		{  
+			resultList = printNodeList(document.getChildNodes());
+			
+		}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return resultList;
+	}
+	
+	private static String printNodeList(NodeList nodeList) {
+		String result = null;
+		for (int count = 0; count < nodeList.getLength(); count++) {
+			Node elemNode = nodeList.item(count);
+			if (elemNode.getNodeType() == Node.ELEMENT_NODE) {
+				// get node name and value
+				System.out.println("Node Content =" + elemNode.getTextContent());
+				result = elemNode.getTextContent();
+			}
+		}
+		return result;
 	}
 }

@@ -14,8 +14,6 @@ public class Item_data  implements java.io.Serializable {
 
     private java.lang.Integer order_code_id;
 
-    private java.lang.Integer dynamic_pricing_code;
-
     private java.lang.Integer source_code_id;
 
     private java.lang.Integer product_id;
@@ -251,7 +249,6 @@ public class Item_data  implements java.io.Serializable {
            java.lang.Integer subscrip_id,
            java.lang.Integer renewed_from_subscrip_id,
            java.lang.Integer order_code_id,
-           java.lang.Integer dynamic_pricing_code,
            java.lang.Integer source_code_id,
            java.lang.Integer product_id,
            java.lang.Integer subscription_def_id,
@@ -369,7 +366,6 @@ public class Item_data  implements java.io.Serializable {
            this.subscrip_id = subscrip_id;
            this.renewed_from_subscrip_id = renewed_from_subscrip_id;
            this.order_code_id = order_code_id;
-           this.dynamic_pricing_code = dynamic_pricing_code;
            this.source_code_id = source_code_id;
            this.product_id = product_id;
            this.subscription_def_id = subscription_def_id;
@@ -544,26 +540,6 @@ public class Item_data  implements java.io.Serializable {
      */
     public void setOrder_code_id(java.lang.Integer order_code_id) {
         this.order_code_id = order_code_id;
-    }
-
-
-    /**
-     * Gets the dynamic_pricing_code value for this Item_data.
-     * 
-     * @return dynamic_pricing_code
-     */
-    public java.lang.Integer getDynamic_pricing_code() {
-        return dynamic_pricing_code;
-    }
-
-
-    /**
-     * Sets the dynamic_pricing_code value for this Item_data.
-     * 
-     * @param dynamic_pricing_code
-     */
-    public void setDynamic_pricing_code(java.lang.Integer dynamic_pricing_code) {
-        this.dynamic_pricing_code = dynamic_pricing_code;
     }
 
 
@@ -2883,9 +2859,6 @@ public class Item_data  implements java.io.Serializable {
             ((this.order_code_id==null && other.getOrder_code_id()==null) || 
              (this.order_code_id!=null &&
               this.order_code_id.equals(other.getOrder_code_id()))) &&
-            ((this.dynamic_pricing_code==null && other.getDynamic_pricing_code()==null) || 
-             (this.dynamic_pricing_code!=null &&
-              this.dynamic_pricing_code.equals(other.getDynamic_pricing_code()))) &&
             ((this.source_code_id==null && other.getSource_code_id()==null) || 
              (this.source_code_id!=null &&
               this.source_code_id.equals(other.getSource_code_id()))) &&
@@ -3247,9 +3220,6 @@ public class Item_data  implements java.io.Serializable {
         }
         if (getOrder_code_id() != null) {
             _hashCode += getOrder_code_id().hashCode();
-        }
-        if (getDynamic_pricing_code() != null) {
-            _hashCode += getDynamic_pricing_code().hashCode();
         }
         if (getSource_code_id() != null) {
             _hashCode += getSource_code_id().hashCode();
@@ -3811,13 +3781,6 @@ public class Item_data  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("order_code_id");
         elemField.setXmlName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "order_code_id"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dynamic_pricing_code");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://Think/XmlWebServices/", "dynamic_pricing_code"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

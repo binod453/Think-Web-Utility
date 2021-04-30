@@ -189,59 +189,6 @@
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-	  <xsd:element name="dynamic_price_select_request">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element ref="s0:user_login_data" />
-            <xsd:element name="dynamic_price_id" minOccurs="0" type="xsd:int" />
-          </xsd:sequence>
-          <xsd:attribute name="dsn" type="xsd:string" />
-        </xsd:complexType>
-      </xsd:element>
-	   <xsd:element name="dynamic_price_select_response">
-        <xsd:complexType>
-          <xsd:sequence>
-		  <xsd:element name="dynamic_price_select" minOccurs="0" maxOccurs="unbounded">
-              <xsd:complexType>
-                <xsd:attribute name="dynamic_price_id" type="xsd:int" use="required" />
-                <xsd:attribute name="dynamic_price_name" type="xsd:string" />
-                <xsd:attribute name="description" type="xsd:string"/>
-                <xsd:attribute name="isactive" type="xsd:int" use="required" />
-              </xsd:complexType>
-            </xsd:element>         
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
-	  <xsd:element name="dynamic_price_card_select_request">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element ref="s0:user_login_data" />
-            <xsd:element name="dynamic_price_id" minOccurs="0" type="xsd:int" />
-          </xsd:sequence>
-          <xsd:attribute name="dsn" type="xsd:string" />
-        </xsd:complexType>
-      </xsd:element>
-	  <xsd:element name="dynamic_price_card_select_response">
-        <xsd:complexType>
-          <xsd:sequence>
-		   <xsd:element name="dynamic_price_card_select" minOccurs="0" maxOccurs="unbounded">
-              <xsd:complexType>
-                <xsd:attribute name="dynamic_price_id" type="xsd:int" />
-				<xsd:attribute name="dynamic_price_name" type="xsd:string" />
-	            <xsd:attribute name="description" type="xsd:string"/>
-	            <xsd:attribute name="isactive" type="xsd:int"/>
-	            <xsd:attribute name="dynamic_price_seq" type="xsd:int" />
-	            <xsd:attribute name="from_cycle" type="xsd:int"/>
-				<xsd:attribute name="to_cycle" type="xsd:int"/>
-				<xsd:attribute name="dynamic_price_type" type="xsd:int" />
-	            <xsd:attribute name="currency" type="xsd:string"/>
-	            <xsd:attribute name="price" type="xsd:decimal"/>
-	            <xsd:attribute name="Percentage" type="xsd:decimal"/>
-              </xsd:complexType>
-            </xsd:element>            
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
       <xsd:element name="payment_type_select_request">
         <xsd:complexType>
           <xsd:sequence>
@@ -866,6 +813,7 @@
                 <xsd:attribute name="start_date_type_date_based" type="xsd:int" use="required" />
                 <xsd:attribute name="start_n_days_date_based" type="xsd:int" />
                 <xsd:attribute name="suppress_enumeration" type="xsd:int" use="required" />
+                <xsd:attribute name="max_qual_date_age" type="xsd:int" />
               </xsd:complexType>
             </xsd:element>
           </xsd:sequence>
@@ -1157,115 +1105,6 @@
                 <xsd:attribute name="ba_nbr" type="xsd:string" />
               </xsd:complexType>
             </xsd:element>
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
-	   <xsd:element name="dynamic_price">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element name="dynamic_price_id" type="xsd:int" />
-            <xsd:element name="dynamic_price_name" type="xsd:string" minOccurs="0" />
-            <xsd:element name="description" type="xsd:string" minOccurs="0" />
-            <xsd:element name="isactive" type="xsd:int" nillable="true" />
-         </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
- <xsd:element name="dynamic_price_card">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element name="dynamic_price_id" type="xsd:int" />
-            <xsd:element name="dynamic_price_seq" type="xsd:int" />
-            <xsd:element name="from_cycle" type="xsd:int" minOccurs="0" />
-			<xsd:element name="to_cycle" type="xsd:int" minOccurs="0" />
-			<xsd:element name="dynamic_price_type" type="xsd:int" minOccurs="0" />
-            <xsd:element name="currency" type="xsd:string" minOccurs="0" />
-            <xsd:element name="price" type="xsd:decimal" />
-            <xsd:element name="percentage" type="xsd:decimal" nillable="true" />
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
-	   <xsd:element name="dynamic_price_card_select">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element name="dynamic_price_id" type="xsd:int" />
-			 <xsd:element name="dynamic_price_name" type="xsd:string" minOccurs="0" />
-            <xsd:element name="description" type="xsd:string" minOccurs="0" />
-            <xsd:element name="isactive" type="xsd:int" nillable="true" />
-            <xsd:element name="dynamic_price_seq" type="xsd:int" />
-            <xsd:element name="from_cycle" type="xsd:int" minOccurs="0" />
-			<xsd:element name="to_cycle" type="xsd:int" minOccurs="0" />
-			<xsd:element name="dynamic_price_type" type="xsd:int" minOccurs="0" />
-            <xsd:element name="currency" type="xsd:string" minOccurs="0" />
-            <xsd:element name="price" type="xsd:decimal" />
-            <xsd:element name="percentage" type="xsd:decimal" nillable="true" />
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
-<xsd:element name="dynamic_price_add_request">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element ref="s0:user_login_data" />
-            <xsd:element ref="s0:dynamic_price" />
-          </xsd:sequence>
-          <xsd:attributeGroup ref="s0:transaction_common_root_directives" />
-        </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="dynamic_price_add_response">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element ref="s0:dynamic_price" minOccurs="0" />
-            <xsd:element name="warning" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
-          </xsd:sequence>
-        </xsd:complexType>
-</xsd:element>
-<xsd:element name="dynamic_price_edit_request">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element ref="s0:user_login_data" />
-            <xsd:element ref="s0:dynamic_price" />
-          </xsd:sequence>
-          <xsd:attributeGroup ref="s0:transaction_common_root_directives" />
-        </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="dynamic_price_edit_response">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element ref="s0:dynamic_price" minOccurs="0" />
-            <xsd:element name="warning" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
-	  <xsd:element name="dynamic_price_card_add_request">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element ref="s0:user_login_data" />
-            <xsd:element ref="s0:dynamic_price_card" />
-          </xsd:sequence>
-          <xsd:attributeGroup ref="s0:transaction_common_root_directives" />
-        </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="dynamic_price_card_add_response">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element ref="s0:dynamic_price_card" minOccurs="0" />
-            <xsd:element name="warning" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="dynamic_price_card_edit_request">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element ref="s0:user_login_data" />
-            <xsd:element ref="s0:dynamic_price_card" />
-          </xsd:sequence>
-          <xsd:attributeGroup ref="s0:transaction_common_root_directives" />
-        </xsd:complexType>
-      </xsd:element>
-	  <xsd:element name="dynamic_price_card_edit_response">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element ref="s0:dynamic_price_card" minOccurs="0" />
-            <xsd:element name="warning" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
@@ -1642,7 +1481,7 @@
                 <xsd:attribute name="to_date" type="xsd:date" />
                 <xsd:attribute name="qty" type="xsd:int" />
                 <xsd:attribute name="cost" type="s0:ZZMoney" use="required" />
-                <xsd:attribute name="audit_qual_category" type="xsd:int" use="required" />
+                <xsd:attribute name="audit_qual_category" type="xsd:int" />
                 <xsd:attribute name="generic_agency" type="xsd:int" use="required" />
                 <xsd:attribute name="oc_id" type="xsd:int" use="required" />
                 <xsd:attribute name="active" type="xsd:int" use="required" />
@@ -2098,6 +1937,9 @@
                 <xsd:attribute name="generic_promotion_code_seq" type="xsd:int" />
                 <xsd:attribute name="charge_on_cancellation" type="xsd:int" />
                 <xsd:attribute name="last_tax_invoice_date" type="xsd:dateTime" />
+                <xsd:attribute name="dynamic_pricing_code" type="xsd:int" />
+                <xsd:attribute name="dynamic_price_seq" type="xsd:int" />
+                <xsd:attribute name="dynamic_price_effort" type="xsd:int" />
               </xsd:complexType>
             </xsd:element>
           </xsd:sequence>
@@ -2278,6 +2120,9 @@
                 <xsd:attribute name="generic_promotion_code_seq" type="xsd:int" />
                 <xsd:attribute name="charge_on_cancellation" type="xsd:int" />
                 <xsd:attribute name="last_tax_invoice_date" type="xsd:dateTime" />
+                <xsd:attribute name="dynamic_pricing_code" type="xsd:int" />
+                <xsd:attribute name="dynamic_price_seq" type="xsd:int" />
+                <xsd:attribute name="dynamic_price_effort" type="xsd:int" />
               </xsd:complexType>
             </xsd:element>
           </xsd:sequence>
@@ -2352,7 +2197,7 @@
                 <xsd:attribute name="pub_rotation_id" type="xsd:int" />
                 <xsd:attribute name="standord" type="xsd:int" use="required" />
                 <xsd:attribute name="grace_qty" type="xsd:int" />
-                <xsd:attribute name="audit_qual_category" type="xsd:int" use="required" />
+                <xsd:attribute name="audit_qual_category" type="xsd:int" />
                 <xsd:attribute name="perpetual_order" type="xsd:int" use="required" />
                 <xsd:attribute name="order_code" type="xsd:string" use="required" />
                 <xsd:attribute name="price" type="s0:ZZMoney" />
@@ -2660,7 +2505,7 @@
                 <xsd:attribute name="pub_rotation_id" type="xsd:int" />
                 <xsd:attribute name="standord" type="xsd:int" use="required" />
                 <xsd:attribute name="grace_qty" type="xsd:int" />
-                <xsd:attribute name="audit_qual_category" type="xsd:int" use="required" />
+                <xsd:attribute name="audit_qual_category" type="xsd:int" />
                 <xsd:attribute name="perpetual_order" type="xsd:int" use="required" />
                 <xsd:attribute name="order_code" type="xsd:string" use="required" />
                 <xsd:attribute name="price" type="s0:ZZMoney" />
@@ -2782,7 +2627,7 @@
                 <xsd:attribute name="pub_rotation_id" type="xsd:int" />
                 <xsd:attribute name="standord" type="xsd:int" use="required" />
                 <xsd:attribute name="grace_qty" type="xsd:int" />
-                <xsd:attribute name="audit_qual_category" type="xsd:int" use="required" />
+                <xsd:attribute name="audit_qual_category" type="xsd:int" />
                 <xsd:attribute name="perpetual_order" type="xsd:int" use="required" />
                 <xsd:attribute name="order_code" type="xsd:string" use="required" />
                 <xsd:attribute name="price" type="s0:ZZMoney" />
@@ -3809,6 +3654,9 @@
                 <xsd:attribute name="generic_promotion_code_seq" type="xsd:int" />
                 <xsd:attribute name="charge_on_cancellation" type="xsd:int" />
                 <xsd:attribute name="last_tax_invoice_date" type="xsd:dateTime" />
+                <xsd:attribute name="dynamic_pricing_code" type="xsd:int" />
+                <xsd:attribute name="dynamic_price_seq" type="xsd:int" />
+                <xsd:attribute name="dynamic_price_effort" type="xsd:int" />
                 <xsd:attribute name="order_code_desc" type="xsd:string" />
                 <xsd:attribute name="order_status_desc" type="xsd:string" />
               </xsd:complexType>
@@ -4158,7 +4006,7 @@
                 <xsd:attribute name="pub_rotation_id" type="xsd:int" />
                 <xsd:attribute name="standord" type="xsd:int" use="required" />
                 <xsd:attribute name="grace_qty" type="xsd:int" />
-                <xsd:attribute name="audit_qual_category" type="xsd:int" use="required" />
+                <xsd:attribute name="audit_qual_category" type="xsd:int" />
                 <xsd:attribute name="perpetual_order" type="xsd:int" use="required" />
                 <xsd:attribute name="order_code" type="xsd:string" use="required" />
                 <xsd:attribute name="price" type="s0:ZZMoney" />
@@ -5605,6 +5453,79 @@
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
+      <xsd:element name="dynamic_price_select_request">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="s0:user_login_data" />
+            <xsd:element name="dynamic_price_id" minOccurs="0" default="0" type="xsd:int" />
+          </xsd:sequence>
+          <xsd:attribute name="dsn" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="dynamic_price_select_response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="dynamic_price" minOccurs="0" maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:attribute name="dynamic_price_id" type="xsd:int" use="required" />
+                <xsd:attribute name="dynamic_price_name" type="xsd:string" />
+                <xsd:attribute name="description" type="xsd:string" />
+                <xsd:attribute name="isactive" type="xsd:int" />
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="dynamic_price_card_select_request">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="s0:user_login_data" />
+            <xsd:element name="dynamic_price_id" minOccurs="0" default="0" type="xsd:int" />
+          </xsd:sequence>
+          <xsd:attribute name="dsn" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="dynamic_price_card_select_response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="view_dynamic_price_card" minOccurs="0" maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:attribute name="dynamic_price_id" type="xsd:int" use="required" />
+                <xsd:attribute name="dynamic_price_name" type="xsd:string" />
+                <xsd:attribute name="description" type="xsd:string" />
+                <xsd:attribute name="isactive" type="xsd:int" />
+                <xsd:attribute name="dynamic_price_seq" type="xsd:int" use="required" />
+                <xsd:attribute name="currency" type="xsd:string" />
+                <xsd:attribute name="dynamic_price_type" type="xsd:int" />
+                <xsd:attribute name="from_cycle" type="xsd:int" />
+                <xsd:attribute name="to_cycle" type="xsd:int" />
+                <xsd:attribute name="percentage" type="s0:ZZMoney" />
+                <xsd:attribute name="price" type="s0:ZZMoney" />
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="dynamic_price_isusedinorder_select_request">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="s0:user_login_data" />
+            <xsd:element name="dynamic_price_id" type="xsd:int" />
+          </xsd:sequence>
+          <xsd:attribute name="dsn" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="dynamic_price_isusedinorder_select_response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="dynamic_price" minOccurs="0" maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:attribute name="dynamic_price_id" type="xsd:int" use="required" />
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
       <xsd:complexType name="ZZAgency">
         <xsd:attribute name="customer_id" use="required" type="xsd:int" />
         <xsd:attribute name="accept_ord" use="required" type="xsd:int" />
@@ -6032,7 +5953,7 @@
         <xsd:attribute name="active" use="required" type="xsd:int" />
         <xsd:attribute name="allow_on_internet" use="required" type="xsd:int" />
         <xsd:attribute name="audit_name_title_id" type="xsd:int" />
-        <xsd:attribute name="audit_qual_category" use="required" type="xsd:int" />
+        <xsd:attribute name="audit_qual_category" type="xsd:int" />
         <xsd:attribute name="audit_qual_source_id" type="xsd:int" />
         <xsd:attribute name="audit_sales_channel_id" type="xsd:int" />
         <xsd:attribute name="audit_subscription_type_id" type="xsd:int" />
@@ -6154,6 +6075,9 @@
         <xsd:attribute name="discount_class_id" type="xsd:int" />
         <xsd:attribute name="distribution_method" type="xsd:string" />
         <xsd:attribute name="duration" type="xsd:int" />
+        <xsd:attribute name="dynamic_price_effort" type="xsd:int" />
+        <xsd:attribute name="dynamic_price_seq" type="xsd:int" />
+        <xsd:attribute name="dynamic_pricing_code" type="xsd:int" />
         <xsd:attribute name="electronic_delivery" use="required" type="xsd:int" />
         <xsd:attribute name="electronic_document_identifier" type="xsd:string" />
         <xsd:attribute name="ex_rate_class_effective_seq" type="xsd:int" />
@@ -6184,7 +6108,6 @@
         <xsd:attribute name="item_url" type="xsd:string" />
         <xsd:attribute name="last_inv_date" type="xsd:date" />
         <xsd:attribute name="last_ren_date" type="xsd:date" />
-		<xsd:attribute name="dynamic_pricing_code" type="xsd:int" />  
         <xsd:attribute name="last_tax_invoice_date" type="xsd:dateTime" />
         <xsd:attribute name="manual_disc_amt_base" type="s0:ZZMoney" />
         <xsd:attribute name="manual_disc_amt_local" type="s0:ZZMoney" />
@@ -7578,10 +7501,6 @@
         <xsd:attribute name="cc_tax_amount" type="s0:ZZMoney" default="0" />
         <xsd:attribute name="cc_total_amount" type="s0:ZZMoney" default="0" />
       </xsd:attributeGroup>
-	  <xsd:attributeGroup name="transaction_common_root_directives">
-        <xsd:attribute name="dsn" type="xsd:string" />
-        <xsd:attribute name="submit" type="xsd:boolean" default="true" />
-      </xsd:attributeGroup>
       <xsd:attributeGroup name="xaction_common_root_directives">
         <xsd:attribute name="dsn" type="xsd:string" />
         <xsd:attribute name="submit" default="yes" type="s0:ZZBoolean" />
@@ -7589,6 +7508,10 @@
         <xsd:attribute name="check_missing_fields" default="yes" type="s0:ZZBoolean">
         </xsd:attribute>
         <xsd:attribute name="suppress_events" default="no" type="s0:ZZBoolean" />
+      </xsd:attributeGroup>
+      <xsd:attributeGroup name="transaction_common_root_directives">
+        <xsd:attribute name="dsn" type="xsd:string" />
+        <xsd:attribute name="submit" type="xsd:boolean" default="true" />
       </xsd:attributeGroup>
       <xsd:element name="ip_address" type="s0:ZZIpAddress" />
       <xsd:element name="customer">
@@ -8141,7 +8064,6 @@
             <xsd:element name="subscrip_id" type="xsd:int" minOccurs="0" default="0" />
             <xsd:element name="renewed_from_subscrip_id" type="xsd:int" minOccurs="0" default="0" />
             <xsd:element name="order_code_id" type="xsd:int" minOccurs="0" default="0" />
-			<xsd:element name="dynamic_pricing_code" type="xsd:int" minOccurs="0" default="0" /> 
             <xsd:element name="source_code_id" type="xsd:int" minOccurs="0" default="0" />
             <xsd:element name="product_id" type="xsd:int" minOccurs="0" default="0" />
             <xsd:element name="subscription_def_id" type="xsd:int" minOccurs="0" default="0" />
@@ -14021,6 +13943,98 @@
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
+      <xsd:element name="dynamic_price">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="dynamic_price_id" type="xsd:int" />
+            <xsd:element name="dynamic_price_name" type="xsd:string" minOccurs="0" />
+            <xsd:element name="description" type="xsd:string" minOccurs="0" />
+            <xsd:element name="isactive" type="xsd:int" nillable="true" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="dynamic_price_card">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="dynamic_price_id" type="xsd:int" />
+            <xsd:element name="dynamic_price_seq" type="xsd:int" />
+            <xsd:element name="from_cycle" type="xsd:int" minOccurs="0" />
+            <xsd:element name="to_cycle" type="xsd:int" minOccurs="0" />
+            <xsd:element name="dynamic_price_type" type="xsd:int" minOccurs="0" />
+            <xsd:element name="currency" type="xsd:string" minOccurs="0" />
+            <xsd:element name="price" type="xsd:decimal" />
+            <xsd:element name="percentage" type="xsd:decimal" nillable="true" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="dynamic_price_add_request">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="s0:user_login_data" />
+            <xsd:element ref="s0:dynamic_price" />
+          </xsd:sequence>
+          <xsd:attributeGroup ref="s0:transaction_common_root_directives" />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="dynamic_price_add_response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="s0:dynamic_price" minOccurs="0" />
+            <xsd:element name="warning" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="dynamic_price_edit_request">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="s0:user_login_data" />
+            <xsd:element ref="s0:dynamic_price" />
+          </xsd:sequence>
+          <xsd:attributeGroup ref="s0:transaction_common_root_directives" />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="dynamic_price_edit_response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="s0:dynamic_price" minOccurs="0" />
+            <xsd:element name="warning" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="dynamic_price_card_add_request">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="s0:user_login_data" />
+            <xsd:element ref="s0:dynamic_price_card" />
+          </xsd:sequence>
+          <xsd:attributeGroup ref="s0:transaction_common_root_directives" />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="dynamic_price_card_add_response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="s0:dynamic_price_card" minOccurs="0" />
+            <xsd:element name="warning" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="dynamic_price_card_edit_request">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="s0:user_login_data" />
+            <xsd:element ref="s0:dynamic_price_card" />
+          </xsd:sequence>
+          <xsd:attributeGroup ref="s0:transaction_common_root_directives" />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="dynamic_price_card_edit_response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="s0:dynamic_price_card" minOccurs="0" />
+            <xsd:element name="warning" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
     </xsd:schema>
   </types>
   <service name="ThinkWS">
@@ -14037,14 +14051,6 @@
     <operation name="PaymentTypeSelect">
       <input message="s0:PaymentTypeSelectSoapIn" />
       <output message="s0:PaymentTypeSelectSoapOut" />
-    </operation>
-	 <operation name="DynamicPriceSelect">
-      <input message="s0:DynamicPriceSelectSoapIn" />
-      <output message="s0:DynamicPriceSelectSoapOut" />
-    </operation>
-	 <operation name="DynamicPriceCardSelect">
-      <input message="s0:DynamicPriceCardSelectSoapIn" />
-      <output message="s0:DynamicPriceCardSelectSoapOut" />
     </operation>
     <operation name="OcListByTopicSelect">
       <input message="s0:OcListByTopicSelectSoapIn" />
@@ -14474,6 +14480,18 @@
       <input message="s0:PaymentAccountWithPendingPaymentsSelectSoapIn" />
       <output message="s0:PaymentAccountWithPendingPaymentsSelectSoapOut" />
     </operation>
+    <operation name="DynamicPriceSelect">
+      <input message="s0:DynamicPriceSelectSoapIn" />
+      <output message="s0:DynamicPriceSelectSoapOut" />
+    </operation>
+    <operation name="DynamicPriceCardSelect">
+      <input message="s0:DynamicPriceCardSelectSoapIn" />
+      <output message="s0:DynamicPriceCardSelectSoapOut" />
+    </operation>
+    <operation name="DynamicPriceIsusedinorderSelect">
+      <input message="s0:DynamicPriceIsusedinorderSelectSoapIn" />
+      <output message="s0:DynamicPriceIsusedinorderSelectSoapOut" />
+    </operation>
     <operation name="IpOverlapList">
       <input message="s0:IpOverlapListSoapIn" />
       <output message="s0:IpOverlapListSoapOut" />
@@ -14801,22 +14819,6 @@
     <operation name="EventQueueAdd">
       <input message="s0:EventQueueAddSoapIn" />
       <output message="s0:EventQueueAddSoapOut" />
-    </operation>
-	<operation name="DynamicPriceAdd">
-      <input message="s0:DynamicPriceAddSoapIn" />
-      <output message="s0:DynamicPriceAddSoapOut" />
-    </operation>
-    <operation name="DynamicPriceEdit">
-      <input message="s0:DynamicPriceEditSoapIn" />
-      <output message="s0:DynamicPriceEditSoapOut" />
-    </operation>	
-	 <operation name="DynamicPricecardAdd">
-      <input message="s0:DynamicPricecardAddSoapIn" />
-      <output message="s0:DynamicPricecardAddSoapOut" />
-    </operation>
-    <operation name="DynamicPricecardEdit">
-      <input message="s0:DynamicPricecardEditSoapIn" />
-      <output message="s0:DynamicPricecardEditSoapOut" />
     </operation>
     <operation name="EventQueueDelete">
       <input message="s0:EventQueueDeleteSoapIn" />
@@ -15218,6 +15220,22 @@
       <input message="s0:CustomerAuthSoapIn" />
       <output message="s0:CustomerAuthSoapOut" />
     </operation>
+    <operation name="DynamicPriceAdd">
+      <input message="s0:DynamicPriceAddSoapIn" />
+      <output message="s0:DynamicPriceAddSoapOut" />
+    </operation>
+    <operation name="DynamicPriceEdit">
+      <input message="s0:DynamicPriceEditSoapIn" />
+      <output message="s0:DynamicPriceEditSoapOut" />
+    </operation>
+    <operation name="DynamicPriceCardAdd">
+      <input message="s0:DynamicPriceCardAddSoapIn" />
+      <output message="s0:DynamicPriceCardAddSoapOut" />
+    </operation>
+    <operation name="DynamicPriceCardEdit">
+      <input message="s0:DynamicPriceCardEditSoapIn" />
+      <output message="s0:DynamicPriceCardEditSoapOut" />
+    </operation>
   </portType>
   <binding name="ThinkSoap" type="s0:ThinkSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
@@ -15239,26 +15257,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-	<operation name="DynamicPriceSelect">
-      <soap:operation soapAction="http://Think/XmlWebServices/DynamicPriceSelect" style="document" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-	
-	<operation name="DynamicPriceCardSelect">
-      <soap:operation soapAction="http://Think/XmlWebServices/DynamicPriceCardSelect" style="document" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-	
     <operation name="OcListByTopicSelect">
       <soap:operation soapAction="http://Think/XmlWebServices/OcListByTopicSelect" style="document" />
       <input>
@@ -15270,42 +15268,6 @@
     </operation>
     <operation name="OcDescrSelect">
       <soap:operation soapAction="http://Think/XmlWebServices/OcDescrSelect" style="document" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-	<operation name="DynamicPriceAdd">
-      <soap:operation soapAction="http://Think/XmlWebServices/DynamicPriceAdd" style="document" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>	
-	 <operation name="DynamicPriceEdit">
-      <soap:operation soapAction="http://Think/XmlWebServices/DynamicPriceEdit" style="document" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-	<operation name="DynamicPricecardAdd">
-      <soap:operation soapAction="http://Think/XmlWebServices/DynamicPricecardAdd" style="document" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-	<operation name="DynamicPricecardEdit">
-      <soap:operation soapAction="http://Think/XmlWebServices/DynamicPricecardEdit" style="document" />
       <input>
         <soap:body use="literal" />
       </input>
@@ -16251,6 +16213,33 @@
     </operation>
     <operation name="PaymentAccountWithPendingPaymentsSelect">
       <soap:operation soapAction="http://Think/XmlWebServices/PaymentAccountWithPendingPaymentsSelect" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DynamicPriceSelect">
+      <soap:operation soapAction="http://Think/XmlWebServices/DynamicPriceSelect" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DynamicPriceCardSelect">
+      <soap:operation soapAction="http://Think/XmlWebServices/DynamicPriceCardSelect" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DynamicPriceIsusedinorderSelect">
+      <soap:operation soapAction="http://Think/XmlWebServices/DynamicPriceIsusedinorderSelect" style="document" />
       <input>
         <soap:body use="literal" />
       </input>
@@ -17896,6 +17885,42 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="DynamicPriceAdd">
+      <soap:operation soapAction="http://Think/XmlWebServices/DynamicPriceAdd" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DynamicPriceEdit">
+      <soap:operation soapAction="http://Think/XmlWebServices/DynamicPriceEdit" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DynamicPriceCardAdd">
+      <soap:operation soapAction="http://Think/XmlWebServices/DynamicPriceCardAdd" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DynamicPriceCardEdit">
+      <soap:operation soapAction="http://Think/XmlWebServices/DynamicPriceCardEdit" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
   </binding>
   <message name="PxHeaderSelectSoapIn">
     <part name="parameters" element="s0:px_header_select_request" />
@@ -17908,18 +17933,6 @@
   </message>
   <message name="PaymentTypeSelectSoapOut">
     <part name="parameters" element="s0:payment_type_select_response" />
-  </message>
-  <message name="DynamicPriceSelectSoapIn">
-    <part name="parameters" element="s0:dynamic_price_select_request" />
-  </message>
-  <message name="DynamicPriceSelectSoapOut">
-    <part name="parameters" element="s0:dynamic_price_select_response" />
-  </message>
-  <message name="DynamicPriceCardSelectSoapIn">
-    <part name="parameters" element="s0:dynamic_price_card_select_request" />
-  </message>
-  <message name="DynamicPriceCardSelectSoapOut">
-    <part name="parameters" element="s0:dynamic_price_card_select_response" />
   </message>
   <message name="OcListByTopicSelectSoapIn">
     <part name="parameters" element="s0:oc_list_by_topic_select_request" />
@@ -18563,6 +18576,24 @@
   <message name="PaymentAccountWithPendingPaymentsSelectSoapOut">
     <part name="parameters" element="s0:payment_account_with_pending_payments_select_response" />
   </message>
+  <message name="DynamicPriceSelectSoapIn">
+    <part name="parameters" element="s0:dynamic_price_select_request" />
+  </message>
+  <message name="DynamicPriceSelectSoapOut">
+    <part name="parameters" element="s0:dynamic_price_select_response" />
+  </message>
+  <message name="DynamicPriceCardSelectSoapIn">
+    <part name="parameters" element="s0:dynamic_price_card_select_request" />
+  </message>
+  <message name="DynamicPriceCardSelectSoapOut">
+    <part name="parameters" element="s0:dynamic_price_card_select_response" />
+  </message>
+  <message name="DynamicPriceIsusedinorderSelectSoapIn">
+    <part name="parameters" element="s0:dynamic_price_isusedinorder_select_request" />
+  </message>
+  <message name="DynamicPriceIsusedinorderSelectSoapOut">
+    <part name="parameters" element="s0:dynamic_price_isusedinorder_select_response" />
+  </message>
   <message name="IpOverlapListSoapIn">
     <part name="parameters" element="s0:ip_overlap_list_request" />
   </message>
@@ -18743,30 +18774,6 @@
   <message name="OrderTransferSoapOut">
     <part name="parameters" element="s0:order_transfer_response" />
   </message>
-<message name="DynamicPriceAddSoapIn">
-    <part name="parameters" element="s0:dynamic_price_add_request" />
-  </message>
-  <message name="DynamicPriceAddSoapOut">
-    <part name="parameters" element="s0:dynamic_price_add_response" />
-  </message>
-  <message name="DynamicPriceEditSoapIn">
-    <part name="parameters" element="s0:dynamic_price_edit_request" />
-  </message>
-  <message name="DynamicPriceEditSoapOut">
-    <part name="parameters" element="s0:dynamic_price_edit_response" />
-  </message>  
-   <message name="DynamicPricecardAddSoapIn">
-    <part name="parameters" element="s0:dynamic_price_card_add_request" />
-  </message>
-  <message name="DynamicPricecardAddSoapOut">
-    <part name="parameters" element="s0:dynamic_price_card_add_response" />
-  </message>
-  <message name="DynamicPricecardEditSoapIn">
-    <part name="parameters" element="s0:dynamic_price_card_edit_request" />
-  </message>
-  <message name="DynamicPricecardEditSoapOut">
-    <part name="parameters" element="s0:dynamic_price_card_edit_response" />
-  </message>  
   <message name="CustomerEditSoapIn">
     <part name="parameters" element="s0:customer_edit_request" />
   </message>
@@ -19678,5 +19685,29 @@
   </message>
   <message name="CustomerAuthSoapOut">
     <part name="parameters" element="s0:customer_auth_response" />
+  </message>
+  <message name="DynamicPriceAddSoapIn">
+    <part name="parameters" element="s0:dynamic_price_add_request" />
+  </message>
+  <message name="DynamicPriceAddSoapOut">
+    <part name="parameters" element="s0:dynamic_price_add_response" />
+  </message>
+  <message name="DynamicPriceEditSoapIn">
+    <part name="parameters" element="s0:dynamic_price_edit_request" />
+  </message>
+  <message name="DynamicPriceEditSoapOut">
+    <part name="parameters" element="s0:dynamic_price_edit_response" />
+  </message>
+  <message name="DynamicPriceCardAddSoapIn">
+    <part name="parameters" element="s0:dynamic_price_card_add_request" />
+  </message>
+  <message name="DynamicPriceCardAddSoapOut">
+    <part name="parameters" element="s0:dynamic_price_card_add_response" />
+  </message>
+  <message name="DynamicPriceCardEditSoapIn">
+    <part name="parameters" element="s0:dynamic_price_card_edit_request" />
+  </message>
+  <message name="DynamicPriceCardEditSoapOut">
+    <part name="parameters" element="s0:dynamic_price_card_edit_response" />
   </message>
 </definitions>
