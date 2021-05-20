@@ -1,6 +1,6 @@
 <%@ include file="/common/taglibs.jsp"%>
 <%@ include file="/common/meta.jsp"%>
-<title> Dynamic Renewal Codes </title>
+<title> Dynamic Pricing Codes </title>
 
 <script src="<c:url value='/resources/js/renewalCodes.js'/>"></script>
 <div class="col-md-12">
@@ -63,17 +63,20 @@
 	
 	<!-- Add-Modal -->
 <div class="modal fade" id="addNewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="pageloader">
+   <img src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif" alt="processing..." />
+</div>
     <div class="modal-dialog " style="max-width: 80%;">
         <div class="modal-content">
             <div class="modal-header">
-             <h4 class="modal-title" id="myModalLabel">Create Dynamic Renewal Code</h4>
+             <h4 class="modal-title" id="myModalLabel">Create Dynamic Pricing Code</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
             	 <form:form method="POST" modelAttribute="dynamicRenewalCodeModel" action="addNewRenewalCode" id="addNewRenewalCodeForm">
 					<fieldset>
 						<div class="form-group row">
-							<label for="dynamicRenewalCode" class="col-sm-4 col-form-label required-field">Dynamic Renewal Code </label>
+							<label for="dynamicRenewalCode" class="col-sm-4 col-form-label required-field">Dynamic Pricing Code </label>
 							<div class="col-sm-8">
 								<form:input path = "dynamicCode" type="text" class="form-control" id="dynamicRenewalCode" onfocusout="checkRenewalCode(this)"/>
 							</div>
@@ -126,10 +129,13 @@
 <!-- Edit Modal -->
 
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="pageloader">
+   <img src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif" alt="processing..." />
+</div>
     <div class="modal-dialog " style="max-width: 80%;">
         <div class="modal-content">
             <div class="modal-header">
-             <h4 class="modal-title" id="myModalLabel">Create Dynamic Renewal Code</h4>
+             <h4 class="modal-title" id="myModalLabel">Edit Dynamic Pricing Code</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
             </div>
             <div class="modal-body">
@@ -137,7 +143,7 @@
 					<fieldset>
 					
 						<div class="form-group row">
-							<label for="dynamicRenewalCode" class="col-sm-4 col-form-label required-field">Dynamic Renewal Code</label>
+							<label for="dynamicRenewalCode" class="col-sm-4 col-form-label required-field">Dynamic Pricing Code</label>
 							<div class="col-sm-8">
 								<form:input path = "dynamicCode" type="text" class="form-control" id="editDynamicRenewalCode"/>
 							</div>
@@ -182,6 +188,7 @@
         </div>
     </div>
 </div>
+
 
 <c:if test="${not empty priceNameList}">
 	<input type="hidden" id="priceNameList" value="${priceNameList}"/>

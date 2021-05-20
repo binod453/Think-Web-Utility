@@ -64,11 +64,17 @@ public class LoginController {
 		LoginModel loginModel = new LoginModel();
 		model.addAttribute("loginModel", loginModel);
 		String data = dynamicRenewalCodeService.getDSNLists("DSNLists.xml");
+		List<String> dsnListsdata = new ArrayList<String>();
 		List<String> dsnLists = new ArrayList<String>();
 		List<String> uri = new ArrayList<String>();
 		if(StringUtils.isNotBlank(data)) {
-			dsnLists = Arrays.stream(data.trim().split("\n\t\t")).filter(s->!s.trim().startsWith("http")).collect(Collectors.toList());
+			dsnListsdata = Arrays.stream(data.trim().split("\n\t\t")).filter(s->!s.trim().startsWith("http")).collect(Collectors.toList());
 			uri = Arrays.stream(data.trim().split("\n\t\t")).filter(s->s.trim().startsWith("http")).collect(Collectors.toList());
+		}
+		for(String s : dsnListsdata) {
+			//if(s.contains("\n\t\n\t")) {
+				dsnLists.add(s.trim());
+			//}
 		}
 		HttpSession session = request.getSession();
 		session.setAttribute("dsnLists", dsnLists);

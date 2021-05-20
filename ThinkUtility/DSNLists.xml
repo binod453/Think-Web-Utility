@@ -2,8 +2,6 @@
 <loginConf>
 	<dsn>
 		<name>QADB-Local</name>
-		<name>QADB</name>
-		<name>Local</name>
 	</dsn>
 	<soapUri>
 		<uriValue>http://192.168.80.237:8585/soap.slap</uriValue>
